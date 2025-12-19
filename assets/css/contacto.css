@@ -1,0 +1,464 @@
+/* ============================================
+   SECCIÓN CONTACTO - DISEÑO MODERNO
+   ============================================ */
+
+#contacto {
+    position: relative;
+    padding: 100px 0;
+    overflow: hidden;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+}
+
+/* Fondo con efecto */
+.contacto-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/fondo.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.15;
+}
+
+.contacto-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, 
+        rgba(26, 26, 46, 0.95) 0%, 
+        rgba(22, 33, 62, 0.9) 50%, 
+        rgba(15, 52, 96, 0.95) 100%);
+}
+
+/* Container */
+.contacto-container {
+    position: relative;
+    z-index: 2;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+/* Header */
+.contacto-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.contacto-header .header-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(37, 211, 102, 0.15);
+    color: #25D366;
+    padding: 10px 25px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    border: 1px solid rgba(37, 211, 102, 0.3);
+}
+
+.contacto-header .header-badge i {
+    font-size: 1.1rem;
+}
+
+.contacto-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 15px;
+    text-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+}
+
+.contacto-subtitle {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.7);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Grid de cards de contacto */
+.contacto-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    margin-bottom: 50px;
+}
+
+/* Cards de contacto */
+.contacto-card {
+    position: relative;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    padding: 30px;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contacto-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, transparent 0%, rgba(255, 255, 255, 0.05) 100%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.contacto-card:hover {
+    transform: translateY(-10px);
+    border-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+}
+
+.contacto-card:hover::before {
+    opacity: 1;
+}
+
+/* Icon wrapper */
+.card-icon-wrapper {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-icon-wrapper .icon-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    opacity: 0.15;
+    transition: all 0.4s ease;
+}
+
+.card-icon-wrapper i {
+    font-size: 2rem;
+    position: relative;
+    z-index: 1;
+    transition: all 0.4s ease;
+}
+
+.contacto-card:hover .card-icon-wrapper i {
+    transform: scale(1.15);
+}
+
+/* WhatsApp card styles */
+.whatsapp-card .icon-bg {
+    background: #25D366;
+}
+
+.whatsapp-card .card-icon-wrapper i {
+    color: #25D366;
+}
+
+.whatsapp-card:hover {
+    background: rgba(37, 211, 102, 0.1);
+    border-color: rgba(37, 211, 102, 0.4);
+}
+
+/* Teléfono card styles */
+.telefono-card .icon-bg {
+    background: #4A90D9;
+}
+
+.telefono-card .card-icon-wrapper i {
+    color: #4A90D9;
+}
+
+.telefono-card:hover {
+    background: rgba(74, 144, 217, 0.1);
+    border-color: rgba(74, 144, 217, 0.4);
+}
+
+/* Email card styles */
+.email-card .icon-bg {
+    background: #FF6B6B;
+}
+
+.email-card .card-icon-wrapper i {
+    color: #FF6B6B;
+}
+
+.email-card:hover {
+    background: rgba(255, 107, 107, 0.1);
+    border-color: rgba(255, 107, 107, 0.4);
+}
+
+/* Ubicación card styles */
+.ubicacion-card .icon-bg {
+    background: #FFD93D;
+}
+
+.ubicacion-card .card-icon-wrapper i {
+    color: #FFD93D;
+}
+
+.ubicacion-card:hover {
+    background: rgba(255, 217, 61, 0.1);
+    border-color: rgba(255, 217, 61, 0.4);
+}
+
+/* Card info */
+.card-info h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.card-info p {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 8px;
+}
+
+.card-detail {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 500;
+}
+
+/* Card action */
+.card-action {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: auto;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.card-action i {
+    transition: transform 0.3s ease;
+}
+
+.contacto-card:hover .card-action {
+    color: #fff;
+}
+
+.contacto-card:hover .card-action i {
+    transform: translateX(5px);
+}
+
+/* Status indicator (WhatsApp) */
+.status-indicator {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.8rem;
+    color: #25D366;
+    font-weight: 600;
+}
+
+.pulse {
+    width: 10px;
+    height: 10px;
+    background: #25D366;
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4);
+    }
+    50% {
+        box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
+    }
+}
+
+/* Sección extras */
+.contacto-extras {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+/* Horarios card */
+.horarios-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    padding: 35px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    gap: 25px;
+    align-items: flex-start;
+}
+
+.horarios-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.horarios-icon i {
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.horarios-info h4 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.horarios-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.horario-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.horario-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.horario-item .dia {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.95rem;
+}
+
+.horario-item .hora {
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.95rem;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 5px 12px;
+    border-radius: 20px;
+}
+
+/* Servicios rápidos */
+.servicios-rapidos {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.servicio-rapido {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    border-radius: 15px;
+    padding: 20px 25px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: all 0.3s ease;
+}
+
+.servicio-rapido:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateX(10px);
+}
+
+.servicio-rapido i {
+    font-size: 1.3rem;
+    color: #25D366;
+    width: 25px;
+    text-align: center;
+}
+
+.servicio-rapido span {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 1200px) {
+    .contacto-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    #contacto {
+        padding: 80px 0;
+    }
+
+    .contacto-container {
+        padding: 0 25px;
+    }
+
+    .contacto-title {
+        font-size: 2.5rem;
+    }
+
+    .contacto-subtitle {
+        font-size: 1rem;
+    }
+
+    .contacto-extras {
+        grid-template-columns: 1fr;
+    }
+
+    .horarios-card {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .horarios-info {
+        width: 100%;
+    }
+}
+
+@media (max-width: 650px) {
+    .contacto-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contacto-title {
+        font-size: 2rem;
+    }
+
+    .contacto-header {
+        margin-bottom: 40px;
+    }
+
+    .contacto-card {
+        padding: 25px;
+    }
+}

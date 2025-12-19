@@ -1,0 +1,91 @@
+/* Layout general y secciones */
+section {
+    min-height: 100vh;
+    padding: 100px 20px 50px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+/* Fix para que el contenido no se desborde */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* Ocultar overflow horizontal en toda la página */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Fondo con overlay */
+.background-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    z-index: -1;
+}
+
+.background-overlay::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.6) 0%,
+        rgba(0, 0, 0, 0.4) 30%,
+        rgba(0, 0, 0, 0.5) 70%,
+        rgba(0, 0, 0, 0.7) 100%
+    );
+}
+
+.section-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.section-text h2 {
+    font-family: 'Poppins', 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 3.8rem;
+    margin-bottom: 2rem;
+    animation: slideInFromLeft 1s ease-out;
+}
+
+.section-text p {
+    font-family: 'Poppins', 'Montserrat', Arial, sans-serif;
+    font-size: 1.25rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    animation: slideInFromLeft 1s ease-out 0.2s both;
+}
+
+.section-image {
+    text-align: center;
+    animation: fadeInRight 1s ease-out 0.4s both;
+}
+
+.section-image img {
+    max-width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}

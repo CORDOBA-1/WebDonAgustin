@@ -1,0 +1,17 @@
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Archivos de Word temporales
+~$*.docx
+
+# Archivos de editor
+*.swp
+*.swo
+.vscode/
+.idea/
+
+# Logs
+*.log
+

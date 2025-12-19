@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corralón y Ferretería - Don Agustín</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/corralon-page.css">
+</head>
+<body>
+    <!-- Fondo con overlay -->
+    <div class="background-overlay"></div>
+    
+    <!-- Navegación simplificada -->
+    <nav id="navbar" class="navbar-simple">
+        <div class="nav-container">
+            <a href="index.html" class="btn-back" title="Volver al inicio">
+                <i class="fas fa-arrow-left"></i>
+            </a>
+            <a href="index.html" class="logo" title="Volver al inicio">
+                <img src="assets/icons/logo.png" alt="Don Agustin Logo">
+            </a>
+            <div class="nav-spacer"></div>
+        </div>
+    </nav>
+
+    <!-- Sección Productos del Corralón -->
+    <section id="corralon-productos">
+        <div class="productos-container">
+            <div class="productos-header">
+                <h1 class="productos-title">Corralón y Ferretería</h1>
+                <p class="productos-subtitle">Materiales de construcción de primera calidad para tu obra</p>
+            </div>
+            
+            <!-- Filtros de categorías -->
+            <div class="productos-filtros">
+                <button class="filtro-btn active" data-filter="todos">
+                    <i class="fas fa-th-large"></i>
+                    <span>Todos</span>
+                </button>
+                <button class="filtro-btn" data-filter="obra-gruesa">
+                    <i class="fas fa-cube"></i>
+                    <span>Obra Gruesa</span>
+                </button>
+                <button class="filtro-btn" data-filter="obra-fina">
+                    <i class="fas fa-paint-roller"></i>
+                    <span>Obra Fina</span>
+                </button>
+                <button class="filtro-btn" data-filter="hierros">
+                    <i class="fas fa-link"></i>
+                    <span>Hierros</span>
+                </button>
+                <button class="filtro-btn" data-filter="ferreteria">
+                    <i class="fas fa-wrench"></i>
+                    <span>Ferretería</span>
+                </button>
+                <button class="filtro-btn" data-filter="representantes">
+                    <i class="fas fa-award"></i>
+                    <span>Representantes</span>
+                </button>
+            </div>
+
+            <!-- Grid de productos -->
+            <div class="productos-grid">
+                <!-- OBRA GRUESA -->
+                <div class="producto-card" data-category="obra-gruesa">
+                    <div class="card-image-wrapper">
+                        <img src="assets/images/materiales_obras_gruesa.jpg" alt="Cemite" class="card-image">
+                        <div class="card-overlay">
+                            <span class="card-linea">Obra Gruesa</span>
+                        </div>
+                        <span class="card-badge obra-gruesa">Obra Gruesa</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Cemento</h3>
+                        <p class="card-description">Cemento portland de las mejores marcas. Bolsas de 50kg.</p>
+                        <div class="card-specs">
+                            <span><i class="fas fa-box"></i> 50kg</span>
+                            <span><i class="fas fa-check"></i> Stock</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="producto-card" data-category="obra-gruesa">
+                    <div class="card-image-wrapper">
+                        <img src="assets/images/materiales_obras_gruesa.jpg" alt="Ladrillos" class="card-image">
+                        <div class="card-overlay">
+                            <span class="card-linea">Obra Gruesa</span>
+                        </div>
+                        <span class="card-badge obra-gruesa">Obra Gruesa</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Ladrillos Huecos</h3>
+                        <p class="card-description">Ladrillos huecos 8x18x33 y 12x18x33. Precio por millar.</p>
+                        <div class="card-specs">
+                            <span><i class="fas fa-cubes"></i> Por millar</span>
+                            <span><i class="fas fa-check"></i> Stock</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="producto-card" data-category="obra-gruesa">
+                    <div class="card-image-wrapper">
+                        <img src="assets/images/materiales_obras_gruesa.jpg" alt="Bloques" class="card-image">
+                        <div class="card-overlay">
+                            <span class="card-linea">Obra Gruesa</span>
+                        </div>
+                        <span class="card-badge obra-gruesa">Obra Gruesa</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Bloques de Hormigón</h3>
+                        <p class="card-description">Bloques 13x19x39 y 19x19x39. Alta resistencia.</p>
+                        <div class="card-specs">
+                            <span><i class="fas fa-cubes"></i> Por unidad</span>
+                            <span><i class="fas fa-check"></i> Stock</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="producto-card" data-category="obra-gruesa">
+                    <div class="card-image-wrapper">
+                        <img src="assets/images/materiales_obras_gruesa.jpg" alt="Arena" class="card-image">
+                        <div class="card-overlay">
+                            <span class="card-linea">Obra Gruesa</span>
+                        </div>
+                        <span class="card-badge obra-gruesa">Obra Gruesa</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Arena y Piedra</h3>
+                        <p class="card-description">Arena gruesa, fina y piedra partida. Venta por metro cúbico.</p>
+                        <div class="card-specs">
+                            <span><i class="fas fa-truck"></i> Por m³</span>
+                            <span><i class="fas fa-check"></i> Envío</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="producto-card" data-category="obra-gruesa">
+                    <div class="card-image-wrapper">
+                        <img src="assets/images/materiales_obras_gruesa.jpg" alt="Cal" class="card-image">
+                        <div class="card-overlay">
+                            <span class="card-linea">Obra Gruesa</span>
+                        </div>
+                        <span class="card-badge obra-gruesa">Obra Gruesa</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Cal</h3>
+                        <p class="card-description">Cal hidratada y cal viva. Bolsas de 25kg.</p>
+                        <div class="card-specs">
+                            <span><i class="fas fa-box"></i> 25kg</span>
+                            <span><i class="fas fa-check"></i> Stock</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="producto-card" data-category="obra-gruesa">
+                    <div class="card-image-wrapper">
+                        <img src="assets/images/materiales_obras_gruesa.jpg" alt="Viguetas" class="card-image">
+                        <div class="card-overlay">
+                            <span class="card-linea">Obra Gruesa</span>
+                        </div>
+                        <span class="card-badge obra-gruesa">Obra Gruesa</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Viguetas y Bovedillas</h3>
+                        <p class="card-description">Sistema de losa con viguetas pretensadas y bovedillas.</p>
+                        <div class="card-specs">
+                            <span><i class="fas fa-ruler"></i> A medida</span>
+                            <span><i class="fas fa-check"></i> Pedido</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- OBRA FINA -->
+                <div class="producto-card" data-category="obra-fina">
+                    <div class="card-image-wrapper">
+                        <img src="assets/images/materiales_obras_fina.jpg" alt="Cerámicos" class="card-image">
+                        <div class="card-overlay">
+                            <span class="card-linea">Obra Fina</span>
+                        </div>
+                        <span class="card-badge obra-fina">Obra Fina</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Cerámicos</h3>
+                        <p class="card-description">Pisos y revestimientos cerámicos de primera calidad.</p>
+                        <div class="card-specs">
+                            <span><i class="fas fa-th"></i> Por m²</span>
+                            <span><i class="fas fa-check"></i> Stock</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="producto-card" data-category="obra-fina">
+                    <div class="card-image-wrapper">
+                        <img src="assets/images/materiales_obras_fina.jpg" alt="Porcelanatos" class="card-image">
+                        <div class="card-overlay">
+                            <span class="card-linea">Obra Fina</span>
+                        </div>
+                        <span class="card-badge obra-fina">Obra Fina</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Porcelanatos</h3>
+                        <p class="card-description">Porcelanatos nacionales e importados. Varios diseños.</p>
+                        <div class="card-specs">
+                            <span><i class="fas fa-th"></i> Por m²</span>
+                            <span><i class="fas fa-star"></i> Premium</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="producto-card" data-category="obra-fina">
+                    <div class="card-image-wrapper">
+                        <img src="assets/images/materiales_obras_fina.jpg" alt="Pegamentos" class="card-image">
+                        <div class="card-overlay">
+                            <span class="card-linea">Obra Fina</span>
+                        </div>
+                        <span class="card-badge obra-fina">Obra Fina</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Pegamentos</h3>
+                        <p class="card-description">Pegamentos para cerámicos, porcelanatos y piedras.</p>
+                        <div class="card-specs">
+                            <span><i class="fas fa-box"></i> 30kg</span>
+                            <span><i class="fas fa-check"></i> Stock</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="producto-card" data-category="obra-fina">
+                    <div class="card-image-wrapper">
+                        <img src="assets/images/materiales_obras_fina.jpg" alt="Pinturas" class="card-image">
+                        <div class="card-overlay">
+                            <span class="card-linea">Obra Fina</span>
+                        </div>
+                        <span class="card-badge obra-fina">Obra Fina</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Pinturas</h3>
+                        <p class="card-description">Pinturas látex, esmaltes sintéticos y barnices.</p>
+                        <div class="card-specs">
+                            <span><i class="fas fa-fill-drip"></i> Varios</span>
+                            <span><i class="fas fa-palette"></i> Colores</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="producto-card" data-category="obra-fina">
+                    <div class="card-image-wrapper">
+                        <img src="assets/images/materiales_obras_fina.jpg" alt="Pastinas" class="card-image">
+                        <div class="card-overlay">
+                            <span class="card-linea">Obra Fina</span>
+                        </div>
+                        <span class="card-badge obra-fina">Obra Fina</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Pastinas y Selladores</h3>
+                        <p class="card-description">Pastinas para juntas y selladores de silicona.</p>
+                        <div class="card-specs">
+                            <span><i class="fas fa-box"></i> 5kg</span>
+                            <span><i class="fas fa-palette"></i> Colores</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="producto-card" data-category="obra-fina">
+                    <div class="card-image-wrapper">
+                        <img src="assets/images/materiales_obras_fina.jpg" alt="Yeso" class="card-image">
+                        <div class="card-overlay">
+                            <span class="card-linea">Obra Fina</span>
+                        </div>
+                        <span class="card-badge obra-fina">Obra Fina</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Yeso y Enduido</h3>
+                        <p class="card-description">Yeso de construcción y enduido plástico para paredes.</p>
+                        <div class="card-specs">
+                            <span><i class="fas fa-box"></i> 40kg</span>
+                            <span><i class="fas fa-check"></i> Stock</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- HIERROS -->
+                <div class="producto-card" data-category="hierros">
+                    <div class="card-image-wrapper">
+                        <img src="assets/images/materiales_hierro.jpg" alt="Hierro de construcción" class="card-image">
+                        <div class="card-overlay">
+                            <span class="card-linea">Hierros</span>
+                        </div>
+                        <span class="card-badge hierros">Hierro</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Barras de Acero</h3>
+                        <p class="card-description">Hierros del 6 al 20mm. Barras de 12 metros.</p>
+                        <div class="card-specs">
+                            <span><i class="fas fa-ruler"></i> 12m</span>
+                            <span><i class="fas fa-check"></i> Stock</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="producto-card" data-category="hierros">
+                    <div class="card-image-wrapper">
+                        <img src="assets/images/materiales_hierro.jpg" alt="Estribos" class="card-image">
+                        <div class="card-overlay">
+                            <span class="card-linea">Hierros</span>
+                        </div>
+                        <span class="card-badge hierros">Hierro</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Estribos</h3>
+                        <p class="card-description">Estribos pre-doblados de varios tamaños.</p>
+                        <div class="card-specs">
+                            <span><i class="fas fa-shapes"></i> Varios</span>
+                            <span><i class="fas fa-check"></i> Stock</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="producto-card" data-category="hierros">
+                    <div class="card-image-wrapper">
+                        <img src="assets/images/materiales_hierro.jpg" alt="Alambre" class="card-image">
+                        <div class="card-overlay">
+                            <span class="card-linea">Hierros</span>
+                        </div>
+                        <span class="card-badge hierros">Hierro</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Alambre Negro</h3>
+                        <p class="card-description">Alambre de atar Nº 17 y Nº 14. Rollos de 25kg.</p>
+                        <div class="card-specs">
+                            <span><i class="fas fa-weight-hanging"></i> 25kg</span>
+                            <span><i class="fas fa-check"></i> Stock</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="producto-card" data-category="hierros">
+                    <div class="card-image-wrapper">
+                        <img src="assets/images/materiales_hierro.jpg" alt="Chapas" class="card-image">
+                        <div class="card-overlay">
+                            <span class="card-linea">Hierros</span>
+                        </div>
+                        <span class="card-badge hierros">Hierro</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Chapas</h3>
+                        <p class="card-description">Chapas galvanizadas, negras y acanaladas.</p>
+                        <div class="card-specs">
+                            <span><i class="fas fa-ruler"></i> A medida</span>
+                            <span><i class="fas fa-check"></i> Stock</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="producto-card" data-category="hierros">
+                    <div class="card-image-wrapper">
+                        <img src="assets/images/materiales_hierro.jpg" alt="Perfiles" class="card-image">
+                        <div class="card-overlay">
+                            <span class="card-linea">Hierros</span>
+                        </div>
+                        <span class="card-badge hierros">Hierro</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Perfiles</h3>
+                        <p class="card-description">Ángulos, planchuelas, tubos y caños estructurales.</p>
+                        <div class="card-specs">
+                            <span><i class="fas fa-ruler"></i> 6m</span>
+                            <span><i class="fas fa-check"></i> Stock</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="producto-card" data-category="hierros">
+                    <div class="card-image-wrapper">
+                        <img src="assets/images/materiales_hierro.jpg" alt="Clavos" class="card-image">
+                        <div class="card-overlay">
+                            <span class="card-linea">Hierros</span>
+                        </div>
+                        <span class="card-badge hierros">Hierro</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Clavos</h3>
+                        <p class="card-description">Clavos de punta París de todas las medidas.</p>
+                        <div class="card-specs">
+                            <span><i class="fas fa-box"></i> Por kg</span>
+                            <span><i class="fas fa-check"></i> Stock</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FERRETERÍA -->
+                <div class="producto-card" data-category="ferreteria">
+                    <div class="card-image-wrapper">
+                        <img src="assets/images/materiales_obras_fina.jpg" alt="Herramientas" class="card-image">
+                        <div class="card-overlay">
+                            <span class="card-linea">Ferretería</span>
+                        </div>
+                        <span class="card-badge ferreteria">Ferretería</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Herramientas Manuales</h3>
+                        <p class="card-description">Martillos, destornilladores, llaves y más.</p>
+                        <div class="card-specs">
+                            <span><i class="fas fa-tools"></i> Variedad</span>
+                            <span><i class="fas fa-check"></i> Stock</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="producto-card" data-category="ferreteria">
+                    <div class="card-image-wrapper">
+                        <img src="assets/images/materiales_obras_fina.jpg" alt="Eléctricas" class="card-image">
+                        <div class="card-overlay">
+                            <span class="card-linea">Ferretería</span>
+                        </div>
+                        <span class="card-badge ferreteria">Ferretería</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Herramientas Eléctricas</h3>
+                        <p class="card-description">Taladros, amoladoras, sierras y más.</p>
+                        <div class="card-specs">
+                            <span><i class="fas fa-plug"></i> 220V</span>
+                            <span><i class="fas fa-check"></i> Garantía</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="producto-card" data-category="ferreteria">
+                    <div class="card-image-wrapper">
+                        <img src="assets/images/materiales_obras_fina.jpg" alt="Tornillos" class="card-image">
+                        <div class="card-overlay">
+                            <span class="card-linea">Ferretería</span>
+                        </div>
+                        <span class="card-badge ferreteria">Ferretería</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Tornillería</h3>
+                        <p class="card-description">Tornillos, tuercas, arandelas y bulones.</p>
+                        <div class="card-specs">
+                            <span><i class="fas fa-cog"></i> Variedad</span>
+                            <span><i class="fas fa-check"></i> Stock</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="producto-card" data-category="ferreteria">
+                    <div class="card-image-wrapper">
+                        <img src="assets/images/materiales_obras_fina.jpg" alt="Electricidad" class="card-image">
+                        <div class="card-overlay">
+                            <span class="card-linea">Ferretería</span>
+                        </div>
+                        <span class="card-badge ferreteria">Ferretería</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Electricidad</h3>
+                        <p class="card-description">Cables, interruptores, enchufes y tableros.</p>
+                        <div class="card-specs">
+                            <span><i class="fas fa-bolt"></i> Variedad</span>
+                            <span><i class="fas fa-check"></i> Stock</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="producto-card" data-category="ferreteria">
+                    <div class="card-image-wrapper">
+                        <img src="assets/images/materiales_obras_fina.jpg" alt="Plomería" class="card-image">
+                        <div class="card-overlay">
+                            <span class="card-linea">Ferretería</span>
+                        </div>
+                        <span class="card-badge ferreteria">Ferretería</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Plomería</h3>
+                        <p class="card-description">Caños, conexiones, griferías y accesorios.</p>
+                        <div class="card-specs">
+                            <span><i class="fas fa-tint"></i> Variedad</span>
+                            <span><i class="fas fa-check"></i> Stock</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="producto-card" data-category="ferreteria">
+                    <div class="card-image-wrapper">
+                        <img src="assets/images/materiales_obras_fina.jpg" alt="Cerraduras" class="card-image">
+                        <div class="card-overlay">
+                            <span class="card-linea">Ferretería</span>
+                        </div>
+                        <span class="card-badge ferreteria">Ferretería</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Cerraduras</h3>
+                        <p class="card-description">Cerraduras, candados, picaportes y bisagras.</p>
+                        <div class="card-specs">
+                            <span><i class="fas fa-lock"></i> Seguridad</span>
+                            <span><i class="fas fa-check"></i> Stock</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- REPRESENTANTES -->
+                <div class="producto-card featured" data-category="representantes">
+                    <div class="card-image-wrapper">
+                        <img src="assets/images/perfil_c.jpg" alt="Perfil C" class="card-image">
+                        <div class="card-overlay">
+                            <span class="card-linea">Representantes Directos</span>
+                        </div>
+                        <span class="card-badge representantes">Representante</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Perfil C Galvanizado</h3>
+                        <p class="card-description">Somos representantes directos. Precios de fábrica.</p>
+                        <div class="card-specs">
+                            <span><i class="fas fa-ruler"></i> Varios</span>
+                            <span><i class="fas fa-award"></i> Directo</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="producto-card featured" data-category="representantes">
+                    <div class="card-image-wrapper">
+                        <img src="assets/images/malla_electrosoldada.jpg" alt="Malla Electrosoldada" class="card-image">
+                        <div class="card-overlay">
+                            <span class="card-linea">Representantes Directos</span>
+                        </div>
+                        <span class="card-badge representantes">Representante</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Malla Electrosoldada</h3>
+                        <p class="card-description">Representantes directos con stock permanente.</p>
+                        <div class="card-specs">
+                            <span><i class="fas fa-th"></i> Varios</span>
+                            <span><i class="fas fa-award"></i> Directo</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="producto-card featured" data-category="representantes">
+                    <div class="card-image-wrapper">
+                        <img src="assets/images/materiales_hierro.jpg" alt="Perfiles Estructurales" class="card-image">
+                        <div class="card-overlay">
+                            <span class="card-linea">Representantes Directos</span>
+                        </div>
+                        <span class="card-badge representantes">Representante</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Perfiles Estructurales</h3>
+                        <p class="card-description">IPN, UPN y doble T. Precios mayoristas.</p>
+                        <div class="card-specs">
+                            <span><i class="fas fa-industry"></i> Fábrica</span>
+                            <span><i class="fas fa-award"></i> Directo</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="producto-card featured" data-category="representantes">
+                    <div class="card-image-wrapper">
+                        <img src="assets/images/materiales_hierro.jpg" alt="Caños Estructurales" class="card-image">
+                        <div class="card-overlay">
+                            <span class="card-linea">Representantes Directos</span>
+                        </div>
+                        <span class="card-badge representantes">Representante</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Caños Estructurales</h3>
+                        <p class="card-description">Caños redondos, cuadrados y rectangulares.</p>
+                        <div class="card-specs">
+                            <span><i class="fas fa-ruler"></i> 6m</span>
+                            <span><i class="fas fa-award"></i> Directo</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sección de contacto -->
+            <div class="productos-contacto">
+                <div class="contacto-content">
+                    <h3><i class="fas fa-truck-loading"></i> ¿Necesitás materiales para tu obra?</h3>
+                    <p>Hacemos envíos a toda la zona. Consultá precios y disponibilidad</p>
+                    <a href="index.html#contacto" class="btn-contacto">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>Pedir Presupuesto</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
+

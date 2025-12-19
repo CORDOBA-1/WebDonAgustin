@@ -1,0 +1,545 @@
+/* Página de Proyectos de Aberturas */
+
+#aberturas-proyectos {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    min-height: 100vh;
+    padding: 120px 20px 80px;
+    position: relative;
+    overflow: hidden;
+}
+
+#aberturas-proyectos::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 80%, rgba(94, 129, 172, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(129, 178, 154, 0.08) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+#aberturas-proyectos::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+    background-size: 50px 50px;
+    pointer-events: none;
+}
+
+.proyectos-container {
+    width: 100%;
+    padding: 0 40px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    box-sizing: border-box;
+}
+
+/* Header */
+.proyectos-header {
+    text-align: center;
+    margin-bottom: 50px;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.proyectos-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 15px;
+    letter-spacing: -0.5px;
+    text-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+.proyectos-subtitle {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.15rem;
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Filtros */
+.proyectos-filtros {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+    animation: fadeInUp 0.8s ease-out 0.1s both;
+}
+
+.proyectos-filtros .filtro-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    border-radius: 50px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(5px);
+}
+
+.proyectos-filtros .filtro-btn i {
+    font-size: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.proyectos-filtros .filtro-btn:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+    color: #ffffff;
+}
+
+.proyectos-filtros .filtro-btn:hover i {
+    transform: scale(1.15);
+}
+
+.proyectos-filtros .filtro-btn.active {
+    background: linear-gradient(135deg, #e94560 0%, #c23a51 100%);
+    border-color: transparent;
+    color: #ffffff;
+    box-shadow: 0 6px 25px rgba(233, 69, 96, 0.4);
+}
+
+.proyectos-filtros .filtro-btn.active:hover {
+    background: linear-gradient(135deg, #d13a54 0%, #b03347 100%);
+}
+
+/* Grid de proyectos */
+.proyectos-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    margin-bottom: 70px;
+}
+
+/* Cards de proyectos */
+.proyecto-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    animation: fadeInUp 0.6s ease-out both;
+}
+
+.proyecto-card:nth-child(1) { animation-delay: 0.05s; }
+.proyecto-card:nth-child(2) { animation-delay: 0.1s; }
+.proyecto-card:nth-child(3) { animation-delay: 0.15s; }
+.proyecto-card:nth-child(4) { animation-delay: 0.2s; }
+.proyecto-card:nth-child(5) { animation-delay: 0.25s; }
+.proyecto-card:nth-child(6) { animation-delay: 0.3s; }
+
+.proyecto-card:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.proyecto-card.hidden {
+    display: none;
+}
+
+/* Imagen de la card */
+.proyecto-card .card-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+}
+
+.proyecto-card .card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.proyecto-card:hover .card-image {
+    transform: scale(1.1);
+}
+
+.proyecto-card .card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, transparent 0%, rgba(26, 26, 46, 0.9) 100%);
+    display: flex;
+    align-items: flex-end;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.proyecto-card:hover .card-overlay {
+    opacity: 1;
+}
+
+.card-linea {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #ffffff;
+    background: rgba(233, 69, 96, 0.9);
+    padding: 6px 14px;
+    border-radius: 20px;
+}
+
+/* Badges por categoría */
+.proyecto-card .card-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding: 6px 14px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+    z-index: 2;
+}
+
+.card-badge.ventanas {
+    background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+    color: #ffffff;
+}
+
+.card-badge.puertas {
+    background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+    color: #ffffff;
+}
+
+.card-badge.corredizas {
+    background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%);
+    color: #ffffff;
+}
+
+.card-badge.mamparas {
+    background: linear-gradient(135deg, #1abc9c 0%, #16a085 100%);
+    color: #ffffff;
+}
+
+.card-badge.frentes {
+    background: linear-gradient(135deg, #f39c12 0%, #d68910 100%);
+    color: #ffffff;
+}
+
+/* Contenido de la card */
+.proyecto-card .card-content {
+    padding: 24px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.proyecto-card .card-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 10px;
+    line-height: 1.3;
+}
+
+.proyecto-card .card-description {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.6;
+    margin-bottom: 15px;
+    flex-grow: 1;
+}
+
+.card-specs {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.card-specs span {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.08);
+    padding: 5px 12px;
+    border-radius: 15px;
+}
+
+.card-specs span i {
+    color: #4ecca3;
+    font-size: 0.75rem;
+}
+
+/* Sección de contacto */
+.proyectos-contacto {
+    background: linear-gradient(135deg, rgba(233, 69, 96, 0.15) 0%, rgba(233, 69, 96, 0.05) 100%);
+    border: 1px solid rgba(233, 69, 96, 0.3);
+    border-radius: 24px;
+    padding: 50px 40px;
+    text-align: center;
+    animation: fadeInUp 0.8s ease-out 0.4s both;
+}
+
+.contacto-content h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.contacto-content h3 i {
+    color: #e94560;
+}
+
+.contacto-content p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 30px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-contacto {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 36px;
+    background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 50px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 30px rgba(37, 211, 102, 0.35);
+}
+
+.btn-contacto:hover {
+    background: linear-gradient(135deg, #128C7E 0%, #075E54 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 40px rgba(37, 211, 102, 0.45);
+}
+
+.btn-contacto i {
+    font-size: 1.2rem;
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .proyectos-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .proyectos-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    #aberturas-proyectos {
+        padding: 90px 12px 50px !important;
+        min-height: auto !important;
+    }
+    
+    .proyectos-container {
+        padding: 0 !important;
+    }
+    
+    .proyectos-header {
+        margin-bottom: 25px;
+    }
+    
+    .proyectos-title {
+        font-size: 1.8rem;
+        margin-bottom: 8px;
+    }
+    
+    .proyectos-subtitle {
+        font-size: 0.9rem;
+        padding: 0;
+        line-height: 1.4;
+    }
+    
+    /* Filtros compactos */
+    .proyectos-filtros {
+        gap: 6px;
+        margin-bottom: 20px;
+        padding: 0 5px;
+    }
+    
+    .proyectos-filtros .filtro-btn {
+        padding: 8px 12px;
+        font-size: 0.8rem;
+        border-radius: 25px;
+        border-width: 1px;
+    }
+    
+    .proyectos-filtros .filtro-btn span {
+        display: none;
+    }
+    
+    .proyectos-filtros .filtro-btn i {
+        font-size: 1rem;
+    }
+    
+    /* Grid 2 columnas */
+    .proyectos-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px !important;
+        margin-bottom: 30px;
+    }
+    
+    /* Cards compactas */
+    .proyecto-card {
+        border-radius: 14px;
+    }
+    
+    .proyecto-card .card-image-wrapper {
+        height: 100px;
+    }
+    
+    .proyecto-card .card-badge {
+        padding: 4px 8px;
+        font-size: 0.55rem;
+        top: 8px;
+        left: 8px;
+    }
+    
+    .proyecto-card .card-overlay {
+        display: none;
+    }
+    
+    .proyecto-card .card-content {
+        padding: 12px;
+    }
+    
+    .proyecto-card .card-title {
+        font-size: 0.85rem;
+        margin-bottom: 5px;
+        line-height: 1.2;
+    }
+    
+    .proyecto-card .card-description {
+        display: none;
+    }
+    
+    .card-specs {
+        display: none;
+    }
+    
+    /* Contacto */
+    .proyectos-contacto {
+        padding: 25px 20px;
+        border-radius: 16px;
+    }
+    
+    .contacto-content h3 {
+        font-size: 1.2rem;
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .contacto-content p {
+        font-size: 0.85rem;
+        margin-bottom: 20px;
+    }
+    
+    .btn-contacto {
+        padding: 12px 28px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 400px) {
+    #aberturas-proyectos {
+        padding: 85px 10px 40px !important;
+    }
+    
+    .proyectos-title {
+        font-size: 1.5rem;
+    }
+    
+    .proyectos-subtitle {
+        font-size: 0.85rem;
+    }
+    
+    .proyectos-filtros .filtro-btn {
+        padding: 7px 10px;
+    }
+    
+    .proyectos-grid {
+        gap: 8px !important;
+    }
+    
+    .proyecto-card .card-image-wrapper {
+        height: 85px;
+    }
+    
+    .proyecto-card .card-content {
+        padding: 10px;
+    }
+    
+    .proyecto-card .card-title {
+        font-size: 0.75rem;
+    }
+    
+    .proyecto-card .card-badge {
+        padding: 3px 6px;
+        font-size: 0.5rem;
+    }
+}
+

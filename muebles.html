@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muebles - Fábrica de Aberturas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+    <!-- Fondo con overlay -->
+    <div class="background-overlay"></div>
+    
+    <!-- Navegación simplificada -->
+    <nav id="navbar" class="navbar-simple">
+        <div class="nav-container">
+            <a href="index.html" class="btn-back" title="Volver al inicio">
+                <i class="fas fa-arrow-left"></i>
+            </a>
+            <a href="index.html" class="logo" title="Volver al inicio">
+                <img src="assets/icons/logo.png" alt="Don Agustin Logo">
+            </a>
+            <div class="nav-spacer"></div>
+        </div>
+    </nav>
+
+    <!-- Sección Muebles -->
+    <section id="muebles" class="muebles-page">
+        <div class="muebles-content">
+            <div class="muebles-header">
+                <h1 class="muebles-title">Nuestra Colección de Muebles</h1>
+                <p class="muebles-subtitle">Descubrí piezas únicas que transformarán tu hogar con estilo y confort</p>
+            </div>
+            
+            <!-- Filtros de categorías -->
+            <div class="muebles-filtros">
+                <button class="filtro-btn active" data-filter="todos">
+                    <i class="fas fa-th-large"></i>
+                    <span>Todos</span>
+                </button>
+                <button class="filtro-btn" data-filter="living">
+                    <i class="fas fa-couch"></i>
+                    <span>Living</span>
+                </button>
+                <button class="filtro-btn" data-filter="comedor">
+                    <i class="fas fa-utensils"></i>
+                    <span>Comedor</span>
+                </button>
+                <button class="filtro-btn" data-filter="dormitorio">
+                    <i class="fas fa-bed"></i>
+                    <span>Dormitorio</span>
+                </button>
+                <button class="filtro-btn" data-filter="jardin">
+                    <i class="fas fa-leaf"></i>
+                    <span>Jardín</span>
+                </button>
+            </div>
+
+            <!-- Grid de muebles -->
+            <div class="muebles-grid">
+                <!-- Living - 6 productos -->
+                <div class="mueble-card" data-category="living">
+                    <div class="card-image-wrapper">
+                        <img src="assets/images/mueble1.jpg" alt="Sofá 3 Cuerpos" class="card-image">
+                        <div class="card-overlay"></div>
+                        <span class="card-badge">Living</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Sofá 3 Cuerpos</h3>
+                        <p class="card-description">Sofá moderno con tapizado premium y estructura reforzada. Ideal para reuniones familiares.</p>
+                    </div>
+                </div>
+                <div class="mueble-card" data-category="living">
+                    <div class="card-image-wrapper">
+                        <img src="assets/images/mueble1.jpg" alt="Sillón Reclinable" class="card-image">
+                        <div class="card-overlay"></div>
+                        <span class="card-badge">Living</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Sillón Reclinable</h3>
+                        <p class="card-description">Máximo confort con sistema de reclinado suave. Perfecto para relajarte después del trabajo.</p>
+                    </div>
+                </div>
+                <div class="mueble-card" data-category="living">
+                    <div class="card-image-wrapper">
+                        <img src="assets/images/mueble1.jpg" alt="Mesa de Centro" class="card-image">
+                        <div class="card-overlay"></div>
+                        <span class="card-badge">Living</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Mesa de Centro</h3>
+                        <p class="card-description">Mesa con diseño contemporáneo en madera maciza. El complemento perfecto para tu sala.</p>
+                    </div>
+                </div>
+                <div class="mueble-card" data-category="living">
+                    <div class="card-image-wrapper">
+                        <img src="assets/images/mueble1.jpg" alt="Rack para TV" class="card-image">
+                        <div class="card-overlay"></div>
+                        <span class="card-badge">Living</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Rack para TV</h3>
+                        <p class="card-description">Mueble funcional con amplios espacios de almacenamiento y pasacables integrado.</p>
+                    </div>
+                </div>
+                <div class="mueble-card" data-category="living">
+                    <div class="card-image-wrapper">
+                        <img src="assets/images/mueble1.jpg" alt="Biblioteca Modular" class="card-image">
+                        <div class="card-overlay"></div>
+                        <span class="card-badge">Living</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Biblioteca Modular</h3>
+                        <p class="card-description">Sistema modular adaptable a cualquier espacio. Organiza tus libros con elegancia.</p>
+                    </div>
+                </div>
+                <div class="mueble-card" data-category="living">
+                    <div class="card-image-wrapper">
+                        <img src="assets/images/mueble1.jpg" alt="Puff Redondo" class="card-image">
+                        <div class="card-overlay"></div>
+                        <span class="card-badge">Living</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Puff Redondo</h3>
+                        <p class="card-description">Asiento versátil y decorativo. Disponible en múltiples colores y texturas.</p>
+                    </div>
+                </div>
+
+                <!-- Comedor - 6 productos -->
+                <div class="mueble-card" data-category="comedor">
+                    <div class="card-image-wrapper">
+                        <img src="assets/images/mueble2.jpg" alt="Mesa Comedor 6 Personas" class="card-image">
+                        <div class="card-overlay"></div>
+                        <span class="card-badge">Comedor</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Mesa 6 Personas</h3>
+                        <p class="card-description">Mesa rectangular de madera nativa con acabado natural. Capacidad para toda la familia.</p>
+                    </div>
+                </div>
+                <div class="mueble-card" data-category="comedor">
+                    <div class="card-image-wrapper">
+                        <img src="assets/images/mueble2.jpg" alt="Set de Sillas" class="card-image">
+                        <div class="card-overlay"></div>
+                        <span class="card-badge">Comedor</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Set de 4 Sillas</h3>
+                        <p class="card-description">Sillas ergonómicas con respaldo curvo y asiento acolchado. Diseño escandinavo.</p>
+                    </div>
+                </div>
+                <div class="mueble-card" data-category="comedor">
+                    <div class="card-image-wrapper">
+                        <img src="assets/images/mueble2.jpg" alt="Aparador" class="card-image">
+                        <div class="card-overlay"></div>
+                        <span class="card-badge">Comedor</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Aparador Clásico</h3>
+                        <p class="card-description">Mueble de guardado con puertas corredizas y estantes ajustables. Estilo atemporal.</p>
+                    </div>
+                </div>
+                <div class="mueble-card" data-category="comedor">
+                    <div class="card-image-wrapper">
+                        <img src="assets/images/mueble2.jpg" alt="Vitrina" class="card-image">
+                        <div class="card-overlay"></div>
+                        <span class="card-badge">Comedor</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Vitrina Exhibidora</h3>
+                        <p class="card-description">Vitrina con puertas de vidrio templado e iluminación LED integrada.</p>
+                    </div>
+                </div>
+                <div class="mueble-card" data-category="comedor">
+                    <div class="card-image-wrapper">
+                        <img src="assets/images/mueble2.jpg" alt="Barra Desayunador" class="card-image">
+                        <div class="card-overlay"></div>
+                        <span class="card-badge">Comedor</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Barra Desayunador</h3>
+                        <p class="card-description">Barra alta con repisa inferior y ganchos para copas. Ideal para espacios reducidos.</p>
+                    </div>
+                </div>
+                <div class="mueble-card" data-category="comedor">
+                    <div class="card-image-wrapper">
+                        <img src="assets/images/mueble2.jpg" alt="Banco Largo" class="card-image">
+                        <div class="card-overlay"></div>
+                        <span class="card-badge">Comedor</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Banco Largo</h3>
+                        <p class="card-description">Banco rústico de madera maciza. Combina funcionalidad con estilo campestre.</p>
+                    </div>
+                </div>
+
+                <!-- Dormitorio - 6 productos -->
+                <div class="mueble-card" data-category="dormitorio">
+                    <div class="card-image-wrapper">
+                        <img src="assets/images/mueble3.jpg" alt="Cama 2 Plazas" class="card-image">
+                        <div class="card-overlay"></div>
+                        <span class="card-badge">Dormitorio</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Cama 2 Plazas</h3>
+                        <p class="card-description">Cama con cabecera tapizada y sommier incluido. Descanso garantizado.</p>
+                    </div>
+                </div>
+                <div class="mueble-card" data-category="dormitorio">
+                    <div class="card-image-wrapper">
+                        <img src="assets/images/mueble3.jpg" alt="Placard 6 Puertas" class="card-image">
+                        <div class="card-overlay"></div>
+                        <span class="card-badge">Dormitorio</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Placard 6 Puertas</h3>
+                        <p class="card-description">Amplio placard con cajones, estantes y barra para perchas. Organización total.</p>
+                    </div>
+                </div>
+                <div class="mueble-card" data-category="dormitorio">
+                    <div class="card-image-wrapper">
+                        <img src="assets/images/mueble3.jpg" alt="Mesa de Luz" class="card-image">
+                        <div class="card-overlay"></div>
+                        <span class="card-badge">Dormitorio</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Mesa de Luz</h3>
+                        <p class="card-description">Mesita de noche con cajón y estante inferior. Diseño minimalista y funcional.</p>
+                    </div>
+                </div>
+                <div class="mueble-card" data-category="dormitorio">
+                    <div class="card-image-wrapper">
+                        <img src="assets/images/mueble3.jpg" alt="Cómoda 5 Cajones" class="card-image">
+                        <div class="card-overlay"></div>
+                        <span class="card-badge">Dormitorio</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Cómoda 5 Cajones</h3>
+                        <p class="card-description">Cómoda elegante con correderas metálicas de cierre suave. Almacenamiento premium.</p>
+                    </div>
+                </div>
+                <div class="mueble-card" data-category="dormitorio">
+                    <div class="card-image-wrapper">
+                        <img src="assets/images/mueble3.jpg" alt="Tocador con Espejo" class="card-image">
+                        <div class="card-overlay"></div>
+                        <span class="card-badge">Dormitorio</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Tocador con Espejo</h3>
+                        <p class="card-description">Tocador vintage con espejo basculante y compartimentos secretos.</p>
+                    </div>
+                </div>
+                <div class="mueble-card" data-category="dormitorio">
+                    <div class="card-image-wrapper">
+                        <img src="assets/images/mueble3.jpg" alt="Zapatero" class="card-image">
+                        <div class="card-overlay"></div>
+                        <span class="card-badge">Dormitorio</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Zapatero Slim</h3>
+                        <p class="card-description">Organizador de calzado con puertas abatibles. Capacidad para 18 pares.</p>
+                    </div>
+                </div>
+
+                <!-- Jardín - 6 productos -->
+                <div class="mueble-card" data-category="jardin">
+                    <div class="card-image-wrapper">
+                        <img src="assets/images/mueble4.jpg" alt="Juego de Jardín" class="card-image">
+                        <div class="card-overlay"></div>
+                        <span class="card-badge">Jardín</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Juego Completo</h3>
+                        <p class="card-description">Set de mesa y 4 sillas en aluminio con cojines impermeables. Listo para exterior.</p>
+                    </div>
+                </div>
+                <div class="mueble-card" data-category="jardin">
+                    <div class="card-image-wrapper">
+                        <img src="assets/images/mueble4.jpg" alt="Reposera" class="card-image">
+                        <div class="card-overlay"></div>
+                        <span class="card-badge">Jardín</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Reposera Plegable</h3>
+                        <p class="card-description">Reposera con múltiples posiciones y parasol integrado. Máximo relax al sol.</p>
+                    </div>
+                </div>
+                <div class="mueble-card" data-category="jardin">
+                    <div class="card-image-wrapper">
+                        <img src="assets/images/mueble4.jpg" alt="Hamaca" class="card-image">
+                        <div class="card-overlay"></div>
+                        <span class="card-badge">Jardín</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Hamaca Paraguaya</h3>
+                        <p class="card-description">Hamaca artesanal de algodón trenzado. Incluye soporte de madera tratada.</p>
+                    </div>
+                </div>
+                <div class="mueble-card" data-category="jardin">
+                    <div class="card-image-wrapper">
+                        <img src="assets/images/mueble4.jpg" alt="Sombrilla" class="card-image">
+                        <div class="card-overlay"></div>
+                        <span class="card-badge">Jardín</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Sombrilla 3 metros</h3>
+                        <p class="card-description">Sombrilla con sistema de inclinación y manivela. Tejido UV resistente.</p>
+                    </div>
+                </div>
+                <div class="mueble-card" data-category="jardin">
+                    <div class="card-image-wrapper">
+                        <img src="assets/images/mueble4.jpg" alt="Banco de Jardín" class="card-image">
+                        <div class="card-overlay"></div>
+                        <span class="card-badge">Jardín</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Banco de Jardín</h3>
+                        <p class="card-description">Banco de madera tratada con respaldo ergonómico. Resistente a la intemperie.</p>
+                    </div>
+                </div>
+                <div class="mueble-card" data-category="jardin">
+                    <div class="card-image-wrapper">
+                        <img src="assets/images/mueble4.jpg" alt="Macetero Grande" class="card-image">
+                        <div class="card-overlay"></div>
+                        <span class="card-badge">Jardín</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Macetero Decorativo</h3>
+                        <p class="card-description">Macetero de fibrocemento con acabado texturizado. Ideal para plantas grandes.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sección de catálogos para descarga -->
+            <div class="catalogos-section">
+                <h3 class="catalogos-title">
+                    <i class="fas fa-download"></i>
+                    Descargá nuestros catálogos
+                </h3>
+                <div class="catalogos">
+                    <a href="assets/documents/living-catalogo.pdf" class="catalogo-boton" download>
+                        <i class="fas fa-couch"></i>
+                        <span>Catálogo Living</span>
+                    </a>
+                    <a href="assets/documents/comedor-catalogo.pdf" class="catalogo-boton" download>
+                        <i class="fas fa-utensils"></i>
+                        <span>Catálogo Comedor</span>
+                    </a>
+                    <a href="assets/documents/dormitorio-catalogo.pdf" class="catalogo-boton" download>
+                        <i class="fas fa-bed"></i>
+                        <span>Catálogo Dormitorio</span>
+                    </a>
+                    <a href="assets/documents/jardin-catalogo.pdf" class="catalogo-boton" download>
+                        <i class="fas fa-leaf"></i>
+                        <span>Catálogo Jardín</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

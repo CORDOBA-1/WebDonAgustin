@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyectos de Aberturas - Fábrica Don Agustín</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/aberturas-page.css">
+</head>
+<body>
+    <!-- Fondo con overlay -->
+    <div class="background-overlay"></div>
+    
+    <!-- Navegación simplificada -->
+    <nav id="navbar" class="navbar-simple">
+        <div class="nav-container">
+            <a href="index.html" class="btn-back" title="Volver al inicio">
+                <i class="fas fa-arrow-left"></i>
+            </a>
+            <a href="index.html" class="logo" title="Volver al inicio">
+                <img src="assets/icons/logo.png" alt="Don Agustin Logo">
+            </a>
+            <div class="nav-spacer"></div>
+        </div>
+    </nav>
+
+    <!-- Sección Proyectos de Aberturas -->
+    <section id="aberturas-proyectos">
+        <div class="proyectos-container">
+            <div class="proyectos-header">
+                <h1 class="proyectos-title">Nuestros Proyectos</h1>
+                <p class="proyectos-subtitle">Explorá nuestra galería de trabajos realizados en aluminio de alta calidad</p>
+            </div>
+            
+            <!-- Filtros de categorías -->
+            <div class="proyectos-filtros">
+                <button class="filtro-btn active" data-filter="todos">
+                    <i class="fas fa-th-large"></i>
+                    <span>Todos</span>
+                </button>
+                <button class="filtro-btn" data-filter="ventanas">
+                    <i class="fas fa-border-all"></i>
+                    <span>Ventanas</span>
+                </button>
+                <button class="filtro-btn" data-filter="puertas">
+                    <i class="fas fa-door-open"></i>
+                    <span>Puertas</span>
+                </button>
+                <button class="filtro-btn" data-filter="corredizas">
+                    <i class="fas fa-arrows-alt-h"></i>
+                    <span>Corredizas</span>
+                </button>
+                <button class="filtro-btn" data-filter="mamparas">
+                    <i class="fas fa-shower"></i>
+                    <span>Mamparas</span>
+                </button>
+                <button class="filtro-btn" data-filter="frentes">
+                    <i class="fas fa-building"></i>
+                    <span>Frentes</span>
+                </button>
+            </div>
+
+            <!-- Grid de proyectos -->
+            <div class="proyectos-grid">
+                <!-- VENTANAS -->
+                <div class="proyecto-card" data-category="ventanas">
+                    <div class="card-image-wrapper">
+                        <img src="assets/images/a30_new.jpg" alt="Ventana Corrediza A30" class="card-image">
+                        <div class="card-overlay">
+                            <span class="card-linea">Línea A30 New</span>
+                        </div>
+                        <span class="card-badge ventanas">Ventana</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Ventana Corrediza 2 Hojas</h3>
+                        <p class="card-description">Ventana corrediza con vidrio DVH, ideal para living y dormitorios.</p>
+                        <div class="card-specs">
+                            <span><i class="fas fa-ruler"></i> 1.50 x 1.20m</span>
+                            <span><i class="fas fa-layer-group"></i> DVH</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="proyecto-card" data-category="ventanas">
+                    <div class="card-image-wrapper">
+                        <img src="assets/images/modena.jpg" alt="Ventana Modena" class="card-image">
+                        <div class="card-overlay">
+                            <span class="card-linea">Línea Modena</span>
+                        </div>
+                        <span class="card-badge ventanas">Ventana</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Ventana Oscilobatiente</h3>
+                        <p class="card-description">Sistema de apertura doble para máxima ventilación y practicidad.</p>
+                        <div class="card-specs">
+                            <span><i class="fas fa-ruler"></i> 1.20 x 1.40m</span>
+                            <span><i class="fas fa-layer-group"></i> DVH</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="proyecto-card" data-category="ventanas">
+                    <div class="card-image-wrapper">
+                        <img src="assets/images/herrero_pesado.JPG" alt="Ventana Herrero" class="card-image">
+                        <div class="card-overlay">
+                            <span class="card-linea">Herrero Pesado</span>
+                        </div>
+                        <span class="card-badge ventanas">Ventana</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Ventana de Abrir</h3>
+                        <p class="card-description">Ventana tradicional de abrir con mosquitero incluido.</p>
+                        <div class="card-specs">
+                            <span><i class="fas fa-ruler"></i> 1.00 x 1.00m</span>
+                            <span><i class="fas fa-layer-group"></i> Simple</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="proyecto-card" data-category="ventanas">
+                    <div class="card-image-wrapper">
+                        <img src="assets/images/a30_new.jpg" alt="Ventana Paño Fijo" class="card-image">
+                        <div class="card-overlay">
+                            <span class="card-linea">Línea A30 New</span>
+                        </div>
+                        <span class="card-badge ventanas">Ventana</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Paño Fijo Panorámico</h3>
+                        <p class="card-description">Paño fijo de grandes dimensiones para vistas panorámicas.</p>
+                        <div class="card-specs">
+                            <span><i class="fas fa-ruler"></i> 2.00 x 2.40m</span>
+                            <span><i class="fas fa-layer-group"></i> DVH</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="proyecto-card" data-category="ventanas">
+                    <div class="card-image-wrapper">
+                        <img src="assets/images/modena.jpg" alt="Ventana Banderola" class="card-image">
+                        <div class="card-overlay">
+                            <span class="card-linea">Línea Modena</span>
+                        </div>
+                        <span class="card-badge ventanas">Ventana</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Ventana Banderola</h3>
+                        <p class="card-description">Ideal para baños y cocinas, apertura superior para ventilación.</p>
+                        <div class="card-specs">
+                            <span><i class="fas fa-ruler"></i> 0.60 x 0.40m</span>
+                            <span><i class="fas fa-layer-group"></i> Simple</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="proyecto-card" data-category="ventanas">
+                    <div class="card-image-wrapper">
+                        <img src="assets/images/herrero_ekkonal.jpg" alt="Ventana Desplazable" class="card-image">
+                        <div class="card-overlay">
+                            <span class="card-linea">Herrero Ekonal</span>
+                        </div>
+                        <span class="card-badge ventanas">Ventana</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Ventana Desplazable</h3>
+                        <p class="card-description">Sistema económico con apertura desplazable hacia afuera.</p>
+                        <div class="card-specs">
+                            <span><i class="fas fa-ruler"></i> 1.00 x 0.60m</span>
+                            <span><i class="fas fa-layer-group"></i> Simple</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PUERTAS -->
+                <div class="proyecto-card" data-category="puertas">
+                    <div class="card-image-wrapper">
+                        <img src="assets/images/a30_new.jpg" alt="Puerta Principal" class="card-image">
+                        <div class="card-overlay">
+                            <span class="card-linea">Línea A30 New</span>
+                        </div>
+                        <span class="card-badge puertas">Puerta</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Puerta Principal</h3>
+                        <p class="card-description">Puerta de entrada con diseño moderno y cerradura multipunto.</p>
+                        <div class="card-specs">
+                            <span><i class="fas fa-ruler"></i> 0.90 x 2.10m</span>
+                            <span><i class="fas fa-lock"></i> Multipunto</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="proyecto-card" data-category="puertas">
+                    <div class="card-image-wrapper">
+                        <img src="assets/images/modena.jpg" alt="Puerta Balcón" class="card-image">
+                        <div class="card-overlay">
+                            <span class="card-linea">Línea Modena</span>
+                        </div>
+                        <span class="card-badge puertas">Puerta</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Puerta Balcón</h3>
+                        <p class="card-description">Puerta de abrir para acceso a balcones y terrazas.</p>
+                        <div class="card-specs">
+                            <span><i class="fas fa-ruler"></i> 0.80 x 2.00m</span>
+                            <span><i class="fas fa-layer-group"></i> DVH</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="proyecto-card" data-category="puertas">
+                    <div class="card-image-wrapper">
+                        <img src="assets/images/herrero_pesado.JPG" alt="Puerta Doble Hoja" class="card-image">
+                        <div class="card-overlay">
+                            <span class="card-linea">Herrero Pesado</span>
+                        </div>
+                        <span class="card-badge puertas">Puerta</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Puerta Doble Hoja</h3>
+                        <p class="card-description">Puerta de dos hojas para ingresos amplios y garajes.</p>
+                        <div class="card-specs">
+                            <span><i class="fas fa-ruler"></i> 1.60 x 2.10m</span>
+                            <span><i class="fas fa-lock"></i> Reforzada</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="proyecto-card" data-category="puertas">
+                    <div class="card-image-wrapper">
+                        <img src="assets/images/a30_new.jpg" alt="Puerta Pivotante" class="card-image">
+                        <div class="card-overlay">
+                            <span class="card-linea">Línea A30 New</span>
+                        </div>
+                        <span class="card-badge puertas">Puerta</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Puerta Pivotante</h3>
+                        <p class="card-description">Diseño exclusivo con sistema de pivote central oculto.</p>
+                        <div class="card-specs">
+                            <span><i class="fas fa-ruler"></i> 1.20 x 2.40m</span>
+                            <span><i class="fas fa-lock"></i> Premium</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="proyecto-card" data-category="puertas">
+                    <div class="card-image-wrapper">
+                        <img src="assets/images/modena.jpg" alt="Puerta con Vidrio" class="card-image">
+                        <div class="card-overlay">
+                            <span class="card-linea">Línea Modena</span>
+                        </div>
+                        <span class="card-badge puertas">Puerta</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Puerta con Vidrio Lateral</h3>
+                        <p class="card-description">Puerta principal con paño fijo lateral de vidrio.</p>
+                        <div class="card-specs">
+                            <span><i class="fas fa-ruler"></i> 1.30 x 2.10m</span>
+                            <span><i class="fas fa-layer-group"></i> DVH</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="proyecto-card" data-category="puertas">
+                    <div class="card-image-wrapper">
+                        <img src="assets/images/herrero_ekkonal.jpg" alt="Puerta Económica" class="card-image">
+                        <div class="card-overlay">
+                            <span class="card-linea">Herrero Ekonal</span>
+                        </div>
+                        <span class="card-badge puertas">Puerta</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Puerta Interior</h3>
+                        <p class="card-description">Puerta interior económica para divisiones de ambientes.</p>
+                        <div class="card-specs">
+                            <span><i class="fas fa-ruler"></i> 0.70 x 2.00m</span>
+                            <span><i class="fas fa-layer-group"></i> Simple</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CORREDIZAS -->
+                <div class="proyecto-card" data-category="corredizas">
+                    <div class="card-image-wrapper">
+                        <img src="assets/images/a30_new.jpg" alt="Corredera Elevadora" class="card-image">
+                        <div class="card-overlay">
+                            <span class="card-linea">Línea A30 New</span>
+                        </div>
+                        <span class="card-badge corredizas">Corrediza</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Corredera Elevadora</h3>
+                        <p class="card-description">Sistema premium de elevación para grandes paños de vidrio.</p>
+                        <div class="card-specs">
+                            <span><i class="fas fa-ruler"></i> 4.00 x 2.40m</span>
+                            <span><i class="fas fa-layer-group"></i> DVH</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="proyecto-card" data-category="corredizas">
+                    <div class="card-image-wrapper">
+                        <img src="assets/images/modena.jpg" alt="Corrediza 4 Hojas" class="card-image">
+                        <div class="card-overlay">
+                            <span class="card-linea">Línea Modena</span>
+                        </div>
+                        <span class="card-badge corredizas">Corrediza</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Corrediza 4 Hojas</h3>
+                        <p class="card-description">Sistema de 4 hojas para cerramiento de galerías y quinchos.</p>
+                        <div class="card-specs">
+                            <span><i class="fas fa-ruler"></i> 6.00 x 2.20m</span>
+                            <span><i class="fas fa-layer-group"></i> DVH</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="proyecto-card" data-category="corredizas">
+                    <div class="card-image-wrapper">
+                        <img src="assets/images/herrero_pesado.JPG" alt="Corrediza Standard" class="card-image">
+                        <div class="card-overlay">
+                            <span class="card-linea">Herrero Pesado</span>
+                        </div>
+                        <span class="card-badge corredizas">Corrediza</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Corrediza 2 Hojas</h3>
+                        <p class="card-description">Corrediza clásica de 2 hojas para balcones y terrazas.</p>
+                        <div class="card-specs">
+                            <span><i class="fas fa-ruler"></i> 2.00 x 2.00m</span>
+                            <span><i class="fas fa-layer-group"></i> Simple</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="proyecto-card" data-category="corredizas">
+                    <div class="card-image-wrapper">
+                        <img src="assets/images/a30_new.jpg" alt="Corrediza Apilable" class="card-image">
+                        <div class="card-overlay">
+                            <span class="card-linea">Línea A30 New</span>
+                        </div>
+                        <span class="card-badge corredizas">Corrediza</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Corrediza Apilable</h3>
+                        <p class="card-description">Sistema apilable que permite abrir todo el vano.</p>
+                        <div class="card-specs">
+                            <span><i class="fas fa-ruler"></i> 5.00 x 2.40m</span>
+                            <span><i class="fas fa-layer-group"></i> DVH</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="proyecto-card" data-category="corredizas">
+                    <div class="card-image-wrapper">
+                        <img src="assets/images/modena.jpg" alt="Corrediza con Mosquitero" class="card-image">
+                        <div class="card-overlay">
+                            <span class="card-linea">Línea Modena</span>
+                        </div>
+                        <span class="card-badge corredizas">Corrediza</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Corrediza con Mosquitero</h3>
+                        <p class="card-description">Incluye mosquitero corredizo en tercer riel.</p>
+                        <div class="card-specs">
+                            <span><i class="fas fa-ruler"></i> 2.40 x 2.00m</span>
+                            <span><i class="fas fa-bug-slash"></i> Mosquitero</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="proyecto-card" data-category="corredizas">
+                    <div class="card-image-wrapper">
+                        <img src="assets/images/herrero_ekkonal.jpg" alt="Corrediza Económica" class="card-image">
+                        <div class="card-overlay">
+                            <span class="card-linea">Herrero Ekonal</span>
+                        </div>
+                        <span class="card-badge corredizas">Corrediza</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Corrediza Económica</h3>
+                        <p class="card-description">Opción accesible para cerramientos básicos.</p>
+                        <div class="card-specs">
+                            <span><i class="fas fa-ruler"></i> 1.50 x 1.50m</span>
+                            <span><i class="fas fa-layer-group"></i> Simple</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MAMPARAS -->
+                <div class="proyecto-card" data-category="mamparas">
+                    <div class="card-image-wrapper">
+                        <img src="assets/images/a30_new.jpg" alt="Mampara Box Ducha" class="card-image">
+                        <div class="card-overlay">
+                            <span class="card-linea">Línea Premium</span>
+                        </div>
+                        <span class="card-badge mamparas">Mampara</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Box de Ducha</h3>
+                        <p class="card-description">Mampara de vidrio templado para box de ducha esquinero.</p>
+                        <div class="card-specs">
+                            <span><i class="fas fa-ruler"></i> 0.90 x 0.90m</span>
+                            <span><i class="fas fa-shield-alt"></i> Templado</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="proyecto-card" data-category="mamparas">
+                    <div class="card-image-wrapper">
+                        <img src="assets/images/modena.jpg" alt="Mampara Frontal" class="card-image">
+                        <div class="card-overlay">
+                            <span class="card-linea">Línea Modena</span>
+                        </div>
+                        <span class="card-badge mamparas">Mampara</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Mampara Frontal</h3>
+                        <p class="card-description">Mampara frontal corrediza para bañeras y duchas.</p>
+                        <div class="card-specs">
+                            <span><i class="fas fa-ruler"></i> 1.50 x 1.90m</span>
+                            <span><i class="fas fa-shield-alt"></i> Templado</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="proyecto-card" data-category="mamparas">
+                    <div class="card-image-wrapper">
+                        <img src="assets/images/a30_new.jpg" alt="Mampara Rebatible" class="card-image">
+                        <div class="card-overlay">
+                            <span class="card-linea">Línea Premium</span>
+                        </div>
+                        <span class="card-badge mamparas">Mampara</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Mampara Rebatible</h3>
+                        <p class="card-description">Panel rebatible para espacios reducidos.</p>
+                        <div class="card-specs">
+                            <span><i class="fas fa-ruler"></i> 0.80 x 1.90m</span>
+                            <span><i class="fas fa-shield-alt"></i> Templado</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="proyecto-card" data-category="mamparas">
+                    <div class="card-image-wrapper">
+                        <img src="assets/images/modena.jpg" alt="Mampara Fija" class="card-image">
+                        <div class="card-overlay">
+                            <span class="card-linea">Línea Modena</span>
+                        </div>
+                        <span class="card-badge mamparas">Mampara</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Paño Fijo Baño</h3>
+                        <p class="card-description">Panel fijo de vidrio para separación de ducha.</p>
+                        <div class="card-specs">
+                            <span><i class="fas fa-ruler"></i> 1.00 x 2.00m</span>
+                            <span><i class="fas fa-shield-alt"></i> Templado</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FRENTES -->
+                <div class="proyecto-card" data-category="frentes">
+                    <div class="card-image-wrapper">
+                        <img src="assets/images/a30_new.jpg" alt="Frente Comercial" class="card-image">
+                        <div class="card-overlay">
+                            <span class="card-linea">Línea A30 New</span>
+                        </div>
+                        <span class="card-badge frentes">Frente</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Frente Comercial</h3>
+                        <p class="card-description">Frente integral para locales comerciales con puerta de acceso.</p>
+                        <div class="card-specs">
+                            <span><i class="fas fa-ruler"></i> 4.00 x 3.00m</span>
+                            <span><i class="fas fa-layer-group"></i> DVH</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="proyecto-card" data-category="frentes">
+                    <div class="card-image-wrapper">
+                        <img src="assets/images/modena.jpg" alt="Frente Vidriado" class="card-image">
+                        <div class="card-overlay">
+                            <span class="card-linea">Línea Modena</span>
+                        </div>
+                        <span class="card-badge frentes">Frente</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Frente Vidriado</h3>
+                        <p class="card-description">Muro cortina para edificios y oficinas modernas.</p>
+                        <div class="card-specs">
+                            <span><i class="fas fa-ruler"></i> 6.00 x 4.00m</span>
+                            <span><i class="fas fa-layer-group"></i> DVH</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="proyecto-card" data-category="frentes">
+                    <div class="card-image-wrapper">
+                        <img src="assets/images/a30_new.jpg" alt="Cerramiento Galería" class="card-image">
+                        <div class="card-overlay">
+                            <span class="card-linea">Línea A30 New</span>
+                        </div>
+                        <span class="card-badge frentes">Frente</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Cerramiento de Galería</h3>
+                        <p class="card-description">Cierre completo de galería con sistema modular.</p>
+                        <div class="card-specs">
+                            <span><i class="fas fa-ruler"></i> 8.00 x 2.60m</span>
+                            <span><i class="fas fa-layer-group"></i> DVH</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="proyecto-card" data-category="frentes">
+                    <div class="card-image-wrapper">
+                        <img src="assets/images/modena.jpg" alt="Fachada Integral" class="card-image">
+                        <div class="card-overlay">
+                            <span class="card-linea">Línea Modena</span>
+                        </div>
+                        <span class="card-badge frentes">Frente</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Fachada Integral</h3>
+                        <p class="card-description">Diseño integral de fachada con combinación de paños fijos y móviles.</p>
+                        <div class="card-specs">
+                            <span><i class="fas fa-ruler"></i> A medida</span>
+                            <span><i class="fas fa-layer-group"></i> DVH</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sección de contacto -->
+            <div class="proyectos-contacto">
+                <div class="contacto-content">
+                    <h3><i class="fas fa-comments"></i> ¿Tenés un proyecto en mente?</h3>
+                    <p>Contactanos para recibir asesoramiento personalizado y un presupuesto sin cargo</p>
+                    <a href="index.html#contacto" class="btn-contacto">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>Solicitar Presupuesto</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
+

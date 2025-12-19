@@ -1,0 +1,753 @@
+/* Sección Corralón - Diseño Moderno */
+#corralon {
+    background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 50%, #0d0d0d 100%);
+    min-height: 100vh;
+    padding: 100px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+#corralon::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 10% 20%, rgba(230, 0, 0, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(255, 102, 102, 0.05) 0%, transparent 40%);
+    pointer-events: none;
+}
+
+#corralon::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+    background-size: 60px 60px;
+    pointer-events: none;
+}
+
+.corralon-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+/* Header */
+.corralon-header {
+    text-align: center;
+    margin-bottom: 60px;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.corralon-header .header-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, #e60000 0%, #cc0000 100%);
+    padding: 10px 24px;
+    border-radius: 50px;
+    margin-bottom: 25px;
+    box-shadow: 0 8px 30px rgba(230, 0, 0, 0.4);
+}
+
+.corralon-header .header-badge i {
+    font-size: 1rem;
+    color: #ffffff;
+}
+
+.corralon-header .header-badge span {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.corralon-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 20px;
+    letter-spacing: -0.5px;
+    text-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+.corralon-subtitle {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.15rem;
+    color: rgba(255, 255, 255, 0.7);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+/* Grid de cards */
+.corralon-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 25px;
+    margin-bottom: 60px;
+}
+
+/* Cards */
+.corralon-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    animation: fadeInUp 0.8s ease-out both;
+}
+
+.corralon-card:nth-child(1) { animation-delay: 0.1s; }
+.corralon-card:nth-child(2) { animation-delay: 0.2s; }
+.corralon-card:nth-child(3) { animation-delay: 0.3s; }
+.corralon-card:nth-child(4) { animation-delay: 0.4s; }
+.corralon-card:nth-child(5) { animation-delay: 0.5s; }
+
+.corralon-card:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Cards destacadas */
+.corralon-card.featured {
+    border: 2px solid rgba(255, 215, 0, 0.5);
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.08) 0%, rgba(255, 255, 255, 0.05) 100%);
+}
+
+.corralon-card.featured:hover {
+    border-color: rgba(255, 215, 0, 0.8);
+    box-shadow: 0 25px 60px rgba(255, 215, 0, 0.15);
+}
+
+/* Ribbon */
+.corralon-card .card-ribbon {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 14px;
+    background: linear-gradient(135deg, #ffd700 0%, #ffb700 100%);
+    border-radius: 25px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    z-index: 10;
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4);
+}
+
+.corralon-card .card-ribbon i {
+    font-size: 0.75rem;
+}
+
+/* Imagen */
+.corralon-card .card-image {
+    position: relative;
+    width: 100%;
+    height: 160px;
+    overflow: hidden;
+}
+
+.corralon-card .card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.corralon-card:hover .card-image img {
+    transform: scale(1.1);
+}
+
+.corralon-card .card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, transparent 0%, rgba(26, 26, 26, 0.8) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.corralon-card:hover .card-overlay {
+    opacity: 1;
+}
+
+.corralon-card .overlay-icon {
+    width: 50px;
+    height: 50px;
+    background: rgba(230, 0, 0, 0.8);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0.8);
+    transition: transform 0.3s ease;
+}
+
+.corralon-card:hover .overlay-icon {
+    transform: scale(1);
+}
+
+.corralon-card .overlay-icon i {
+    color: #ffffff;
+    font-size: 1.2rem;
+}
+
+/* Cuerpo de la card */
+.corralon-card .card-body {
+    padding: 20px;
+}
+
+.corralon-card .card-icon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #e60000 0%, #cc0000 100%);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    box-shadow: 0 5px 15px rgba(230, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.corralon-card:hover .card-icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.corralon-card .card-icon i {
+    font-size: 1.3rem;
+    color: #ffffff;
+}
+
+.corralon-card .card-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.corralon-card .card-description {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.5;
+}
+
+/* Servicios */
+.corralon-servicios {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 20px;
+    padding: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    margin-bottom: 50px;
+    animation: fadeInUp 0.8s ease-out 0.6s both;
+}
+
+.corralon-servicios .servicio-item {
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.corralon-servicios .servicio-item:hover {
+    transform: translateY(-5px);
+}
+
+.corralon-servicios .servicio-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #e60000 0%, #cc0000 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    box-shadow: 0 10px 30px rgba(230, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.corralon-servicios .servicio-item:hover .servicio-icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.corralon-servicios .servicio-icon i {
+    font-size: 1.8rem;
+    color: #ffffff;
+}
+
+.corralon-servicios .servicio-item h4 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 8px;
+}
+
+.corralon-servicios .servicio-item p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Botón CTA */
+.corralon-cta {
+    text-align: center;
+    animation: fadeInUp 0.8s ease-out 0.7s both;
+}
+
+.btn-ver-productos {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 40px;
+    background: linear-gradient(135deg, #e60000 0%, #cc0000 100%);
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 50px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 30px rgba(230, 0, 0, 0.4);
+    border: 2px solid transparent;
+}
+
+.btn-ver-productos:hover {
+    background: transparent;
+    border-color: #e60000;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 40px rgba(230, 0, 0, 0.5);
+}
+
+.btn-ver-productos i {
+    transition: transform 0.3s ease;
+}
+
+.btn-ver-productos:hover i {
+    transform: translateX(5px);
+}
+
+/* Carrusel de marcas */
+.marcas-section-corralon {
+    margin-top: 60px;
+    margin-bottom: -80px;
+    padding-bottom: 30px;
+    text-align: center;
+    animation: fadeInUp 0.8s ease-out 0.8s both;
+    position: relative;
+}
+
+.marcas-section-corralon .marcas-titulo {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+}
+
+.marcas-section-corralon .marcas-carousel {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 20px 0;
+}
+
+.marcas-section-corralon .marcas-carousel::before,
+.marcas-section-corralon .marcas-carousel::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.marcas-section-corralon .marcas-carousel::before {
+    left: 0;
+    background: linear-gradient(to right, #1a1a1a, transparent);
+}
+
+.marcas-section-corralon .marcas-carousel::after {
+    right: 0;
+    background: linear-gradient(to left, #1a1a1a, transparent);
+}
+
+.marcas-section-corralon .marcas-track {
+    display: flex;
+    gap: 50px;
+    animation: scrollMarcas 25s linear infinite;
+    width: max-content;
+}
+
+.marcas-section-corralon .marcas-track:hover {
+    animation-play-state: paused;
+}
+
+.marcas-section-corralon .marca-item {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 25px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.marcas-section-corralon .marca-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(230, 0, 0, 0.5);
+    transform: scale(1.05);
+}
+
+.marcas-section-corralon .marca-item span {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.6);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.marcas-section-corralon .marca-item:hover span {
+    color: #ffffff;
+}
+
+@keyframes scrollMarcas {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .corralon-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .corralon-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .corralon-servicios {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    #corralon {
+        padding: 50px 12px !important;
+        min-height: auto !important;
+        height: auto !important;
+        display: block !important;
+    }
+    
+    .corralon-container {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 !important;
+    }
+    
+    .corralon-header {
+        margin-bottom: 25px;
+    }
+    
+    .corralon-header .header-badge {
+        padding: 6px 14px;
+        margin-bottom: 12px;
+        box-shadow: 0 4px 15px rgba(230, 0, 0, 0.3);
+    }
+    
+    .corralon-header .header-badge i {
+        font-size: 0.8rem;
+    }
+    
+    .corralon-header .header-badge span {
+        font-size: 0.7rem;
+        letter-spacing: 0.5px;
+    }
+    
+    .corralon-title {
+        font-size: 1.6rem !important;
+        margin-bottom: 8px;
+        letter-spacing: 0;
+    }
+    
+    .corralon-subtitle {
+        font-size: 0.85rem;
+        padding: 0 5px;
+        line-height: 1.4;
+        opacity: 0.85;
+    }
+    
+    /* Grid móvil - 2 columnas para 5 cards, ultima centrada */
+    .corralon-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px !important;
+        margin-bottom: 25px;
+        width: 100% !important;
+    }
+    
+    /* Cards móvil - Sin imagen, solo icono */
+    .corralon-card {
+        width: 100% !important;
+        border-radius: 16px;
+        overflow: hidden;
+        background: rgba(255, 255, 255, 0.08) !important;
+        border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    }
+    
+    /* Cards destacadas - Mantener bordes de colores */
+    .corralon-card.featured {
+        border: 2px solid rgba(255, 215, 0, 0.6) !important;
+        background: linear-gradient(135deg, rgba(255, 215, 0, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%) !important;
+        box-shadow: 0 4px 20px rgba(255, 215, 0, 0.15);
+    }
+    
+    .corralon-card .card-image {
+        display: none !important;
+    }
+    
+    .corralon-card .card-overlay {
+        display: none !important;
+    }
+    
+    /* Ribbon en móvil para cards destacadas */
+    .corralon-card .card-ribbon {
+        display: none !important;
+    }
+    
+    .corralon-card.featured .card-ribbon {
+        display: flex !important;
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        padding: 4px 8px;
+        font-size: 0.5rem;
+        border-radius: 12px;
+        background: linear-gradient(135deg, #ffd700 0%, #ffb700 100%) !important;
+        color: #1a1a2e !important;
+        box-shadow: 0 2px 8px rgba(255, 215, 0, 0.4);
+        z-index: 5;
+    }
+    
+    .corralon-card.featured .card-ribbon i {
+        font-size: 0.5rem;
+    }
+    
+    .corralon-card .card-body {
+        padding: 16px 12px;
+        text-align: center;
+    }
+    
+    .corralon-card .card-icon {
+        width: 50px;
+        height: 50px;
+        margin: 0 auto 10px;
+        border-radius: 14px;
+        box-shadow: 0 6px 20px rgba(230, 0, 0, 0.25);
+    }
+    
+    .corralon-card .card-icon i {
+        font-size: 1.2rem;
+    }
+    
+    .corralon-card .card-title {
+        font-size: 0.85rem;
+        margin-bottom: 0;
+        font-weight: 600;
+        line-height: 1.2;
+    }
+    
+    .corralon-card .card-description {
+        display: none !important;
+    }
+    
+    /* Servicios móvil - Una fila de 4 */
+    .corralon-servicios {
+        display: grid !important;
+        grid-template-columns: repeat(4, 1fr) !important;
+        padding: 15px 10px;
+        gap: 8px;
+        margin-bottom: 20px;
+        border-radius: 16px;
+    }
+    
+    .corralon-servicios .servicio-item {
+        padding: 8px 4px;
+    }
+    
+    .corralon-servicios .servicio-icon {
+        width: 36px;
+        height: 36px;
+        margin-bottom: 6px;
+        box-shadow: 0 4px 12px rgba(230, 0, 0, 0.25);
+    }
+    
+    .corralon-servicios .servicio-icon i {
+        font-size: 0.9rem;
+    }
+    
+    .corralon-servicios .servicio-item h4 {
+        font-size: 0.65rem;
+        margin-bottom: 0;
+        line-height: 1.2;
+    }
+    
+    .corralon-servicios .servicio-item p {
+        display: none !important;
+    }
+    
+    /* CTA móvil */
+    .corralon-cta {
+        margin-top: 15px;
+    }
+    
+    .btn-ver-productos {
+        padding: 12px 24px;
+        font-size: 0.85rem;
+        border-radius: 30px;
+    }
+    
+    /* Marcas móvil */
+    .marcas-section-corralon {
+        margin-top: 25px;
+        margin-bottom: -50px;
+    }
+    
+    .marcas-section-corralon .marcas-titulo {
+        font-size: 0.65rem;
+        margin-bottom: 12px;
+    }
+    
+    .marcas-section-corralon .marcas-track {
+        gap: 15px;
+    }
+    
+    .marcas-section-corralon .marca-item {
+        padding: 6px 10px;
+        border-radius: 6px;
+    }
+    
+    .marcas-section-corralon .marca-item span {
+        font-size: 0.6rem;
+        letter-spacing: 1px;
+    }
+    
+    .marcas-section-corralon .marcas-carousel::before,
+    .marcas-section-corralon .marcas-carousel::after {
+        width: 25px;
+    }
+}
+
+@media (max-width: 400px) {
+    #corralon {
+        padding: 40px 10px !important;
+    }
+    
+    .corralon-title {
+        font-size: 1.4rem !important;
+    }
+    
+    .corralon-subtitle {
+        font-size: 0.8rem;
+    }
+    
+    .corralon-grid {
+        gap: 8px !important;
+    }
+    
+    .corralon-card {
+        border-radius: 12px;
+    }
+    
+    .corralon-card .card-body {
+        padding: 14px 10px;
+    }
+    
+    .corralon-card .card-icon {
+        width: 42px;
+        height: 42px;
+        border-radius: 12px;
+    }
+    
+    .corralon-card .card-icon i {
+        font-size: 1rem;
+    }
+    
+    .corralon-card .card-title {
+        font-size: 0.75rem;
+    }
+    
+    .corralon-servicios {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px;
+    }
+    
+    .corralon-servicios .servicio-icon {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .corralon-servicios .servicio-icon i {
+        font-size: 1rem;
+    }
+    
+    .corralon-servicios .servicio-item h4 {
+        font-size: 0.7rem;
+    }
+}

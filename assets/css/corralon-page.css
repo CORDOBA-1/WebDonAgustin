@@ -1,0 +1,556 @@
+/* Página de Productos del Corralón */
+
+#corralon-productos {
+    background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 50%, #0d0d0d 100%);
+    min-height: 100vh;
+    padding: 120px 20px 80px;
+    position: relative;
+    overflow: hidden;
+}
+
+#corralon-productos::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 80%, rgba(230, 0, 0, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(255, 102, 102, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+#corralon-productos::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+    background-size: 60px 60px;
+    pointer-events: none;
+}
+
+.productos-container {
+    width: 100%;
+    padding: 0 40px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    box-sizing: border-box;
+}
+
+/* Header */
+.productos-header {
+    text-align: center;
+    margin-bottom: 50px;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.productos-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 15px;
+    letter-spacing: -0.5px;
+    text-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+.productos-subtitle {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.15rem;
+    color: rgba(255, 255, 255, 0.7);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Filtros */
+.productos-filtros {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+    animation: fadeInUp 0.8s ease-out 0.1s both;
+}
+
+.productos-filtros .filtro-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    border-radius: 50px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(5px);
+}
+
+.productos-filtros .filtro-btn i {
+    font-size: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.productos-filtros .filtro-btn:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+    color: #ffffff;
+}
+
+.productos-filtros .filtro-btn:hover i {
+    transform: scale(1.15);
+}
+
+.productos-filtros .filtro-btn.active {
+    background: linear-gradient(135deg, #e60000 0%, #cc0000 100%);
+    border-color: transparent;
+    color: #ffffff;
+    box-shadow: 0 6px 25px rgba(230, 0, 0, 0.4);
+}
+
+.productos-filtros .filtro-btn.active:hover {
+    background: linear-gradient(135deg, #cc0000 0%, #aa0000 100%);
+}
+
+/* Grid de productos */
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    margin-bottom: 70px;
+}
+
+/* Cards de productos */
+.producto-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    animation: fadeInUp 0.6s ease-out both;
+}
+
+.producto-card:nth-child(1) { animation-delay: 0.05s; }
+.producto-card:nth-child(2) { animation-delay: 0.1s; }
+.producto-card:nth-child(3) { animation-delay: 0.15s; }
+.producto-card:nth-child(4) { animation-delay: 0.2s; }
+.producto-card:nth-child(5) { animation-delay: 0.25s; }
+.producto-card:nth-child(6) { animation-delay: 0.3s; }
+
+.producto-card:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.producto-card.hidden {
+    display: none;
+}
+
+/* Cards destacadas */
+.producto-card.featured {
+    border: 2px solid rgba(255, 215, 0, 0.5);
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.08) 0%, rgba(255, 255, 255, 0.05) 100%);
+}
+
+.producto-card.featured:hover {
+    border-color: rgba(255, 215, 0, 0.8);
+    box-shadow: 0 25px 60px rgba(255, 215, 0, 0.15);
+}
+
+/* Imagen de la card */
+.producto-card .card-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+}
+
+.producto-card .card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.producto-card:hover .card-image {
+    transform: scale(1.1);
+}
+
+.producto-card .card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, transparent 0%, rgba(26, 26, 26, 0.9) 100%);
+    display: flex;
+    align-items: flex-end;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.producto-card:hover .card-overlay {
+    opacity: 1;
+}
+
+.producto-card .card-linea {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #ffffff;
+    background: rgba(230, 0, 0, 0.9);
+    padding: 6px 14px;
+    border-radius: 20px;
+}
+
+/* Badges por categoría */
+.producto-card .card-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding: 6px 14px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 600;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+    z-index: 2;
+}
+
+.card-badge.obra-gruesa {
+    background: linear-gradient(135deg, #8B4513 0%, #654321 100%);
+    color: #ffffff;
+}
+
+.card-badge.obra-fina {
+    background: linear-gradient(135deg, #9370DB 0%, #7B68EE 100%);
+    color: #ffffff;
+}
+
+.card-badge.hierros {
+    background: linear-gradient(135deg, #708090 0%, #4a5568 100%);
+    color: #ffffff;
+}
+
+.card-badge.ferreteria {
+    background: linear-gradient(135deg, #2196F3 0%, #1976D2 100%);
+    color: #ffffff;
+}
+
+.card-badge.representantes {
+    background: linear-gradient(135deg, #ffd700 0%, #ffb700 100%);
+    color: #1a1a1a;
+}
+
+/* Contenido de la card */
+.producto-card .card-content {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.producto-card .card-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 10px;
+    line-height: 1.3;
+}
+
+.producto-card .card-description {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.5;
+    margin-bottom: 15px;
+    flex-grow: 1;
+}
+
+.card-specs {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.card-specs span {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.08);
+    padding: 5px 10px;
+    border-radius: 15px;
+}
+
+.card-specs span i {
+    color: #e60000;
+    font-size: 0.7rem;
+}
+
+/* Sección de contacto */
+.productos-contacto {
+    background: linear-gradient(135deg, rgba(230, 0, 0, 0.15) 0%, rgba(230, 0, 0, 0.05) 100%);
+    border: 1px solid rgba(230, 0, 0, 0.3);
+    border-radius: 24px;
+    padding: 50px 40px;
+    text-align: center;
+    animation: fadeInUp 0.8s ease-out 0.4s both;
+}
+
+.productos-contacto .contacto-content h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.productos-contacto .contacto-content h3 i {
+    color: #e60000;
+}
+
+.productos-contacto .contacto-content p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 30px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.productos-contacto .btn-contacto {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 36px;
+    background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 50px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 30px rgba(37, 211, 102, 0.35);
+}
+
+.productos-contacto .btn-contacto:hover {
+    background: linear-gradient(135deg, #128C7E 0%, #075E54 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 40px rgba(37, 211, 102, 0.45);
+}
+
+.productos-contacto .btn-contacto i {
+    font-size: 1.2rem;
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .productos-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .productos-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    #corralon-productos {
+        padding: 90px 12px 50px !important;
+        min-height: auto !important;
+    }
+    
+    .productos-container {
+        padding: 0 !important;
+    }
+    
+    .productos-header {
+        margin-bottom: 25px;
+    }
+    
+    .productos-title {
+        font-size: 1.8rem;
+        margin-bottom: 8px;
+    }
+    
+    .productos-subtitle {
+        font-size: 0.9rem;
+        padding: 0;
+        line-height: 1.4;
+    }
+    
+    /* Filtros compactos */
+    .productos-filtros {
+        gap: 6px;
+        margin-bottom: 20px;
+        padding: 0 5px;
+    }
+    
+    .productos-filtros .filtro-btn {
+        padding: 8px 12px;
+        font-size: 0.8rem;
+        border-radius: 25px;
+        border-width: 1px;
+    }
+    
+    .productos-filtros .filtro-btn span {
+        display: none;
+    }
+    
+    .productos-filtros .filtro-btn i {
+        font-size: 1rem;
+    }
+    
+    /* Grid 2 columnas */
+    .productos-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px !important;
+        margin-bottom: 30px;
+    }
+    
+    /* Cards compactas */
+    .producto-card {
+        border-radius: 14px;
+    }
+    
+    .producto-card .card-image-wrapper {
+        height: 90px;
+    }
+    
+    .producto-card .card-badge {
+        padding: 4px 8px;
+        font-size: 0.55rem;
+        top: 8px;
+        left: 8px;
+    }
+    
+    .producto-card .card-overlay {
+        display: none;
+    }
+    
+    .producto-card .card-content {
+        padding: 12px;
+    }
+    
+    .producto-card .card-title {
+        font-size: 0.85rem;
+        margin-bottom: 5px;
+        line-height: 1.2;
+    }
+    
+    .producto-card .card-description {
+        display: none;
+    }
+    
+    .card-specs {
+        display: none;
+    }
+    
+    /* Contacto */
+    .productos-contacto {
+        padding: 25px 20px;
+        border-radius: 16px;
+    }
+    
+    .productos-contacto .contacto-content h3 {
+        font-size: 1.2rem;
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .productos-contacto .contacto-content p {
+        font-size: 0.85rem;
+        margin-bottom: 20px;
+    }
+    
+    .productos-contacto .btn-contacto {
+        padding: 12px 28px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 400px) {
+    #corralon-productos {
+        padding: 85px 10px 40px !important;
+    }
+    
+    .productos-title {
+        font-size: 1.5rem;
+    }
+    
+    .productos-subtitle {
+        font-size: 0.85rem;
+    }
+    
+    .productos-filtros .filtro-btn {
+        padding: 7px 10px;
+    }
+    
+    .productos-grid {
+        gap: 8px !important;
+    }
+    
+    .producto-card .card-image-wrapper {
+        height: 75px;
+    }
+    
+    .producto-card .card-content {
+        padding: 10px;
+    }
+    
+    .producto-card .card-title {
+        font-size: 0.75rem;
+    }
+    
+    .producto-card .card-badge {
+        padding: 3px 6px;
+        font-size: 0.5rem;
+    }
+}
+

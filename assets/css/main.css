@@ -1,0 +1,24 @@
+/* Archivo CSS Principal - Importa todos los estilos */
+
+/* Variables y configuración base */
+@import url('variables.css');
+@import url('reset.css');
+
+/* Layout y estructura */
+@import url('layout.css');
+@import url('navigation.css');
+
+/* Secciones específicas */
+@import url('hero.css');
+@import url('aberturas.css');
+@import url('corralon.css');
+@import url('muebles.css');
+@import url('obras.css');
+@import url('contacto.css');
+@import url('faq.css');
+
+/* Efectos y animaciones */
+@import url('animations.css');
+
+/* Responsive design */
+@import url('responsive.css');

@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Preguntas Frecuentes</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap');
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f7f7f7;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      min-height: 100vh;
+    }
+    .faq-container {
+      width: 60%;
+      max-width: 1000px;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      margin-right: 20px;
+    }
+    .faq-header {
+      background-color: #333;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      border-radius: 15px 15px 0 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .faq-header h1 {
+      margin: 0;
+      font-size: 36px;
+      font-family: 'Roboto Slab', serif; /* Nueva tipografía */
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 2px solid white;
+      animation: typing 2.5s steps(30, end), blink 0.7s step-end infinite; /* Efecto de escritura */
+    }
+    @keyframes typing {
+      from {
+        width: 0;
+      }
+      to {
+        width: 100%;
+      }
+    }
+    @keyframes blink {
+      from, to {
+        border-color: transparent;
+      }
+      50% {
+        border-color: white;
+      }
+    }
+    .categories {
+      display: flex;
+      justify-content: center;
+      background-color: #f9f9f9;
+      padding: 15px 0;
+      gap: 15px;
+    }
+    .categories button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      background-color: #e0e0e0;
+      color: #333;
+      font-size: 14px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      backface-visibility: hidden;
+      transform: translateZ(0);
+    }
+    .categories button:hover {
+      background-color: #d6d6d6;
+      transform: scale(1.05);
+    }
+    .categories button.active {
+      background-color: #4CAF50;
+      color: white;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      transform: scale(1.1);
+    }
+    .faq-section {
+      display: none;
+      padding: 20px;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+    .faq-section.active {
+      display: block;
+      opacity: 1;
+    }
+    .faq-item {
+      margin-bottom: 10px;
+      padding: 5px 15px;
+      border-radius: 10px;
+      background: #f9f9f9;
+      cursor: pointer;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    .faq-item:hover {
+      background-color: #eaeaea;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    .faq-question {
+      font-size: 16px;
+      font-weight: bold;
+      position: relative;
+    }
+    .faq-question::after {
+      content: '+';
+      position: absolute;
+      right: 0;
+      font-size: 18px;
+      transition: transform 0.3s ease;
+    }
+    .faq-item.active .faq-question::after {
+      content: '-';
+      transform: rotate(180deg);
+    }
+    .faq-answer {
+      font-size: 14px;
+      color: #555;
+      margin-top: 10px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease, padding 0.3s ease;
+      padding: 0 10px;
+    }
+    .faq-item.active .faq-answer {
+      max-height: 300px;
+      padding: 10px 10px;
+    }
+    .faq-image {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .faq-image img {
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.5s ease, box-shadow 0.5s ease;
+    }
+    .faq-image img.general {
+      width: 90%;
+      max-width: 500px;
+    }
+    .faq-image img.aberturas, .faq-image img.ferreteria {
+      width: 90%;
+      max-width: 500px;
+    }
+    .faq-image img.zoom {
+      transform: scale(1.1);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    }
+  </style>
+</head>
+<body>
+  <div class="faq-container">
+    <div class="faq-header">
+      <h1>Preguntas Frecuentes</h1>
+    </div>
+
+    <!-- Categorías -->
+    <div class="categories">
+      <button data-category="general" class="active">Preguntas Generales</button>
+      <button data-category="aberturas">Fábrica de Aberturas</button>
+      <button data-category="ferreteria">Ferretería y Corralón</button>
+    </div>
+
+    <!-- Preguntas Generales -->
+    <div class="faq-section active" id="general">
+      <div class="faq-item">
+        <div class="faq-question">¿Cuánto demoramos en contestar por whatsapp?</div>
+        <div class="faq-answer">
+          El tiempo de respuesta es por orden de llegada de los mensajes. En el caso de la fábrica de aberturas, hay que recordar que puede acortar su tiempo de respuesta definiendo características de su pedido al momento de contactarnos (Ej.: línea, color, medidas, proporcionar planos arquitectónicos, etc.).
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">¿Qué métodos de pago trabajamos?</div>
+        <div class="faq-answer">
+          Tarjeta de débito, crédito, transferencia, Mercado Pago y otras billeteras virtuales.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">¿Querés trabajar con nosotros?</div>
+        <div class="faq-answer">
+          Dejanos tu CV al mail de la parte de la empresa donde querés aplicar. Podés encontrar estos en la sección de “Contacto” más abajo.
+        </div>
+      </div>
+    </div>
+
+    <!-- Fábrica de Aberturas -->
+    <div class="faq-section" id="aberturas">
+      <div class="faq-item">
+        <div class="faq-question">¿Qué servicios ofrece la Fábrica de Aberturas?</div>
+        <div class="faq-answer">
+          Ofrece la fabricación de las aberturas, su traslado e instalación. Además del asesoramiento, presupuesto y atención post-venta sin cargo.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">¿Cómo realizamos el envío de las aberturas?</div>
+        <div class="faq-answer">
+          El envío lo realizamos por medio de transportes propios de la empresa.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">¿Cuánto se pueden personalizar mis aberturas?</div>
+        <div class="faq-answer">
+          Tienen un alto grado de personalización, si nuestros modelos actuales no te satisfacen, dirigí tu consulta al WhatsApp y con gusto te asesoramos.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">¿Cuánto demoran en realizarse los pedidos?</div>
+        <div class="faq-answer">
+          La demora depende del propio pedido y la demanda actual. Consultar al momento de la compra.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">¿Qué colores de aluminio anodizado trabajamos?</div>
+        <div class="faq-answer">
+          Los colores que trabajamos son Anodizado Natural, Anodizado Negro y Anodizado Cobre.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">¿Qué colores de aluminio pintado trabajamos?</div>
+        <div class="faq-answer">
+          Los colores en aluminio pintado son muy amplios y trabajamos la mayoría. Los colores más vendidos son Blanco, Negro, Gris y Símil Madera.
+        </div>
+      </div>
+    </div>
+
+    <!-- Ferretería y Corralón -->
+    <div class="faq-section" id="ferreteria">
+      <div class="faq-item">
+        <div class="faq-question">¿Hasta dónde realizamos el envío de los materiales de construcción?</div>
+        <div class="faq-answer">
+          El envío de las mallas electrosoldadas, los perfiles, las chapas, las barras de acero, el cemento y la cal se envían a gran parte de la provincia de Entre Ríos. Siempre consultar al whatsapp.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="faq-image">
+    <img class="general zoom" src="./local-general.jpg" alt="Imagen de la categoría">
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Cambiar de categoría
+      const categoryButtons = document.querySelectorAll(".categories button");
+      const sections = document.querySelectorAll(".faq-section");
+      const image = document.querySelector(".faq-image img");
+
+      categoryButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          categoryButtons.forEach((btn) => btn.classList.remove("active"));
+          button.classList.add("active");
+
+          // Mostrar la sección correspondiente
+          const category = button.getAttribute("data-category");
+          sections.forEach((section) => {
+            section.classList.remove("active");
+            if (section.id === category) {
+              section.classList.add("active");
+            }
+          });
+
+          // Cambiar imagen
+          switch (category) {
+            case "general":
+              image.src = "./local-general.jpg";
+              image.className = "general zoom";
+              break;
+            case "aberturas":
+              image.src = "./fabrica-aberturas.jpg";
+              image.className = "aberturas zoom";
+              break;
+            case "ferreteria":
+              image.src = "./ferreteria-corralon.jpg";
+              image.className = "ferreteria zoom";
+              break;
+          }
+        });
+      });
+
+      // Despliegue de preguntas
+      const faqItems = document.querySelectorAll(".faq-item");
+      faqItems.forEach((item) => {
+        item.addEventListener("click", () => {
+          item.classList.toggle("active");
+        });
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,782 @@
+/* Sección Aberturas - Diseño Moderno */
+#aberturas {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    min-height: 100vh;
+    padding: 100px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+#aberturas::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 80%, rgba(94, 129, 172, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(129, 178, 154, 0.08) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+/* Patrón decorativo */
+#aberturas::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+    background-size: 50px 50px;
+    pointer-events: none;
+}
+
+.aberturas-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+/* Header */
+.aberturas-header {
+    text-align: center;
+    margin-bottom: 60px;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.header-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, #e94560 0%, #c23a51 100%);
+    padding: 10px 24px;
+    border-radius: 50px;
+    margin-bottom: 25px;
+    box-shadow: 0 8px 30px rgba(233, 69, 96, 0.4);
+}
+
+.header-badge i {
+    font-size: 1rem;
+    color: #ffffff;
+}
+
+.header-badge span {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.aberturas-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 20px;
+    letter-spacing: -0.5px;
+    text-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+.aberturas-subtitle {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.15rem;
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+/* Grid de cards */
+.aberturas-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    margin-bottom: 70px;
+}
+
+/* Cards de aberturas */
+.abertura-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    animation: fadeInUp 0.8s ease-out both;
+}
+
+.abertura-card:nth-child(1) { animation-delay: 0.1s; }
+.abertura-card:nth-child(2) { animation-delay: 0.2s; }
+.abertura-card:nth-child(3) { animation-delay: 0.3s; }
+.abertura-card:nth-child(4) { animation-delay: 0.4s; }
+
+.abertura-card:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Cards Premium */
+.abertura-card.premium {
+    border: 2px solid rgba(255, 215, 0, 0.5);
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.08) 0%, rgba(255, 255, 255, 0.05) 100%);
+}
+
+.abertura-card.premium:hover {
+    border-color: rgba(255, 215, 0, 0.8);
+    box-shadow: 0 25px 60px rgba(255, 215, 0, 0.2);
+}
+
+.abertura-card.premium .card-ribbon {
+    background: linear-gradient(135deg, #ffd700 0%, #ffb700 100%);
+    color: #1a1a2e;
+}
+
+/* Cards Recomendado */
+.abertura-card.recommended {
+    border: 2px solid rgba(233, 69, 96, 0.5);
+    background: linear-gradient(135deg, rgba(233, 69, 96, 0.08) 0%, rgba(255, 255, 255, 0.05) 100%);
+}
+
+.abertura-card.recommended:hover {
+    border-color: rgba(233, 69, 96, 0.8);
+    box-shadow: 0 25px 60px rgba(233, 69, 96, 0.2);
+}
+
+.abertura-card.recommended .card-ribbon {
+    background: linear-gradient(135deg, #e94560 0%, #c23a51 100%);
+    color: #ffffff;
+}
+
+/* Ribbon/Badge */
+.card-ribbon {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 14px;
+    border-radius: 25px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    z-index: 10;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.card-ribbon i {
+    font-size: 0.8rem;
+}
+
+/* Imagen de la card */
+.abertura-card .card-image {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.abertura-card .card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.abertura-card:hover .card-image img {
+    transform: scale(1.1);
+}
+
+.abertura-card .card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, transparent 0%, rgba(26, 26, 46, 0.8) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.abertura-card:hover .card-overlay {
+    opacity: 1;
+}
+
+.overlay-icon {
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(5px);
+    transform: scale(0.8);
+    transition: transform 0.3s ease;
+}
+
+.abertura-card:hover .overlay-icon {
+    transform: scale(1);
+}
+
+.overlay-icon i {
+    color: #ffffff;
+    font-size: 1.2rem;
+}
+
+/* Cuerpo de la card */
+.abertura-card .card-body {
+    padding: 25px;
+}
+
+.abertura-card .card-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.card-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.feature {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.feature i {
+    color: #4ecca3;
+    font-size: 0.7rem;
+}
+
+.abertura-card .card-description {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.6;
+}
+
+/* Sección de servicios */
+.aberturas-servicios {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 20px;
+    padding: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    animation: fadeInUp 0.8s ease-out 0.5s both;
+}
+
+.servicio-item {
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.servicio-item:hover {
+    transform: translateY(-5px);
+}
+
+.servicio-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #e94560 0%, #c23a51 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    box-shadow: 0 10px 30px rgba(233, 69, 96, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.servicio-item:hover .servicio-icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.servicio-icon i {
+    font-size: 1.8rem;
+    color: #ffffff;
+}
+
+.servicio-item h4 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 8px;
+}
+
+.servicio-item p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 1.5;
+}
+
+/* Botón CTA */
+.aberturas-cta {
+    text-align: center;
+    margin-top: 50px;
+    animation: fadeInUp 0.8s ease-out 0.6s both;
+}
+
+.btn-ver-proyectos {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 40px;
+    background: linear-gradient(135deg, #e94560 0%, #c23a51 100%);
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 50px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 30px rgba(233, 69, 96, 0.4);
+    border: 2px solid transparent;
+}
+
+.btn-ver-proyectos:hover {
+    background: transparent;
+    border-color: #e94560;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 40px rgba(233, 69, 96, 0.5);
+}
+
+.btn-ver-proyectos i {
+    transition: transform 0.3s ease;
+}
+
+.btn-ver-proyectos:hover i {
+    transform: translateX(5px);
+}
+
+/* Carrusel de marcas */
+.marcas-section {
+    margin-top: 60px;
+    margin-bottom: -80px;
+    padding-bottom: 30px;
+    text-align: center;
+    animation: fadeInUp 0.8s ease-out 0.8s both;
+    position: relative;
+}
+
+.marcas-titulo {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+}
+
+.marcas-carousel {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 20px 0;
+}
+
+.marcas-carousel::before,
+.marcas-carousel::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.marcas-carousel::before {
+    left: 0;
+    background: linear-gradient(to right, #1a1a2e, transparent);
+}
+
+.marcas-carousel::after {
+    right: 0;
+    background: linear-gradient(to left, #1a1a2e, transparent);
+}
+
+.marcas-track {
+    display: flex;
+    gap: 50px;
+    animation: scrollMarcas 25s linear infinite;
+    width: max-content;
+}
+
+.marcas-track:hover {
+    animation-play-state: paused;
+}
+
+.marca-item {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 25px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.marca-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(233, 69, 96, 0.5);
+    transform: scale(1.05);
+}
+
+.marca-item span {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.6);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.marca-item:hover span {
+    color: #ffffff;
+}
+
+@keyframes scrollMarcas {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .aberturas-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .aberturas-servicios {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    #aberturas {
+        padding: 50px 12px !important;
+        min-height: auto !important;
+        height: auto !important;
+        display: block !important;
+    }
+    
+    .aberturas-container {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 !important;
+    }
+    
+    .aberturas-header {
+        margin-bottom: 25px;
+    }
+    
+    .header-badge {
+        padding: 6px 14px;
+        margin-bottom: 12px;
+        box-shadow: 0 4px 15px rgba(233, 69, 96, 0.3);
+    }
+    
+    .header-badge i {
+        font-size: 0.8rem;
+    }
+    
+    .header-badge span {
+        font-size: 0.7rem;
+        letter-spacing: 0.5px;
+    }
+    
+    .aberturas-title {
+        font-size: 1.6rem !important;
+        margin-bottom: 8px;
+        letter-spacing: 0;
+    }
+    
+    .aberturas-subtitle {
+        font-size: 0.85rem;
+        padding: 0 5px;
+        line-height: 1.4;
+        opacity: 0.85;
+    }
+    
+    /* Grid móvil - 2 columnas */
+    .aberturas-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px !important;
+        margin-bottom: 25px;
+        width: 100% !important;
+    }
+    
+    /* Cards móvil - Diseño limpio */
+    .abertura-card {
+        width: 100% !important;
+        border-radius: 16px;
+        overflow: hidden;
+        background: rgba(255, 255, 255, 0.08) !important;
+        border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    }
+    
+    /* Cards destacadas - Mantener bordes de colores */
+    .abertura-card.premium {
+        border: 2px solid rgba(255, 215, 0, 0.6) !important;
+        background: linear-gradient(135deg, rgba(255, 215, 0, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%) !important;
+        box-shadow: 0 4px 20px rgba(255, 215, 0, 0.15);
+    }
+    
+    .abertura-card.recommended {
+        border: 2px solid rgba(233, 69, 96, 0.6) !important;
+        background: linear-gradient(135deg, rgba(233, 69, 96, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%) !important;
+        box-shadow: 0 4px 20px rgba(233, 69, 96, 0.15);
+    }
+    
+    .abertura-card .card-image {
+        height: 90px !important;
+        position: relative;
+    }
+    
+    .abertura-card .card-image img {
+        filter: brightness(0.9);
+    }
+    
+    .abertura-card .card-overlay {
+        display: none !important;
+    }
+    
+    .card-ribbon {
+        padding: 4px 8px;
+        font-size: 0.5rem;
+        top: 6px;
+        right: 6px;
+        border-radius: 12px;
+        gap: 4px;
+        display: flex !important;
+    }
+    
+    .card-ribbon i {
+        font-size: 0.5rem;
+    }
+    
+    /* Colores de ribbons en móvil */
+    .abertura-card.premium .card-ribbon {
+        background: linear-gradient(135deg, #ffd700 0%, #ffb700 100%) !important;
+        color: #1a1a2e !important;
+        box-shadow: 0 2px 8px rgba(255, 215, 0, 0.4);
+    }
+    
+    .abertura-card.recommended .card-ribbon {
+        background: linear-gradient(135deg, #e94560 0%, #c23a51 100%) !important;
+        color: #fff !important;
+        box-shadow: 0 2px 8px rgba(233, 69, 96, 0.4);
+    }
+    
+    .abertura-card .card-body {
+        padding: 10px 12px 14px;
+        text-align: center;
+    }
+    
+    .abertura-card .card-title {
+        font-size: 0.85rem;
+        margin-bottom: 0;
+        font-weight: 600;
+        line-height: 1.2;
+    }
+    
+    .card-features {
+        display: none !important;
+    }
+    
+    .abertura-card .card-description {
+        display: none !important;
+    }
+    
+    /* Servicios móvil - Más compactos */
+    .aberturas-servicios {
+        display: grid !important;
+        grid-template-columns: repeat(4, 1fr) !important;
+        padding: 15px 10px;
+        gap: 8px;
+        margin-bottom: 20px;
+        border-radius: 16px;
+    }
+    
+    .servicio-item {
+        padding: 8px 4px;
+    }
+    
+    .servicio-icon {
+        width: 36px;
+        height: 36px;
+        margin-bottom: 6px;
+        box-shadow: 0 4px 12px rgba(233, 69, 96, 0.25);
+    }
+    
+    .servicio-icon i {
+        font-size: 0.9rem;
+    }
+    
+    .servicio-item h4 {
+        font-size: 0.65rem;
+        margin-bottom: 0;
+        line-height: 1.2;
+    }
+    
+    .servicio-item p {
+        display: none !important;
+    }
+    
+    /* CTA móvil */
+    .aberturas-cta {
+        margin-top: 15px;
+    }
+    
+    .btn-ver-proyectos {
+        padding: 12px 24px;
+        font-size: 0.85rem;
+        border-radius: 30px;
+    }
+    
+    /* Marcas móvil */
+    .marcas-section {
+        margin-top: 25px;
+        margin-bottom: -50px;
+    }
+    
+    .marcas-titulo {
+        font-size: 0.65rem;
+        margin-bottom: 12px;
+    }
+    
+    .marcas-track {
+        gap: 15px;
+    }
+    
+    .marca-item {
+        padding: 6px 10px;
+        border-radius: 6px;
+    }
+    
+    .marca-item span {
+        font-size: 0.6rem;
+        letter-spacing: 1px;
+    }
+    
+    .marcas-carousel::before,
+    .marcas-carousel::after {
+        width: 25px;
+    }
+}
+
+@media (max-width: 400px) {
+    #aberturas {
+        padding: 40px 10px !important;
+    }
+    
+    .aberturas-title {
+        font-size: 1.4rem !important;
+    }
+    
+    .aberturas-subtitle {
+        font-size: 0.8rem;
+    }
+    
+    .aberturas-grid {
+        gap: 8px !important;
+    }
+    
+    .abertura-card {
+        border-radius: 12px;
+    }
+    
+    .abertura-card .card-image {
+        height: 75px !important;
+    }
+    
+    .abertura-card .card-body {
+        padding: 8px 10px 12px;
+    }
+    
+    .abertura-card .card-title {
+        font-size: 0.75rem;
+    }
+    
+    .card-ribbon {
+        padding: 3px 6px;
+        font-size: 0.45rem;
+        top: 5px;
+        right: 5px;
+    }
+    
+    .card-ribbon i {
+        font-size: 0.4rem;
+    }
+    
+    .aberturas-servicios {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px;
+    }
+    
+    .servicio-icon {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .servicio-icon i {
+        font-size: 1rem;
+    }
+    
+    .servicio-item h4 {
+        font-size: 0.7rem;
+    }
+}

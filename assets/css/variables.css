@@ -1,0 +1,18 @@
+/* Variables CSS - Paleta de colores y configuraciones globales */
+:root {
+    --rojo: #E74C3C;
+    --rojo-suave: #FADBD8;
+    --madera-oscura: #8B4513;
+    --madera-betas: rgba(193, 154, 107, 0.8);
+    --aluminio-oscuro: #A9A9A9;
+    --vidrio: rgba(173, 216, 230, 0.8);
+    --ladrillo: #D2691E;
+    --cemento: #B0B0B0;
+    --whatsapp-verde: #25D366;
+    --whatsapp-blanco: #FFFFFF;
+    --gris-oscuro: #333333;
+    --gris-medio: #777777;
+    --gris-claro: #F5F5F5;
+    --blanco: #FFFFFF;
+    --negro: #000000;
+}
