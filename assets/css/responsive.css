@@ -3,6 +3,151 @@
    ============================================ */
 
 /* ============================================
+   PC CHICA (max-width: 1680px) — compactar bien, que se note
+   Se aplica en la mayoría de monitores que no sean muy grandes.
+   ============================================ */
+@media (max-width: 1680px) {
+    section {
+        padding: 70px 16px 40px;
+    }
+
+    /* Hero más compacto */
+    #inicio { min-height: 92vh; }
+    .hero-content { padding: 48px 36px; }
+    .hero-title { font-size: 4.5rem !important; }
+    .hero-vision { font-size: 1.3rem !important; margin-bottom: 24px; }
+    .hero-servicios { gap: 18px; }
+    .hero-servicios span { padding: 9px 18px; font-size: 0.88rem; }
+
+    /* Aberturas: contenedor más angosto + todo más chico (gana sobre aberturas.css) */
+    #aberturas {
+        padding: 55px 16px 40px !important;
+        min-height: auto !important;
+    }
+    .aberturas-container {
+        max-width: 1200px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+    .aberturas-header { margin-bottom: 28px !important; }
+    .aberturas-title { font-size: 2.5rem !important; margin-bottom: 10px !important; }
+    .aberturas-subtitle { font-size: 0.98rem !important; }
+    .aberturas-grid {
+        grid-template-columns: repeat(4, 1fr) !important;
+        gap: 14px !important;
+        margin-bottom: 36px !important;
+    }
+    .abertura-card .card-image { height: 135px !important; }
+    .abertura-card .card-body { padding: 14px !important; }
+    .abertura-card .card-title { font-size: 1.12rem !important; margin-bottom: 8px !important; }
+    .abertura-card .card-features { margin-bottom: 8px !important; }
+    .abertura-card .feature { font-size: 0.68rem !important; padding: 3px 8px !important; }
+    .abertura-card .card-description { font-size: 0.8rem !important; }
+
+    .aberturas-servicios {
+        grid-template-columns: repeat(4, 1fr) !important;
+        gap: 14px !important;
+        padding: 22px 20px !important;
+    }
+    .aberturas-servicios .servicio-icon { width: 52px !important; height: 52px !important; margin-bottom: 10px !important; }
+    .aberturas-servicios .servicio-icon i { font-size: 1.35rem !important; }
+    .aberturas-servicios .servicio-item h4 { font-size: 0.95rem !important; }
+    .aberturas-servicios .servicio-item p { font-size: 0.75rem !important; }
+    .aberturas-cta { margin-top: 28px !important; }
+    .aberturas-cta .btn-ver-proyectos { padding: 12px 24px !important; font-size: 0.95rem !important; }
+
+    .marcas-section { margin-top: 32px !important; margin-bottom: -50px !important; }
+    .marcas-titulo { font-size: 0.78rem !important; margin-bottom: 14px !important; }
+    .marcas-track { gap: 24px !important; }
+    .marca-item { padding: 6px 14px !important; }
+    .marca-item span { font-size: 0.78rem !important; }
+
+    /* Corralón: mismo criterio */
+    #corralon {
+        padding: 55px 16px 40px !important;
+        min-height: auto !important;
+    }
+    .corralon-container { max-width: 1200px !important; }
+    .corralon-header { margin-bottom: 28px !important; }
+    .corralon-title { font-size: 2.5rem !important; margin-bottom: 10px !important; }
+    .corralon-subtitle { font-size: 0.98rem !important; }
+    .corralon-grid {
+        grid-template-columns: repeat(5, 1fr) !important;
+        gap: 14px !important;
+        margin-bottom: 36px !important;
+    }
+    .corralon-card .card-image { height: 115px !important; }
+    .corralon-card .card-body { padding: 12px !important; }
+    .corralon-card .card-icon { width: 40px !important; height: 40px !important; margin-bottom: 10px !important; }
+    .corralon-card .card-icon i { font-size: 1.05rem !important; }
+    .corralon-card .card-title { font-size: 1rem !important; margin-bottom: 6px !important; }
+    .corralon-card .card-description { font-size: 0.75rem !important; }
+    .corralon-servicios { gap: 14px !important; padding: 22px 20px !important; margin-bottom: 28px !important; }
+    .corralon-servicios .servicio-icon { width: 52px !important; height: 52px !important; margin-bottom: 10px !important; }
+    .corralon-servicios .servicio-icon i { font-size: 1.35rem !important; }
+    .corralon-servicios .servicio-item h4 { font-size: 0.95rem !important; }
+    .corralon-servicios .servicio-item p { font-size: 0.75rem !important; }
+
+    .marcas-section-corralon { margin-top: 32px !important; margin-bottom: -50px !important; }
+    .marcas-section-corralon .marcas-titulo { font-size: 0.78rem !important; margin-bottom: 14px !important; }
+    .marcas-section-corralon .marcas-track { gap: 24px !important; }
+    .marcas-section-corralon .marca-item { padding: 6px 14px !important; }
+    .marcas-section-corralon .marca-item span { font-size: 0.78rem !important; }
+
+    .section-text h2 { font-size: 3.2rem !important; }
+    .section-text p { font-size: 1.1rem !important; }
+    .muebles-title,
+    .obras-title,
+    .contacto-title,
+    .faq-title { font-size: 2.6rem !important; }
+}
+
+/* ============================================
+   PC MUY CHICA (max-width: 1280px) — un escalón más compacto
+   ============================================ */
+@media (max-width: 1280px) {
+    #aberturas { padding: 48px 14px 32px !important; }
+    .aberturas-container { max-width: 100% !important; padding: 0 8px !important; }
+    .aberturas-title { font-size: 2.1rem !important; }
+    .aberturas-subtitle { font-size: 0.92rem !important; }
+    .aberturas-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 12px !important;
+        margin-bottom: 28px !important;
+    }
+    .abertura-card .card-image { height: 120px !important; }
+    .abertura-card .card-body { padding: 12px !important; }
+    .abertura-card .card-title { font-size: 1.05rem !important; }
+    .abertura-card .card-description { font-size: 0.75rem !important; }
+    .aberturas-servicios { padding: 18px 14px !important; gap: 12px !important; }
+    .aberturas-servicios .servicio-icon { width: 46px !important; height: 46px !important; }
+    .aberturas-servicios .servicio-icon i { font-size: 1.2rem !important; }
+    .aberturas-servicios .servicio-item h4 { font-size: 0.9rem !important; }
+    .aberturas-servicios .servicio-item p { font-size: 0.7rem !important; }
+    .marca-item span { font-size: 0.72rem !important; }
+
+    #corralon { padding: 48px 14px 32px !important; }
+    .corralon-container { max-width: 100% !important; padding: 0 8px !important; }
+    .corralon-title { font-size: 2.1rem !important; }
+    .corralon-subtitle { font-size: 0.92rem !important; }
+    .corralon-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 12px !important;
+        margin-bottom: 28px !important;
+    }
+    .corralon-card .card-image { height: 100px !important; }
+    .corralon-card .card-body { padding: 10px !important; }
+    .corralon-card .card-title { font-size: 0.95rem !important; }
+    .corralon-card .card-description { font-size: 0.7rem !important; }
+    .corralon-servicios { padding: 18px 14px !important; gap: 12px !important; }
+    .corralon-servicios .servicio-icon { width: 46px !important; height: 46px !important; }
+    .marcas-section-corralon .marca-item span { font-size: 0.72rem !important; }
+
+    .hero-title { font-size: 3.8rem !important; }
+    .hero-vision { font-size: 1.15rem !important; }
+}
+
+/* ============================================
    TABLETS (max-width: 1024px)
    ============================================ */
 @media (max-width: 1024px) {
