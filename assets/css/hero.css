@@ -112,7 +112,8 @@
     animation: fadeInUp 1s ease-out 0.7s both;
 }
 
-.hero-servicios span {
+.hero-servicios span,
+.hero-servicio-link {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -126,15 +127,19 @@
     color: #fff;
     transition: all 0.3s ease;
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+    cursor: pointer;
 }
 
-.hero-servicios span:hover {
+.hero-servicios span:hover,
+.hero-servicio-link:hover {
     background: rgba(255, 255, 255, 0.2);
     transform: translateY(-3px);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
-.hero-servicios span i {
+.hero-servicios span i,
+.hero-servicio-link i {
     font-size: 1.1rem;
     color: rgba(255, 255, 255, 0.8);
 }
@@ -235,7 +240,8 @@
         gap: 15px;
     }
 
-    .hero-servicios span {
+    .hero-servicios span,
+    .hero-servicio-link {
         padding: 10px 20px;
         font-size: 0.85rem;
     }
@@ -260,7 +266,8 @@
         gap: 12px;
     }
 
-    .hero-servicios span {
+    .hero-servicios span,
+    .hero-servicio-link {
         width: 200px;
         justify-content: center;
     }

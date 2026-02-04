@@ -7,6 +7,7 @@ section {
     position: relative;
     overflow: hidden;
     box-sizing: border-box;
+    scroll-margin-top: 80px; /* Ajuste para que el scroll llegue un poco más arriba cuando se hace clic en enlaces */
 }
 
 /* Fix para que el contenido no se desborde */

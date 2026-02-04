@@ -17,7 +17,8 @@
     .hero-title { font-size: 4.5rem !important; }
     .hero-vision { font-size: 1.3rem !important; margin-bottom: 24px; }
     .hero-servicios { gap: 18px; }
-    .hero-servicios span { padding: 9px 18px; font-size: 0.88rem; }
+    .hero-servicios span,
+    .hero-servicio-link { padding: 9px 18px; font-size: 0.88rem; }
 
     /* Aberturas: contenedor más angosto + todo más chico (gana sobre aberturas.css) */
     #aberturas {
@@ -82,7 +83,12 @@
     .corralon-card .card-icon i { font-size: 1.05rem !important; }
     .corralon-card .card-title { font-size: 1rem !important; margin-bottom: 6px !important; }
     .corralon-card .card-description { font-size: 0.75rem !important; }
-    .corralon-servicios { gap: 14px !important; padding: 22px 20px !important; margin-bottom: 28px !important; }
+    .corralon-servicios {
+        grid-template-columns: repeat(4, 1fr) !important;
+        gap: 14px !important;
+        padding: 22px 20px !important;
+        margin-bottom: 28px !important;
+    }
     .corralon-servicios .servicio-icon { width: 52px !important; height: 52px !important; margin-bottom: 10px !important; }
     .corralon-servicios .servicio-icon i { font-size: 1.35rem !important; }
     .corralon-servicios .servicio-item h4 { font-size: 0.95rem !important; }
@@ -139,7 +145,11 @@
     .corralon-card .card-body { padding: 10px !important; }
     .corralon-card .card-title { font-size: 0.95rem !important; }
     .corralon-card .card-description { font-size: 0.7rem !important; }
-    .corralon-servicios { padding: 18px 14px !important; gap: 12px !important; }
+    .corralon-servicios {
+        grid-template-columns: repeat(4, 1fr) !important;
+        padding: 18px 14px !important;
+        gap: 12px !important;
+    }
     .corralon-servicios .servicio-icon { width: 46px !important; height: 46px !important; }
     .marcas-section-corralon .marca-item span { font-size: 0.72rem !important; }
 
@@ -231,7 +241,8 @@
         align-items: center;
     }
 
-    .hero-servicios span {
+    .hero-servicios span,
+    .hero-servicio-link {
         width: 100%;
         max-width: 220px;
         justify-content: center;
@@ -298,12 +309,33 @@
     }
 
     .aberturas-servicios {
-        flex-direction: column;
-        gap: 15px;
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 12px !important;
+        padding: 15px 10px !important;
     }
 
     .servicio-item {
-        padding: 15px 20px;
+        padding: 12px 8px;
+    }
+    
+    .servicio-icon {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 10px;
+    }
+    
+    .servicio-icon i {
+        font-size: 1.2rem;
+    }
+    
+    .servicio-item h4 {
+        font-size: 0.75rem;
+        margin-bottom: 4px;
+    }
+    
+    .servicio-item p {
+        display: none !important;
     }
 
     .aberturas-cta .btn-ver-proyectos {
@@ -374,8 +406,37 @@
     }
 
     .corralon-servicios {
-        flex-direction: column;
-        gap: 15px;
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 12px !important;
+        padding: 15px 10px !important;
+        margin-bottom: 20px !important;
+        border-radius: 16px !important;
+    }
+    
+    .corralon-servicios .servicio-item {
+        padding: 12px 8px;
+    }
+    
+    .corralon-servicios .servicio-icon {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 10px;
+        box-shadow: 0 4px 12px rgba(230, 0, 0, 0.25);
+    }
+    
+    .corralon-servicios .servicio-icon i {
+        font-size: 1.2rem;
+    }
+    
+    .corralon-servicios .servicio-item h4 {
+        font-size: 0.75rem;
+        margin-bottom: 4px;
+        line-height: 1.2;
+    }
+    
+    .corralon-servicios .servicio-item p {
+        display: none !important;
     }
 
     .corralon-cta .btn-ver-productos {
@@ -665,7 +726,8 @@
         width: 35px;
     }
 
-    .hero-servicios span {
+    .hero-servicios span,
+    .hero-servicio-link {
         font-size: 0.85rem;
         padding: 8px 15px;
     }
@@ -734,6 +796,7 @@
     /* Reducir blur para mejor rendimiento */
     .hero-badge span,
     .hero-servicios span,
+    .hero-servicio-link,
     .contacto-card,
     .faq-tab {
         backdrop-filter: blur(5px);

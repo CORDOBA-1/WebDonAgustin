@@ -9,6 +9,7 @@
     padding: 120px 20px 80px;
     position: relative;
     overflow: hidden;
+    scroll-margin-top: 80px; /* Ajuste de scroll para enlaces del hero */
 }
 
 #muebles::before {

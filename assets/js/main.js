@@ -202,18 +202,30 @@ function updateActiveNavLink() {
 document.addEventListener('DOMContentLoaded', function() {
     const navToggle = document.querySelector('.nav-toggle');
     const navbar = document.getElementById('navbar');
+    const navMobile = document.querySelector('.nav-mobile');
     const navMobileLinks = document.querySelectorAll('.nav-mobile-link');
     
     if (navToggle) {
-        navToggle.addEventListener('click', function() {
+        navToggle.addEventListener('click', function(e) {
+            e.stopPropagation();
             navbar.classList.toggle('menu-open');
             document.body.style.overflow = navbar.classList.contains('menu-open') ? 'hidden' : '';
         });
     }
     
+    // Cerrar menú al hacer clic en el fondo del menú móvil
+    if (navMobile) {
+        navMobile.addEventListener('click', function(e) {
+            if (e.target === navMobile) {
+                navbar.classList.remove('menu-open');
+                document.body.style.overflow = '';
+            }
+        });
+    }
+    
     // Cerrar menú al hacer clic en un enlace
     navMobileLinks.forEach(link => {
-        link.addEventListener('click', function() {
+        link.addEventListener('click', function(e) {
             navbar.classList.remove('menu-open');
             document.body.style.overflow = '';
         });
