@@ -254,7 +254,7 @@ function scrollToNextSection() {
 // Efecto parallax suave en el scroll
 window.addEventListener('scroll', function() {
     const scrolled = window.pageYOffset;
-    const parallax = document.querySelectorAll('.section-image img');
+    const parallax = document.querySelectorAll('.section-image > img');
     
     parallax.forEach(img => {
         const speed = 0.5;
@@ -324,4 +324,22 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     }
+});
+
+// Carrusel de Obras (imágenes WhatsApp)
+document.addEventListener('DOMContentLoaded', function() {
+    if (typeof Swiper === 'undefined') return;
+    if (!document.querySelector('.obras-carousel')) return;
+    new Swiper('.obras-carousel', {
+        loop: true,
+        autoplay: { delay: 3500, disableOnInteraction: false },
+        pagination: { el: '.obras-pagination', clickable: true },
+        navigation: {
+            nextEl: '.obras-next',
+            prevEl: '.obras-prev'
+        },
+        effect: 'slide',
+        speed: 600,
+        grabCursor: true
+    });
 });

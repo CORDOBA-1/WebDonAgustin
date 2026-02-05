@@ -1,5 +1,118 @@
-/* Sección Obras */
+/* Sección Obras - Carrusel a ancho completo */
 #obras {
-    background: linear-gradient(135deg, var(--gris-oscuro) 0%, var(--gris-medio) 100%);
-    color: var(--blanco);
+    position: relative;
+    min-height: 85vh;
+    color: #fff;
+    overflow: hidden;
+}
+
+/* Carrusel ocupa toda la sección */
+#obras .obras-carousel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+#obras .obras-carousel .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #1a1a2e;
+}
+
+#obras .obras-carousel .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Overlay oscuro para legibilidad del texto */
+.obras-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.35) 100%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Contenido de texto superpuesto */
+.obras-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 80px 40px;
+    text-align: center;
+}
+
+.obras-content h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+}
+
+.obras-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto 0.75rem;
+    text-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
+}
+
+.obras-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* Controles del carrusel */
+#obras .obras-pagination {
+    z-index: 3;
+}
+
+#obras .swiper-pagination-bullet {
+    background: rgba(255, 255, 255, 0.6);
+    opacity: 1;
+}
+
+#obras .swiper-pagination-bullet-active {
+    background: #fff;
+    transform: scale(1.2);
+}
+
+#obras .swiper-button-prev,
+#obras .swiper-button-next {
+    color: #fff;
+    z-index: 3;
+}
+
+#obras .swiper-button-prev::after,
+#obras .swiper-button-next::after {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    #obras {
+        min-height: 70vh;
+    }
+
+    .obras-content {
+        padding: 50px 20px;
+    }
+
+    .obras-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .obras-content p {
+        font-size: 0.95rem;
+    }
 }

@@ -4,9 +4,10 @@
 
 #contacto {
     position: relative;
-    padding: 100px 0;
+    padding: 65px 0 55px;
     overflow: hidden;
     background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    min-height: auto;
 }
 
 /* Fondo con efecto */
@@ -46,49 +47,49 @@
 /* Header */
 .contacto-header {
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 38px;
 }
 
 .contacto-header .header-badge {
     display: inline-flex;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
     background: rgba(37, 211, 102, 0.15);
     color: #25D366;
-    padding: 10px 25px;
+    padding: 8px 20px;
     border-radius: 50px;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     font-weight: 600;
-    margin-bottom: 20px;
+    margin-bottom: 14px;
     border: 1px solid rgba(37, 211, 102, 0.3);
 }
 
 .contacto-header .header-badge i {
-    font-size: 1.1rem;
+    font-size: 0.95rem;
 }
 
 .contacto-title {
-    font-size: 3.5rem;
+    font-size: 2.4rem;
     font-weight: 800;
     color: #fff;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     text-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
 }
 
 .contacto-subtitle {
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: rgba(255, 255, 255, 0.7);
-    max-width: 600px;
+    max-width: 500px;
     margin: 0 auto;
-    line-height: 1.6;
+    line-height: 1.5;
 }
 
 /* Grid de cards de contacto */
 .contacto-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 25px;
-    margin-bottom: 50px;
+    gap: 20px;
+    margin-bottom: 32px;
 }
 
 /* Cards de contacto */
@@ -96,8 +97,8 @@
     position: relative;
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(20px);
-    border-radius: 20px;
-    padding: 30px;
+    border-radius: 14px;
+    padding: 22px 24px;
     text-decoration: none;
     color: #fff;
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -105,7 +106,7 @@
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 14px;
 }
 
 .contacto-card::before {
@@ -133,8 +134,8 @@
 /* Icon wrapper */
 .card-icon-wrapper {
     position: relative;
-    width: 70px;
-    height: 70px;
+    width: 52px;
+    height: 52px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -144,13 +145,13 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    border-radius: 20px;
+    border-radius: 12px;
     opacity: 0.15;
     transition: all 0.4s ease;
 }
 
 .card-icon-wrapper i {
-    font-size: 2rem;
+    font-size: 1.5rem;
     position: relative;
     z-index: 1;
     transition: all 0.4s ease;
@@ -218,19 +219,19 @@
 
 /* Card info */
 .card-info h3 {
-    font-size: 1.4rem;
+    font-size: 1.15rem;
     font-weight: 700;
-    margin-bottom: 5px;
+    margin-bottom: 4px;
 }
 
 .card-info p {
-    font-size: 0.9rem;
+    font-size: 0.82rem;
     color: rgba(255, 255, 255, 0.5);
-    margin-bottom: 8px;
+    margin-bottom: 6px;
 }
 
 .card-detail {
-    font-size: 0.95rem;
+    font-size: 0.88rem;
     color: rgba(255, 255, 255, 0.8);
     font-weight: 500;
 }
@@ -239,12 +240,12 @@
 .card-action {
     display: flex;
     align-items: center;
-    gap: 10px;
-    font-size: 0.9rem;
+    gap: 8px;
+    font-size: 0.85rem;
     font-weight: 600;
     color: rgba(255, 255, 255, 0.7);
     margin-top: auto;
-    padding-top: 15px;
+    padding-top: 12px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     transition: all 0.3s ease;
 }
@@ -264,19 +265,19 @@
 /* Status indicator (WhatsApp) */
 .status-indicator {
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 12px;
+    right: 12px;
     display: flex;
     align-items: center;
-    gap: 8px;
-    font-size: 0.8rem;
+    gap: 5px;
+    font-size: 0.7rem;
     color: #25D366;
     font-weight: 600;
 }
 
 .pulse {
-    width: 10px;
-    height: 10px;
+    width: 8px;
+    height: 8px;
     background: #25D366;
     border-radius: 50%;
     animation: pulse 2s infinite;
@@ -295,26 +296,26 @@
 .contacto-extras {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 30px;
+    gap: 24px;
 }
 
 /* Horarios card */
 .horarios-card {
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(20px);
-    border-radius: 20px;
-    padding: 35px;
+    border-radius: 14px;
+    padding: 22px 26px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     display: flex;
-    gap: 25px;
+    gap: 20px;
     align-items: flex-start;
 }
 
 .horarios-icon {
-    width: 60px;
-    height: 60px;
+    width: 48px;
+    height: 48px;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    border-radius: 15px;
+    border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -322,28 +323,28 @@
 }
 
 .horarios-icon i {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     color: #fff;
 }
 
 .horarios-info h4 {
-    font-size: 1.3rem;
+    font-size: 1.08rem;
     font-weight: 700;
     color: #fff;
-    margin-bottom: 20px;
+    margin-bottom: 14px;
 }
 
 .horarios-grid {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 10px;
 }
 
 .horario-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 10px;
+    padding-bottom: 8px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -354,34 +355,34 @@
 
 .horario-item .dia {
     color: rgba(255, 255, 255, 0.7);
-    font-size: 0.95rem;
+    font-size: 0.85rem;
 }
 
 .horario-item .hora {
     color: #fff;
     font-weight: 600;
-    font-size: 0.95rem;
+    font-size: 0.85rem;
     background: rgba(255, 255, 255, 0.1);
-    padding: 5px 12px;
-    border-radius: 20px;
+    padding: 4px 12px;
+    border-radius: 12px;
 }
 
 /* Servicios rápidos */
 .servicios-rapidos {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 12px;
 }
 
 .servicio-rapido {
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(20px);
-    border-radius: 15px;
-    padding: 20px 25px;
+    border-radius: 12px;
+    padding: 16px 20px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 12px;
     transition: all 0.3s ease;
 }
 
@@ -391,15 +392,15 @@
 }
 
 .servicio-rapido i {
-    font-size: 1.3rem;
+    font-size: 1rem;
     color: #25D366;
-    width: 25px;
+    width: 20px;
     text-align: center;
 }
 
 .servicio-rapido span {
     color: rgba(255, 255, 255, 0.9);
-    font-size: 1rem;
+    font-size: 0.92rem;
     font-weight: 500;
 }
 
@@ -415,7 +416,7 @@
 
 @media (max-width: 900px) {
     #contacto {
-        padding: 80px 0;
+        padding: 50px 0 40px;
     }
 
     .contacto-container {
@@ -423,21 +424,29 @@
     }
 
     .contacto-title {
-        font-size: 2.5rem;
+        font-size: 1.9rem;
     }
 
     .contacto-subtitle {
-        font-size: 1rem;
+        font-size: 0.92rem;
+    }
+
+    .contacto-header {
+        margin-bottom: 26px;
+    }
+
+    .contacto-grid {
+        margin-bottom: 26px;
     }
 
     .contacto-extras {
         grid-template-columns: 1fr;
+        gap: 18px;
     }
 
     .horarios-card {
-        flex-direction: column;
-        text-align: center;
-        align-items: center;
+        flex-direction: row;
+        padding: 18px 22px;
     }
 
     .horarios-info {
@@ -446,19 +455,25 @@
 }
 
 @media (max-width: 650px) {
+    #contacto {
+        padding: 45px 0 38px;
+    }
+
     .contacto-grid {
         grid-template-columns: 1fr;
+        gap: 14px;
+        margin-bottom: 24px;
     }
 
     .contacto-title {
-        font-size: 2rem;
+        font-size: 1.7rem;
     }
 
     .contacto-header {
-        margin-bottom: 40px;
+        margin-bottom: 22px;
     }
 
     .contacto-card {
-        padding: 25px;
+        padding: 20px 22px;
     }
 }
