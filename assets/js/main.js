@@ -1,7 +1,15 @@
 // JavaScript principal para la página web
 
+function onReady(callback) {
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', callback);
+    } else {
+        callback();
+    }
+}
+
 // Efecto de transición entre páginas
-document.addEventListener('DOMContentLoaded', function() {
+onReady(function() {
     // Crear overlay de transición si no existe
     let transitionOverlay = document.querySelector('.page-transition');
     if (!transitionOverlay) {
@@ -128,7 +136,7 @@ function toggleFAQ(element) {
 }
 
 // Sistema de categorías FAQ
-document.addEventListener("DOMContentLoaded", function () {
+onReady(function () {
     // Soporte para ambos selectores: .faq-tab (nuevo) y .faq-cat-btn (legacy)
     const categoryButtons = document.querySelectorAll(".faq-tab, .faq-cat-btn");
     const faqSections = document.querySelectorAll("#faq .faq-section");
@@ -199,7 +207,7 @@ function updateActiveNavLink() {
 }
 
 // Menú móvil hamburguesa
-document.addEventListener('DOMContentLoaded', function() {
+onReady(function() {
     const navToggle = document.querySelector('.nav-toggle');
     const navbar = document.getElementById('navbar');
     const navMobile = document.querySelector('.nav-mobile');
@@ -263,7 +271,7 @@ window.addEventListener('scroll', function() {
 });
 
 // Sistema de filtrado genérico (para muebles y aberturas)
-document.addEventListener('DOMContentLoaded', function() {
+onReady(function() {
     // Filtrado para muebles
     const mueblesFiltros = document.querySelectorAll('.muebles-filtros .filtro-btn');
     const muebleCards = document.querySelectorAll('.mueble-card');
@@ -327,7 +335,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // Carrusel de Obras (imágenes WhatsApp)
-document.addEventListener('DOMContentLoaded', function() {
+onReady(function() {
     if (typeof Swiper === 'undefined') return;
     if (!document.querySelector('.obras-carousel')) return;
     new Swiper('.obras-carousel', {

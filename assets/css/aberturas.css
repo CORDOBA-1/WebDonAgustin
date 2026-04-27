@@ -126,9 +126,24 @@
     border-color: rgba(255, 255, 255, 0.2);
 }
 
+/* Cards Ultra */
+.abertura-card.ultra {
+    border: 3px solid rgba(181, 0, 175, 0.5);
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.08) 0%, rgba(255, 255, 255, 0.05) 100%);
+}
+
+.abertura-card.ultra:hover {
+    border-color: rgba(251, 0, 255, 0.8);
+    box-shadow: 0 25px 60px rgba(255, 215, 0, 0.2);
+}
+
+.abertura-card.ultra .card-ribbon {
+    background: linear-gradient(135deg, #ff00d4 0%, #f700ff 100%);
+    color: #1a1a2e;
+}
 /* Cards Premium */
 .abertura-card.premium {
-    border: 2px solid rgba(255, 215, 0, 0.5);
+    border: 3px solid rgba(255, 215, 0, 0.5);
     background: linear-gradient(135deg, rgba(255, 215, 0, 0.08) 0%, rgba(255, 255, 255, 0.05) 100%);
 }
 
@@ -144,7 +159,7 @@
 
 /* Cards Recomendado */
 .abertura-card.recommended {
-    border: 2px solid rgba(233, 69, 96, 0.5);
+    border: 3px solid rgba(233, 69, 96, 0.5);
     background: linear-gradient(135deg, rgba(233, 69, 96, 0.08) 0%, rgba(255, 255, 255, 0.05) 100%);
 }
 
@@ -246,9 +261,10 @@
 }
 
 .abertura-card .card-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.4rem;
-    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: 0.2px;
     color: #ffffff;
     margin-bottom: 15px;
 }
@@ -343,6 +359,41 @@
     line-height: 1.5;
 }
 
+/* Ajuste solo escritorio: bloque de servicios más compacto */
+@media (min-width: 769px) {
+    .aberturas-servicios {
+        max-width: 1180px;
+        margin: 0 auto;
+        gap: 18px;
+        padding: 28px;
+        border-radius: 16px;
+    }
+
+    .aberturas-servicios .servicio-item {
+        padding: 12px;
+    }
+
+    .aberturas-servicios .servicio-icon {
+        width: 58px;
+        height: 58px;
+        margin-bottom: 12px;
+        box-shadow: 0 8px 22px rgba(233, 69, 96, 0.26);
+    }
+
+    .aberturas-servicios .servicio-icon i {
+        font-size: 1.45rem;
+    }
+
+    .aberturas-servicios .servicio-item h4 {
+        font-size: 1rem;
+        margin-bottom: 6px;
+    }
+
+    .aberturas-servicios .servicio-item p {
+        font-size: 0.78rem;
+    }
+}
+
 /* Botón CTA */
 .aberturas-cta {
     text-align: center;
@@ -435,10 +486,6 @@
     gap: 50px;
     animation: scrollMarcas 25s linear infinite;
     width: max-content;
-}
-
-.marcas-track:hover {
-    animation-play-state: paused;
 }
 
 .marca-item {

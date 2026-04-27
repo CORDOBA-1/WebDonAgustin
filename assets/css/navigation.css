@@ -28,10 +28,11 @@ nav:not(.scrolled) {
 
 /* Estado al hacer scroll */
 nav.scrolled {
-    background: rgba(255, 255, 255, 0.98);
+    background: linear-gradient(180deg, rgba(8, 13, 24, 0.92) 0%, rgba(10, 16, 30, 0.84) 100%);
     backdrop-filter: blur(20px);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    padding: 10px 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.28);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    padding: 8px 0;
 }
 
 /* Container */
@@ -43,7 +44,7 @@ nav.scrolled {
     align-items: center;
     justify-content: space-between;
     gap: 30px;
-    overflow: hidden; /* Evitar que se desborde */
+    overflow: visible;
     width: 100%;
 }
 
@@ -62,8 +63,8 @@ nav.scrolled {
 }
 
 nav.scrolled .logo img {
-    height: 55px;
-    filter: none;
+    height: 52px;
+    filter: drop-shadow(0 4px 14px rgba(0, 0, 0, 0.4));
 }
 
 .logo:hover {
@@ -116,20 +117,20 @@ nav:not(.scrolled) .nav-link:hover i {
 
 /* Colores al hacer scroll (fondo claro) */
 nav.scrolled .nav-link {
-    color: #374151;
+    color: rgba(255, 255, 255, 0.9);
 }
 
 nav.scrolled .nav-link:hover {
-    color: #1a1a2e;
-    background: #f1f5f9;
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.12);
 }
 
 nav.scrolled .nav-link i {
-    color: #64748b;
+    color: rgba(255, 255, 255, 0.7);
 }
 
 nav.scrolled .nav-link:hover i {
-    color: #1a1a2e;
+    color: #ffffff;
 }
 
 /* Icono del nav-link */
@@ -153,12 +154,12 @@ nav:not(.scrolled) .nav-link.active {
 }
 
 nav.scrolled .nav-link.active {
-    background: #f1f5f9;
-    color: #e74c3c;
+    background: rgba(255, 255, 255, 0.16);
+    color: #ffffff;
 }
 
 nav.scrolled .nav-link.active i {
-    color: #e74c3c;
+    color: #ffffff;
 }
 
 .nav-link.active::after {
@@ -176,7 +177,7 @@ nav.scrolled .nav-link.active i {
 /* Colores específicos por sección al hacer hover */
 nav.scrolled .nav-link.aberturas:hover,
 nav.scrolled .nav-link.aberturas.active {
-    background: linear-gradient(135deg, #e8f4f8 0%, #d4e8ed 100%);
+    background: linear-gradient(135deg, rgba(8, 145, 178, 0.35) 0%, rgba(14, 116, 144, 0.35) 100%);
 }
 
 nav.scrolled .nav-link.aberturas:hover i,
@@ -186,7 +187,7 @@ nav.scrolled .nav-link.aberturas.active i {
 
 nav.scrolled .nav-link.corralon:hover,
 nav.scrolled .nav-link.corralon.active {
-    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+    background: linear-gradient(135deg, rgba(217, 119, 6, 0.35) 0%, rgba(180, 83, 9, 0.35) 100%);
 }
 
 nav.scrolled .nav-link.corralon:hover i,
@@ -196,7 +197,7 @@ nav.scrolled .nav-link.corralon.active i {
 
 nav.scrolled .nav-link.muebles:hover,
 nav.scrolled .nav-link.muebles.active {
-    background: linear-gradient(135deg, #f5f0e6 0%, #e8dcc8 100%);
+    background: linear-gradient(135deg, rgba(146, 64, 14, 0.35) 0%, rgba(120, 53, 15, 0.35) 100%);
 }
 
 nav.scrolled .nav-link.muebles:hover i,
@@ -206,7 +207,7 @@ nav.scrolled .nav-link.muebles.active i {
 
 nav.scrolled .nav-link.obras:hover,
 nav.scrolled .nav-link.obras.active {
-    background: linear-gradient(135deg, #ede9fe 0%, #ddd6fe 100%);
+    background: linear-gradient(135deg, rgba(124, 58, 237, 0.35) 0%, rgba(109, 40, 217, 0.35) 100%);
 }
 
 nav.scrolled .nav-link.obras:hover i,
@@ -261,7 +262,7 @@ nav.scrolled .nav-link.obras.active i {
 }
 
 nav.scrolled .hamburger {
-    background: #1a1a2e;
+    background: #ffffff;
 }
 
 .hamburger::before,
@@ -479,19 +480,31 @@ nav.menu-open .nav-mobile {
     }
     
     .nav-toggle {
-        display: block;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: auto;
+        flex-shrink: 0;
+        padding: 8px;
     }
     
     .nav-container {
-        padding: 0 25px;
+        padding: 0 14px;
+        gap: 10px;
+        overflow: visible;
     }
     
+    .logo {
+        max-width: calc(100% - 56px);
+    }
+
     .logo img {
-        height: 55px;
+        height: 48px;
+        max-width: 100%;
     }
     
     nav.scrolled .logo img {
-        height: 50px;
+        height: 44px;
     }
     
     /* Menú móvil - pantalla completa por encima de todo */

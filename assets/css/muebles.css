@@ -60,6 +60,13 @@
     line-height: 1.6;
 }
 
+.muebles-download-hint {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    color: #8d6e63;
+    margin-top: 14px;
+}
+
 /* ============================================
    ESTILOS PARA INDEX.HTML (versión simplificada)
    ============================================ */
@@ -80,6 +87,8 @@
     text-align: center;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    text-decoration: none;
+    color: inherit;
 }
 
 .categoria-item:hover {
@@ -133,11 +142,14 @@
 .btn-ver-catalogo {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 12px;
     padding: 18px 40px;
     background: linear-gradient(135deg, #4e342e 0%, #3e2723 100%);
     color: #ffffff;
     text-decoration: none;
+    border: none;
+    cursor: pointer;
     border-radius: 50px;
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
@@ -159,6 +171,7 @@
 .btn-ver-catalogo:hover i {
     transform: translateX(5px);
 }
+
 
 /* ============================================
    ESTILOS PARA MUEBLES.HTML (versión completa)
@@ -508,6 +521,12 @@
         padding: 0;
         line-height: 1.4;
     }
+
+    .muebles-download-hint {
+        font-size: 0.8rem;
+        margin-top: 10px;
+        padding: 0 8px;
+    }
     
     /* Categorías (para index) */
     .muebles-categorias {
@@ -550,7 +569,7 @@
         padding: 12px 28px;
         font-size: 0.9rem;
     }
-    
+
     /* Filtros (para muebles.html) */
     .muebles-filtros {
         gap: 6px;

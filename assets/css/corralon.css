@@ -248,9 +248,10 @@
 }
 
 .corralon-card .card-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.25rem;
-    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.2px;
     color: #ffffff;
     margin-bottom: 10px;
 }
@@ -320,6 +321,41 @@
     font-size: 0.85rem;
     color: rgba(255, 255, 255, 0.6);
     line-height: 1.5;
+}
+
+/* Ajuste solo escritorio: bloque de servicios más compacto */
+@media (min-width: 769px) {
+    .corralon-servicios {
+        max-width: 1180px;
+        margin: 0 auto 50px;
+        gap: 18px;
+        padding: 28px;
+        border-radius: 16px;
+    }
+
+    .corralon-servicios .servicio-item {
+        padding: 12px;
+    }
+
+    .corralon-servicios .servicio-icon {
+        width: 58px;
+        height: 58px;
+        margin-bottom: 12px;
+        box-shadow: 0 8px 22px rgba(230, 0, 0, 0.26);
+    }
+
+    .corralon-servicios .servicio-icon i {
+        font-size: 1.45rem;
+    }
+
+    .corralon-servicios .servicio-item h4 {
+        font-size: 1rem;
+        margin-bottom: 6px;
+    }
+
+    .corralon-servicios .servicio-item p {
+        font-size: 0.78rem;
+    }
 }
 
 /* Botón CTA */
@@ -413,10 +449,6 @@
     gap: 50px;
     animation: scrollMarcas 25s linear infinite;
     width: max-content;
-}
-
-.marcas-section-corralon .marcas-track:hover {
-    animation-play-state: paused;
 }
 
 .marcas-section-corralon .marca-item {

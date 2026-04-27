@@ -63,10 +63,10 @@
 }
 
 .faq-title {
-    font-size: 3.5rem;
+    font-size: 2.4rem;
     font-weight: 800;
     color: #1a1a2e;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     background: linear-gradient(135deg, #1a1a2e 0%, #3d3d5c 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -74,7 +74,7 @@
 }
 
 .faq-subtitle {
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: #64748b;
     max-width: 500px;
     margin: 0 auto;
@@ -431,7 +431,11 @@
     }
 
     .faq-title {
-        font-size: 2.5rem;
+        font-size: 1.9rem;
+    }
+    
+    .faq-subtitle {
+        font-size: 0.92rem;
     }
 
     .faq-tabs {
@@ -476,7 +480,11 @@
 
 @media (max-width: 500px) {
     .faq-title {
-        font-size: 2rem;
+        font-size: 1.7rem;
+    }
+    
+    .faq-subtitle {
+        font-size: 0.9rem;
     }
 
     .faq-header .header-badge {
