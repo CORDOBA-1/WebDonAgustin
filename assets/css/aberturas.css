@@ -615,7 +615,12 @@
         background: rgba(255, 255, 255, 0.08) !important;
         border: 1px solid rgba(255, 255, 255, 0.15) !important;
     }
-    
+    /* Cards destacadas - Mantener bordes de colores */
+    .abertura-card.ultra {
+        border: 3px solid rgba(181, 0, 175, 0.6) !important;
+        background: linear-gradient(135deg, rgba(255, 215, 0, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%) !important;
+        box-shadow: 0 4px 20px rgba(255, 215, 0, 0.15);
+    }
     /* Cards destacadas - Mantener bordes de colores */
     .abertura-card.premium {
         border: 2px solid rgba(255, 215, 0, 0.6) !important;
