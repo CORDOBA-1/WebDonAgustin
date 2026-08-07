@@ -365,13 +365,14 @@ onReady(function() {
             prevEl: '.testimonios-prev'
         },
         slidesPerView: 1,
-        spaceBetween: 24,
+        spaceBetween: 12,
         speed: 700,
         grabCursor: true,
+        watchOverflow: true,
         breakpoints: {
-            640: { slidesPerView: 1, spaceBetween: 20 },
-            900: { slidesPerView: 2, spaceBetween: 24 },
-            1200: { slidesPerView: 3, spaceBetween: 28 }
+            640: { slidesPerView: 1, spaceBetween: 14 },
+            900: { slidesPerView: 2, spaceBetween: 20 },
+            1200: { slidesPerView: 3, spaceBetween: 24 }
         }
     });
 });

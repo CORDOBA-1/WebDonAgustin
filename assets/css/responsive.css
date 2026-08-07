@@ -708,78 +708,15 @@
 
     /* ========== TESTIMONIOS SECTION ========== */
     #testimonios {
-        padding: 50px 0 !important;
+        display: block !important;
+        min-height: auto !important;
+        padding: 55px 0 40px !important;
     }
 
     .testimonios-container {
+        width: 100%;
+        max-width: 100%;
         padding: 0 15px;
-    }
-
-    .testimonios-header {
-        margin-bottom: 20px;
-    }
-
-    .testimonios-title {
-        font-size: 1.5rem !important;
-    }
-
-    .testimonios-subtitle {
-        font-size: 0.8rem !important;
-    }
-
-    .testimonios-stats {
-        gap: 12px 16px;
-        padding: 12px 16px;
-        margin-bottom: 20px;
-    }
-
-    .stat-number {
-        font-size: 1.25rem;
-    }
-
-    .stat-label {
-        font-size: 0.65rem;
-    }
-
-    .stat-divider {
-        height: 30px;
-    }
-
-    .testimonios-carousel-wrapper {
-        padding: 0;
-    }
-
-    .testimonios-nav {
-        display: none;
-    }
-
-    .testimonio-card {
-        padding: 14px 12px 12px;
-    }
-
-    .testimonio-quote {
-        font-size: 1.25rem;
-        top: 10px;
-        right: 12px;
-    }
-
-    .testimonio-text {
-        font-size: 0.75rem;
-        margin-bottom: 12px;
-    }
-
-    .author-avatar {
-        width: 32px;
-        height: 32px;
-        font-size: 0.65rem;
-    }
-
-    .author-name {
-        font-size: 0.78rem;
-    }
-
-    .author-service {
-        font-size: 0.62rem;
     }
 }
 
@@ -833,8 +770,7 @@
     .corralon-title,
     .muebles-title,
     .contacto-title,
-    .faq-title,
-    .testimonios-title {
+    .faq-title {
         font-size: 1.7rem !important;
     }
 
@@ -874,24 +810,12 @@
         font-size: 0.9rem;
     }
 
-    /* Testimonios */
-    .testimonios-stats {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 8px;
-        padding: 10px 12px;
+    #testimonios {
+        padding: 50px 0 32px !important;
     }
 
-    .stat-divider {
-        display: none;
-    }
-
-    .stat-number {
-        font-size: 1.15rem;
-    }
-
-    .testimonio-quote {
-        font-size: 1.15rem;
+    .testimonios-title {
+        font-size: 1.35rem !important;
     }
 
     /* Header badges */
@@ -998,7 +922,8 @@
     .contacto-card,
     .abertura-card,
     .corralon-card,
-    .categoria-item {
+    .categoria-item,
+    .testimonio-card {
         min-height: 44px;
     }
 
@@ -1007,7 +932,8 @@
     .abertura-card:hover,
     .corralon-card:hover,
     .categoria-item:hover,
-    .contacto-card:hover {
+    .contacto-card:hover,
+    .testimonio-card:hover {
         transform: none;
     }
 
@@ -1015,7 +941,8 @@
     .abertura-card:active,
     .corralon-card:active,
     .categoria-item:active,
-    .contacto-card:active {
+    .contacto-card:active,
+    .testimonio-card:active {
         transform: scale(0.98);
         opacity: 0.9;
     }
