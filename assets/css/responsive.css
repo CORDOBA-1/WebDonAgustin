@@ -47,13 +47,14 @@
 
     .aberturas-servicios {
         grid-template-columns: repeat(4, 1fr) !important;
-        gap: 14px !important;
-        padding: 22px 20px !important;
+        gap: 8px !important;
+        padding: 10px 14px !important;
+        max-width: 720px !important;
     }
-    .aberturas-servicios .servicio-icon { width: 52px !important; height: 52px !important; margin-bottom: 10px !important; }
-    .aberturas-servicios .servicio-icon i { font-size: 1.35rem !important; }
-    .aberturas-servicios .servicio-item h4 { font-size: 0.95rem !important; }
-    .aberturas-servicios .servicio-item p { font-size: 0.75rem !important; }
+    .aberturas-servicios .servicio-icon { width: 34px !important; height: 34px !important; margin-bottom: 0 !important; }
+    .aberturas-servicios .servicio-icon i { font-size: 0.85rem !important; }
+    .aberturas-servicios .servicio-item h4 { font-size: 0.78rem !important; }
+    .aberturas-servicios .servicio-item p { font-size: 0.65rem !important; }
     .aberturas-cta { margin-top: 28px !important; }
     .aberturas-cta .btn-ver-proyectos { padding: 12px 24px !important; font-size: 0.95rem !important; }
 
@@ -85,14 +86,15 @@
     .corralon-card .card-description { font-size: 0.75rem !important; }
     .corralon-servicios {
         grid-template-columns: repeat(4, 1fr) !important;
-        gap: 14px !important;
-        padding: 22px 20px !important;
+        gap: 8px !important;
+        padding: 10px 14px !important;
+        max-width: 720px !important;
         margin-bottom: 28px !important;
     }
-    .corralon-servicios .servicio-icon { width: 52px !important; height: 52px !important; margin-bottom: 10px !important; }
-    .corralon-servicios .servicio-icon i { font-size: 1.35rem !important; }
-    .corralon-servicios .servicio-item h4 { font-size: 0.95rem !important; }
-    .corralon-servicios .servicio-item p { font-size: 0.75rem !important; }
+    .corralon-servicios .servicio-icon { width: 34px !important; height: 34px !important; margin-bottom: 0 !important; }
+    .corralon-servicios .servicio-icon i { font-size: 0.85rem !important; }
+    .corralon-servicios .servicio-item h4 { font-size: 0.78rem !important; }
+    .corralon-servicios .servicio-item p { font-size: 0.65rem !important; }
 
     .marcas-section-corralon { margin-top: 32px !important; margin-bottom: -50px !important; }
     .marcas-section-corralon .marcas-titulo { font-size: 0.78rem !important; margin-bottom: 14px !important; }
@@ -105,7 +107,7 @@
     .muebles-title,
     .obras-title,
     .contacto-title,
-    .faq-title { font-size: 2.6rem !important; }
+    .faq-title { font-size: 1.85rem !important; }
 }
 
 /* ============================================
@@ -125,11 +127,11 @@
     .abertura-card .card-body { padding: 12px !important; }
     .abertura-card .card-title { font-size: 1.05rem !important; }
     .abertura-card .card-description { font-size: 0.75rem !important; }
-    .aberturas-servicios { padding: 18px 14px !important; gap: 12px !important; }
-    .aberturas-servicios .servicio-icon { width: 46px !important; height: 46px !important; }
-    .aberturas-servicios .servicio-icon i { font-size: 1.2rem !important; }
-    .aberturas-servicios .servicio-item h4 { font-size: 0.9rem !important; }
-    .aberturas-servicios .servicio-item p { font-size: 0.7rem !important; }
+    .aberturas-servicios { padding: 10px 12px !important; gap: 8px !important; max-width: 720px !important; }
+    .aberturas-servicios .servicio-icon { width: 34px !important; height: 34px !important; }
+    .aberturas-servicios .servicio-icon i { font-size: 0.85rem !important; }
+    .aberturas-servicios .servicio-item h4 { font-size: 0.78rem !important; }
+    .aberturas-servicios .servicio-item p { font-size: 0.65rem !important; }
     .marca-item span { font-size: 0.72rem !important; }
 
     #corralon { padding: 48px 14px 32px !important; }
@@ -147,10 +149,14 @@
     .corralon-card .card-description { font-size: 0.7rem !important; }
     .corralon-servicios {
         grid-template-columns: repeat(4, 1fr) !important;
-        padding: 18px 14px !important;
-        gap: 12px !important;
+        padding: 10px 12px !important;
+        gap: 8px !important;
+        max-width: 720px !important;
     }
-    .corralon-servicios .servicio-icon { width: 46px !important; height: 46px !important; }
+    .corralon-servicios .servicio-icon { width: 34px !important; height: 34px !important; }
+    .corralon-servicios .servicio-icon i { font-size: 0.85rem !important; }
+    .corralon-servicios .servicio-item h4 { font-size: 0.78rem !important; }
+    .corralon-servicios .servicio-item p { font-size: 0.65rem !important; }
     .marcas-section-corralon .marca-item span { font-size: 0.72rem !important; }
 
     .hero-title { font-size: 3.8rem !important; }
@@ -313,29 +319,38 @@
         grid-template-columns: repeat(2, 1fr) !important;
         gap: 12px !important;
         padding: 15px 10px !important;
+        max-width: 100% !important;
+    }
+
+    .aberturas-servicios .servicio-item {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        padding: 12px 8px;
+    }
+
+    .aberturas-servicios .servicio-icon {
+        width: 50px !important;
+        height: 50px !important;
+        margin-bottom: 10px !important;
+    }
+
+    .aberturas-servicios .servicio-icon i {
+        font-size: 1.2rem !important;
+    }
+
+    .aberturas-servicios .servicio-item h4 {
+        font-size: 0.75rem !important;
+        margin-bottom: 4px;
+    }
+
+    .aberturas-servicios .servicio-item p {
+        display: none !important;
     }
 
     .servicio-item {
         padding: 12px 8px;
-    }
-    
-    .servicio-icon {
-        width: 50px;
-        height: 50px;
-        margin-bottom: 10px;
-    }
-    
-    .servicio-icon i {
-        font-size: 1.2rem;
-    }
-    
-    .servicio-item h4 {
-        font-size: 0.75rem;
-        margin-bottom: 4px;
-    }
-    
-    .servicio-item p {
-        display: none !important;
     }
 
     .aberturas-cta .btn-ver-proyectos {
@@ -412,25 +427,30 @@
         padding: 15px 10px !important;
         margin-bottom: 20px !important;
         border-radius: 16px !important;
+        max-width: 100% !important;
     }
     
     .corralon-servicios .servicio-item {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
         padding: 12px 8px;
     }
     
     .corralon-servicios .servicio-icon {
-        width: 50px;
-        height: 50px;
-        margin-bottom: 10px;
+        width: 50px !important;
+        height: 50px !important;
+        margin-bottom: 10px !important;
         box-shadow: 0 4px 12px rgba(230, 0, 0, 0.25);
     }
     
     .corralon-servicios .servicio-icon i {
-        font-size: 1.2rem;
+        font-size: 1.2rem !important;
     }
     
     .corralon-servicios .servicio-item h4 {
-        font-size: 0.75rem;
+        font-size: 0.75rem !important;
         margin-bottom: 4px;
         line-height: 1.2;
     }
@@ -601,7 +621,7 @@
 
     /* ========== FAQ SECTION ========== */
     #faq {
-        padding: 60px 0 !important;
+        padding: 50px 0 !important;
     }
 
     .faq-container {
@@ -609,22 +629,22 @@
     }
 
     .faq-title {
-        font-size: 2rem !important;
+        font-size: 1.5rem !important;
     }
 
     .faq-subtitle {
-        font-size: 0.95rem !important;
+        font-size: 0.8rem !important;
     }
 
     .faq-tabs {
         gap: 8px;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
     }
 
     .faq-tab {
-        padding: 10px 15px;
-        font-size: 0.85rem;
-        border-radius: 10px;
+        padding: 8px 12px;
+        font-size: 0.78rem;
+        border-radius: 8px;
     }
 
     .faq-tab span {
@@ -632,49 +652,49 @@
     }
 
     .faq-tab i {
-        font-size: 1.1rem;
+        font-size: 0.85rem;
         margin: 0;
     }
 
     .faq-main {
         grid-template-columns: 1fr !important;
-        gap: 30px;
+        gap: 20px;
     }
 
     .faq-question {
-        padding: 15px;
+        padding: 10px 12px;
     }
 
     .question-icon {
-        width: 35px;
-        height: 35px;
-    }
-
-    .question-icon i {
-        font-size: 0.9rem;
-    }
-
-    .faq-question span {
-        font-size: 0.95rem;
-    }
-
-    .toggle-icon {
         width: 30px;
         height: 30px;
     }
 
+    .question-icon i {
+        font-size: 0.78rem;
+    }
+
+    .faq-question span {
+        font-size: 0.8rem;
+    }
+
+    .toggle-icon {
+        width: 24px;
+        height: 24px;
+    }
+
     .faq-answer p {
-        padding: 0 15px 0 65px;
-        font-size: 0.9rem;
+        padding: 0 12px 0 52px;
+        font-size: 0.75rem;
     }
 
     .faq-decoration {
         flex-direction: column;
-        gap: 20px;
+        gap: 16px;
     }
 
     .decoration-card .faq-img {
-        height: 180px;
+        height: 140px;
     }
 
     .help-card {
@@ -684,6 +704,82 @@
     .help-icon {
         width: 60px;
         height: 60px;
+    }
+
+    /* ========== TESTIMONIOS SECTION ========== */
+    #testimonios {
+        padding: 50px 0 !important;
+    }
+
+    .testimonios-container {
+        padding: 0 15px;
+    }
+
+    .testimonios-header {
+        margin-bottom: 20px;
+    }
+
+    .testimonios-title {
+        font-size: 1.5rem !important;
+    }
+
+    .testimonios-subtitle {
+        font-size: 0.8rem !important;
+    }
+
+    .testimonios-stats {
+        gap: 12px 16px;
+        padding: 12px 16px;
+        margin-bottom: 20px;
+    }
+
+    .stat-number {
+        font-size: 1.25rem;
+    }
+
+    .stat-label {
+        font-size: 0.65rem;
+    }
+
+    .stat-divider {
+        height: 30px;
+    }
+
+    .testimonios-carousel-wrapper {
+        padding: 0;
+    }
+
+    .testimonios-nav {
+        display: none;
+    }
+
+    .testimonio-card {
+        padding: 14px 12px 12px;
+    }
+
+    .testimonio-quote {
+        font-size: 1.25rem;
+        top: 10px;
+        right: 12px;
+    }
+
+    .testimonio-text {
+        font-size: 0.75rem;
+        margin-bottom: 12px;
+    }
+
+    .author-avatar {
+        width: 32px;
+        height: 32px;
+        font-size: 0.65rem;
+    }
+
+    .author-name {
+        font-size: 0.78rem;
+    }
+
+    .author-service {
+        font-size: 0.62rem;
     }
 }
 
@@ -737,7 +833,8 @@
     .corralon-title,
     .muebles-title,
     .contacto-title,
-    .faq-title {
+    .faq-title,
+    .testimonios-title {
         font-size: 1.7rem !important;
     }
 
@@ -775,6 +872,26 @@
 
     .faq-question span {
         font-size: 0.9rem;
+    }
+
+    /* Testimonios */
+    .testimonios-stats {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+        padding: 10px 12px;
+    }
+
+    .stat-divider {
+        display: none;
+    }
+
+    .stat-number {
+        font-size: 1.15rem;
+    }
+
+    .testimonio-quote {
+        font-size: 1.15rem;
     }
 
     /* Header badges */

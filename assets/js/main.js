@@ -351,3 +351,27 @@ onReady(function() {
         grabCursor: true
     });
 });
+
+// Carrusel de Testimonios
+onReady(function() {
+    if (typeof Swiper === 'undefined') return;
+    if (!document.querySelector('.testimonios-carousel')) return;
+    new Swiper('.testimonios-carousel', {
+        loop: true,
+        autoplay: { delay: 5000, disableOnInteraction: false, pauseOnMouseEnter: true },
+        pagination: { el: '.testimonios-pagination', clickable: true },
+        navigation: {
+            nextEl: '.testimonios-next',
+            prevEl: '.testimonios-prev'
+        },
+        slidesPerView: 1,
+        spaceBetween: 24,
+        speed: 700,
+        grabCursor: true,
+        breakpoints: {
+            640: { slidesPerView: 1, spaceBetween: 20 },
+            900: { slidesPerView: 2, spaceBetween: 24 },
+            1200: { slidesPerView: 3, spaceBetween: 28 }
+        }
+    });
+});

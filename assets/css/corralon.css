@@ -263,99 +263,77 @@
     line-height: 1.5;
 }
 
-/* Servicios - mismo estilo que Aberturas */
+/* Servicios - mismo estilo compacto que Aberturas */
 .corralon-servicios {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 25px;
+    gap: 8px;
+    max-width: 720px;
+    margin: 0 auto 50px;
     background: rgba(255, 255, 255, 0.03);
-    border-radius: 20px;
-    padding: 40px;
+    border-radius: 12px;
+    padding: 10px 14px;
     border: 1px solid rgba(255, 255, 255, 0.08);
-    margin-bottom: 50px;
     animation: fadeInUp 0.8s ease-out 0.5s both;
 }
 
 .corralon-servicios .servicio-item {
-    text-align: center;
-    padding: 20px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto;
+    align-items: center;
+    column-gap: 8px;
+    row-gap: 1px;
+    text-align: left;
+    padding: 4px 2px;
     transition: transform 0.3s ease;
 }
 
 .corralon-servicios .servicio-item:hover {
-    transform: translateY(-5px);
+    transform: translateY(-2px);
 }
 
 .corralon-servicios .servicio-icon {
-    width: 70px;
-    height: 70px;
+    grid-row: 1 / 3;
+    width: 34px;
+    height: 34px;
     background: linear-gradient(135deg, #e60000 0%, #cc0000 100%);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto 20px;
-    box-shadow: 0 10px 30px rgba(230, 0, 0, 0.3);
+    margin: 0;
+    box-shadow: 0 4px 12px rgba(230, 0, 0, 0.25);
     transition: transform 0.3s ease;
+    flex-shrink: 0;
 }
 
 .corralon-servicios .servicio-item:hover .servicio-icon {
-    transform: scale(1.1) rotate(5deg);
+    transform: scale(1.06);
 }
 
 .corralon-servicios .servicio-icon i {
-    font-size: 1.8rem;
+    font-size: 0.85rem;
     color: #ffffff;
 }
 
 .corralon-servicios .servicio-item h4 {
+    grid-column: 2;
     font-family: 'Poppins', sans-serif;
-    font-size: 1.1rem;
+    font-size: 0.78rem;
     font-weight: 600;
     color: #ffffff;
-    margin-bottom: 8px;
+    margin-bottom: 0;
+    line-height: 1.2;
 }
 
 .corralon-servicios .servicio-item p {
+    grid-column: 2;
     font-family: 'Poppins', sans-serif;
-    font-size: 0.85rem;
-    color: rgba(255, 255, 255, 0.6);
-    line-height: 1.5;
-}
-
-/* Ajuste solo escritorio: bloque de servicios más compacto */
-@media (min-width: 769px) {
-    .corralon-servicios {
-        max-width: 1180px;
-        margin: 0 auto 50px;
-        gap: 18px;
-        padding: 28px;
-        border-radius: 16px;
-    }
-
-    .corralon-servicios .servicio-item {
-        padding: 12px;
-    }
-
-    .corralon-servicios .servicio-icon {
-        width: 58px;
-        height: 58px;
-        margin-bottom: 12px;
-        box-shadow: 0 8px 22px rgba(230, 0, 0, 0.26);
-    }
-
-    .corralon-servicios .servicio-icon i {
-        font-size: 1.45rem;
-    }
-
-    .corralon-servicios .servicio-item h4 {
-        font-size: 1rem;
-        margin-bottom: 6px;
-    }
-
-    .corralon-servicios .servicio-item p {
-        font-size: 0.78rem;
-    }
+    font-size: 0.65rem;
+    color: rgba(255, 255, 255, 0.55);
+    line-height: 1.25;
+    margin: 0;
 }
 
 /* Botón CTA */
