@@ -2,7 +2,7 @@
    NAVEGACIÓN - DISEÑO MODERNO
    ============================================ */
 
-nav {
+nav#navbar {
     position: fixed;
     top: 0;
     left: 0;
@@ -12,13 +12,13 @@ nav {
     overflow-x: hidden;
 }
 
-nav.menu-open {
+nav#navbar.menu-open {
     overflow: visible;
     z-index: 9999;
 }
 
 /* Estado inicial - transparente con degradado */
-nav:not(.scrolled) {
+nav#navbar:not(.scrolled) {
     background: linear-gradient(180deg, 
         rgba(0, 0, 0, 0.5) 0%, 
         rgba(0, 0, 0, 0.2) 50%, 
@@ -27,7 +27,7 @@ nav:not(.scrolled) {
 }
 
 /* Estado al hacer scroll */
-nav.scrolled {
+nav#navbar.scrolled {
     background: linear-gradient(180deg, rgba(8, 13, 24, 0.92) 0%, rgba(10, 16, 30, 0.84) 100%);
     backdrop-filter: blur(20px);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.28);
@@ -62,7 +62,7 @@ nav.scrolled {
     filter: drop-shadow(0 2px 10px rgba(0, 0, 0, 0.2));
 }
 
-nav.scrolled .logo img {
+nav#navbar.scrolled .logo img {
     height: 52px;
     filter: drop-shadow(0 4px 14px rgba(0, 0, 0, 0.4));
 }
@@ -98,38 +98,38 @@ nav.scrolled .logo img {
 }
 
 /* Colores en estado inicial (fondo oscuro) */
-nav:not(.scrolled) .nav-link {
+nav#navbar:not(.scrolled) .nav-link {
     color: rgba(255, 255, 255, 0.9);
 }
 
-nav:not(.scrolled) .nav-link:hover {
+nav#navbar:not(.scrolled) .nav-link:hover {
     color: #fff;
     background: rgba(255, 255, 255, 0.15);
 }
 
-nav:not(.scrolled) .nav-link i {
+nav#navbar:not(.scrolled) .nav-link i {
     color: rgba(255, 255, 255, 0.7);
 }
 
-nav:not(.scrolled) .nav-link:hover i {
+nav#navbar:not(.scrolled) .nav-link:hover i {
     color: #fff;
 }
 
 /* Colores al hacer scroll (fondo claro) */
-nav.scrolled .nav-link {
+nav#navbar.scrolled .nav-link {
     color: rgba(255, 255, 255, 0.9);
 }
 
-nav.scrolled .nav-link:hover {
+nav#navbar.scrolled .nav-link:hover {
     color: #ffffff;
     background: rgba(255, 255, 255, 0.12);
 }
 
-nav.scrolled .nav-link i {
+nav#navbar.scrolled .nav-link i {
     color: rgba(255, 255, 255, 0.7);
 }
 
-nav.scrolled .nav-link:hover i {
+nav#navbar.scrolled .nav-link:hover i {
     color: #ffffff;
 }
 
@@ -148,17 +148,17 @@ nav.scrolled .nav-link:hover i {
     position: relative;
 }
 
-nav:not(.scrolled) .nav-link.active {
+nav#navbar:not(.scrolled) .nav-link.active {
     background: rgba(255, 255, 255, 0.2);
     color: #fff;
 }
 
-nav.scrolled .nav-link.active {
+nav#navbar.scrolled .nav-link.active {
     background: rgba(255, 255, 255, 0.16);
     color: #ffffff;
 }
 
-nav.scrolled .nav-link.active i {
+nav#navbar.scrolled .nav-link.active i {
     color: #ffffff;
 }
 
@@ -175,43 +175,43 @@ nav.scrolled .nav-link.active i {
 }
 
 /* Colores específicos por sección al hacer hover */
-nav.scrolled .nav-link.aberturas:hover,
-nav.scrolled .nav-link.aberturas.active {
+nav#navbar.scrolled .nav-link.aberturas:hover,
+nav#navbar.scrolled .nav-link.aberturas.active {
     background: linear-gradient(135deg, rgba(8, 145, 178, 0.35) 0%, rgba(14, 116, 144, 0.35) 100%);
 }
 
-nav.scrolled .nav-link.aberturas:hover i,
-nav.scrolled .nav-link.aberturas.active i {
+nav#navbar.scrolled .nav-link.aberturas:hover i,
+nav#navbar.scrolled .nav-link.aberturas.active i {
     color: #0891b2;
 }
 
-nav.scrolled .nav-link.corralon:hover,
-nav.scrolled .nav-link.corralon.active {
+nav#navbar.scrolled .nav-link.corralon:hover,
+nav#navbar.scrolled .nav-link.corralon.active {
     background: linear-gradient(135deg, rgba(217, 119, 6, 0.35) 0%, rgba(180, 83, 9, 0.35) 100%);
 }
 
-nav.scrolled .nav-link.corralon:hover i,
-nav.scrolled .nav-link.corralon.active i {
+nav#navbar.scrolled .nav-link.corralon:hover i,
+nav#navbar.scrolled .nav-link.corralon.active i {
     color: #d97706;
 }
 
-nav.scrolled .nav-link.muebles:hover,
-nav.scrolled .nav-link.muebles.active {
+nav#navbar.scrolled .nav-link.muebles:hover,
+nav#navbar.scrolled .nav-link.muebles.active {
     background: linear-gradient(135deg, rgba(146, 64, 14, 0.35) 0%, rgba(120, 53, 15, 0.35) 100%);
 }
 
-nav.scrolled .nav-link.muebles:hover i,
-nav.scrolled .nav-link.muebles.active i {
+nav#navbar.scrolled .nav-link.muebles:hover i,
+nav#navbar.scrolled .nav-link.muebles.active i {
     color: #92400e;
 }
 
-nav.scrolled .nav-link.obras:hover,
-nav.scrolled .nav-link.obras.active {
+nav#navbar.scrolled .nav-link.obras:hover,
+nav#navbar.scrolled .nav-link.obras.active {
     background: linear-gradient(135deg, rgba(124, 58, 237, 0.35) 0%, rgba(109, 40, 217, 0.35) 100%);
 }
 
-nav.scrolled .nav-link.obras:hover i,
-nav.scrolled .nav-link.obras.active i {
+nav#navbar.scrolled .nav-link.obras:hover i,
+nav#navbar.scrolled .nav-link.obras.active i {
     color: #7c3aed;
 }
 
@@ -261,7 +261,7 @@ nav.scrolled .nav-link.obras.active i {
     transition: all 0.3s ease;
 }
 
-nav.scrolled .hamburger {
+nav#navbar.scrolled .hamburger {
     background: #ffffff;
 }
 
@@ -285,17 +285,17 @@ nav.scrolled .hamburger {
 }
 
 /* Hamburger activo (X) */
-nav.menu-open .hamburger {
+nav#navbar.menu-open .hamburger {
     background: transparent;
 }
 
-nav.menu-open .hamburger::before {
+nav#navbar.menu-open .hamburger::before {
     top: 0;
     transform: rotate(45deg);
     background: #1a1a2e;
 }
 
-nav.menu-open .hamburger::after {
+nav#navbar.menu-open .hamburger::after {
     top: 0;
     transform: rotate(-45deg);
     background: #1a1a2e;
@@ -323,7 +323,7 @@ nav.menu-open .hamburger::after {
     -webkit-overflow-scrolling: touch;
 }
 
-nav.menu-open .nav-mobile {
+nav#navbar.menu-open .nav-mobile {
     display: flex !important;
 }
 
@@ -428,7 +428,7 @@ nav.menu-open .nav-mobile {
         height: 60px;
     }
     
-    nav.scrolled .logo img {
+    nav#navbar.scrolled .logo img {
         height: 50px;
     }
     
@@ -503,12 +503,12 @@ nav.menu-open .nav-mobile {
         max-width: 100%;
     }
     
-    nav.scrolled .logo img {
+    nav#navbar.scrolled .logo img {
         height: 44px;
     }
     
     /* Menú móvil - pantalla completa por encima de todo */
-    nav.menu-open {
+    nav#navbar.menu-open {
         z-index: 9999 !important;
         overflow: visible !important;
     }
@@ -536,7 +536,7 @@ nav.menu-open .nav-mobile {
         -webkit-overflow-scrolling: touch;
     }
     
-    nav.menu-open .nav-mobile {
+    nav#navbar.menu-open .nav-mobile {
         display: flex !important;
     }
     

@@ -139,7 +139,7 @@ function toggleFAQ(element) {
 onReady(function () {
     // Soporte para ambos selectores: .faq-tab (nuevo) y .faq-cat-btn (legacy)
     const categoryButtons = document.querySelectorAll(".faq-tab, .faq-cat-btn");
-    const faqSections = document.querySelectorAll("#como-comprar .faq-section");
+    const faqSections = document.querySelectorAll("#faq .faq-section");
 
     // Mostrar la primera categoría con animación
     if (faqSections.length > 0) {

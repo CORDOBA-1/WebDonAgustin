@@ -58,18 +58,18 @@
                 "hasPart": [
                     {
                         "@type": "WebPageElement",
-                        "name": "Productos",
-                        "url": "https://donagustin.com.ar/#productos"
+                        "name": "Aberturas",
+                        "url": "https://donagustin.com.ar/#aberturas"
                     },
                     {
                         "@type": "WebPageElement",
-                        "name": "Cómo Comprar",
-                        "url": "https://donagustin.com.ar/#como-comprar"
+                        "name": "Corralón",
+                        "url": "https://donagustin.com.ar/#corralon"
                     },
                     {
                         "@type": "WebPageElement",
-                        "name": "Quiénes Somos",
-                        "url": "https://donagustin.com.ar/#quienes-somos"
+                        "name": "Preguntas Frecuentes",
+                        "url": "https://donagustin.com.ar/#faq"
                     },
                     {
                         "@type": "WebPageElement",
@@ -131,7 +131,7 @@
                     </a>
                 </li>
                 <li>
-                    <a class="nav-link faq" href="#como-comprar">
+                    <a class="nav-link faq" href="#faq">
                         <i class="fas fa-question-circle"></i>
                         <span>FAQ</span>
                     </a>
@@ -184,7 +184,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#como-comprar" class="nav-mobile-link">
+                    <a href="#faq" class="nav-mobile-link">
                         <i class="fas fa-question-circle"></i>
                         <span>FAQ</span>
                     </a>
@@ -225,23 +225,13 @@
         </div>
     </section>
 
-    <!-- Productos: aberturas, corralón y muebles -->
-    <div id="productos" role="region" aria-labelledby="heading-productos">
-        <h2 id="heading-productos" class="seo-section-title">Productos</h2>
-        <div data-include="partials/aberturas-section.html"></div>
-        <div data-include="partials/corralon-section.html"></div>
-        <div data-include="partials/muebles-section.html"></div>
-    </div>
+    <div data-include="partials/aberturas-section.html"></div>
+    <div data-include="partials/corralon-section.html"></div>
+    <div data-include="partials/muebles-section.html"></div>
+    <div data-include="partials/obras-section.html"></div>
 
-    <!-- Quiénes Somos: obras y testimonios -->
-    <div id="quienes-somos" role="region" aria-labelledby="heading-quienes-somos">
-        <h2 id="heading-quienes-somos" class="seo-section-title">Quiénes Somos</h2>
-        <div data-include="partials/obras-section.html"></div>
-        <div data-include="partials/testimonios-section.html"></div>
-    </div>
-
-    <!-- Cómo Comprar: preguntas frecuentes -->
-    <section id="como-comprar">
+    <!-- Sección FAQ -->
+    <section id="faq">
         <div class="faq-background">
             <div class="faq-pattern"></div>
         </div>
@@ -252,8 +242,8 @@
                     <i class="fas fa-question-circle"></i>
                     Resolvemos tus dudas
                 </span>
-                <h2 class="faq-title">Cómo Comprar</h2>
-                <p class="faq-subtitle">Presupuestos, pagos, envíos y respuestas a las consultas más comunes</p>
+                <h2 class="faq-title">Preguntas Frecuentes</h2>
+                <p class="faq-subtitle">Encuentra respuestas rápidas a las consultas más comunes</p>
             </div>
 
             <!-- Categorías como tabs -->
@@ -446,22 +436,9 @@
         </div>
     </section>
 
-    <div data-include="partials/contacto-section.html"></div>
+    <div data-include="partials/testimonios-section.html"></div>
 
-    <footer class="site-footer">
-        <div class="site-footer-inner">
-            <p class="site-footer-brand">Fábrica de Aberturas Don Agustín</p>
-            <nav aria-label="Secciones del sitio">
-                <ul class="site-footer-nav">
-                    <li><a href="#productos">Productos</a></li>
-                    <li><a href="#como-comprar">Cómo Comprar</a></li>
-                    <li><a href="#quienes-somos">Quiénes Somos</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
-                </ul>
-            </nav>
-            <p class="site-footer-copy">Hasenkamp, Entre Ríos · Desde 2002</p>
-        </div>
-    </footer>
+    <div data-include="partials/contacto-section.html"></div>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script>
