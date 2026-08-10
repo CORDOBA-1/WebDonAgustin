@@ -2,7 +2,7 @@
    SECCIÓN FAQ - DISEÑO MODERNO
    ============================================ */
 
-#faq {
+#como-comprar {
     position: relative;
     padding: 65px 0;
     overflow: hidden;
@@ -424,7 +424,7 @@
 }
 
 @media (max-width: 768px) {
-    #faq {
+    #como-comprar {
         padding: 55px 0;
     }
 

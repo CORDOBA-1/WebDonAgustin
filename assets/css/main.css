@@ -20,6 +20,7 @@
 
 /* Efectos y animaciones */
 @import url('animations.css');
+@import url('seo.css');
 
 /* Responsive design */
 @import url('responsive.css');

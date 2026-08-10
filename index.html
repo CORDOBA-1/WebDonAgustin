@@ -4,7 +4,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fábrica de Aberturas Don Agustín - Hasenkamp</title>
-    <meta name="description" content="Aberturas de calidad en Hasenkamp. Puertas, ventanas y soluciones a medida para tu hogar o comercio.">
+    <meta name="description" content="Don Agustín: soluciones para la construcción y el hogar en Hasenkamp y la región. Calidad, confianza y atención personalizada.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://donagustin.com.ar/">
+
+    <!-- Open Graph (Facebook, WhatsApp, etc.) -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_AR">
+    <meta property="og:site_name" content="Fábrica de Aberturas Don Agustín">
+    <meta property="og:title" content="Fábrica de Aberturas Don Agustín">
+    <meta property="og:description" content="Puertas y ventanas de calidad en Hasenkamp.">
+    <meta property="og:url" content="https://donagustin.com.ar/">
+    <!-- Reemplazar con la imagen oficial cuando Nicolás la entregue -->
+    <meta property="og:image" content="https://donagustin.com.ar/assets/icons/logo.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Fábrica de Aberturas Don Agustín">
+    <meta name="twitter:description" content="Puertas y ventanas de calidad en Hasenkamp.">
+    <meta name="twitter:image" content="https://donagustin.com.ar/assets/icons/logo.png">
+
+    <!-- Datos estructurados Schema.org -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "WebSite",
+                "@id": "https://donagustin.com.ar/#website",
+                "url": "https://donagustin.com.ar/",
+                "name": "Fábrica de Aberturas Don Agustín",
+                "description": "Puertas y ventanas de calidad en Hasenkamp. Presupuestos, productos y contacto en un solo lugar.",
+                "inLanguage": "es-AR",
+                "publisher": { "@id": "https://donagustin.com.ar/#business" }
+            },
+            {
+                "@type": "LocalBusiness",
+                "@id": "https://donagustin.com.ar/#business",
+                "name": "Fábrica de Aberturas Don Agustín",
+                "url": "https://donagustin.com.ar/",
+                "telephone": "+54-3435-436131",
+                "image": "https://donagustin.com.ar/assets/icons/logo.png",
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Hasenkamp",
+                    "addressRegion": "Entre Ríos",
+                    "addressCountry": "AR"
+                },
+                "areaServed": {
+                    "@type": "State",
+                    "name": "Entre Ríos"
+                },
+                "hasPart": [
+                    {
+                        "@type": "WebPageElement",
+                        "name": "Productos",
+                        "url": "https://donagustin.com.ar/#productos"
+                    },
+                    {
+                        "@type": "WebPageElement",
+                        "name": "Cómo Comprar",
+                        "url": "https://donagustin.com.ar/#como-comprar"
+                    },
+                    {
+                        "@type": "WebPageElement",
+                        "name": "Quiénes Somos",
+                        "url": "https://donagustin.com.ar/#quienes-somos"
+                    },
+                    {
+                        "@type": "WebPageElement",
+                        "name": "Contacto",
+                        "url": "https://donagustin.com.ar/#contacto"
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
@@ -54,7 +131,7 @@
                     </a>
                 </li>
                 <li>
-                    <a class="nav-link faq" href="#faq">
+                    <a class="nav-link faq" href="#como-comprar">
                         <i class="fas fa-question-circle"></i>
                         <span>FAQ</span>
                     </a>
@@ -107,7 +184,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#faq" class="nav-mobile-link">
+                    <a href="#como-comprar" class="nav-mobile-link">
                         <i class="fas fa-question-circle"></i>
                         <span>FAQ</span>
                     </a>
@@ -148,14 +225,23 @@
         </div>
     </section>
 
-    <div data-include="partials/aberturas-section.html"></div>
-    <div data-include="partials/corralon-section.html"></div>
+    <!-- Productos: aberturas, corralón y muebles -->
+    <div id="productos" role="region" aria-labelledby="heading-productos">
+        <h2 id="heading-productos" class="seo-section-title">Productos</h2>
+        <div data-include="partials/aberturas-section.html"></div>
+        <div data-include="partials/corralon-section.html"></div>
+        <div data-include="partials/muebles-section.html"></div>
+    </div>
 
-    <div data-include="partials/muebles-section.html"></div>
-    <div data-include="partials/obras-section.html"></div>
+    <!-- Quiénes Somos: obras y testimonios -->
+    <div id="quienes-somos" role="region" aria-labelledby="heading-quienes-somos">
+        <h2 id="heading-quienes-somos" class="seo-section-title">Quiénes Somos</h2>
+        <div data-include="partials/obras-section.html"></div>
+        <div data-include="partials/testimonios-section.html"></div>
+    </div>
 
-    <!-- Sección FAQ -->
-    <section id="faq">
+    <!-- Cómo Comprar: preguntas frecuentes -->
+    <section id="como-comprar">
         <div class="faq-background">
             <div class="faq-pattern"></div>
         </div>
@@ -166,8 +252,8 @@
                     <i class="fas fa-question-circle"></i>
                     Resolvemos tus dudas
                 </span>
-                <h2 class="faq-title">Preguntas Frecuentes</h2>
-                <p class="faq-subtitle">Encuentra respuestas rápidas a las consultas más comunes</p>
+                <h2 class="faq-title">Cómo Comprar</h2>
+                <p class="faq-subtitle">Presupuestos, pagos, envíos y respuestas a las consultas más comunes</p>
             </div>
 
             <!-- Categorías como tabs -->
@@ -360,9 +446,22 @@
         </div>
     </section>
 
-    <div data-include="partials/testimonios-section.html"></div>
-
     <div data-include="partials/contacto-section.html"></div>
+
+    <footer class="site-footer">
+        <div class="site-footer-inner">
+            <p class="site-footer-brand">Fábrica de Aberturas Don Agustín</p>
+            <nav aria-label="Secciones del sitio">
+                <ul class="site-footer-nav">
+                    <li><a href="#productos">Productos</a></li>
+                    <li><a href="#como-comprar">Cómo Comprar</a></li>
+                    <li><a href="#quienes-somos">Quiénes Somos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+            <p class="site-footer-copy">Hasenkamp, Entre Ríos · Desde 2002</p>
+        </div>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script>
