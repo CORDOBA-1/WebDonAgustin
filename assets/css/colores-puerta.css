@@ -651,35 +651,6 @@
     background: #1da851;
 }
 
-/* Botón en sección aberturas del home */
-.btn-explorar-colores {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    margin-top: 20px;
-    padding: 14px 28px;
-    background: linear-gradient(135deg, #e94560 0%, #c23a51 100%);
-    color: #fff;
-    text-decoration: none;
-    border-radius: 50px;
-    font-size: 0.92rem;
-    font-weight: 600;
-    box-shadow: 0 6px 24px rgba(233, 69, 96, 0.35);
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.btn-explorar-colores:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 30px rgba(233, 69, 96, 0.45);
-    color: #fff;
-}
-
-.aberturas-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 /* Responsive */
 @media (max-width: 768px) {
     .colores-puerta-layout {
