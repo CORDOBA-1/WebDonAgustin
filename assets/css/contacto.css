@@ -87,9 +87,95 @@
 /* Grid de cards de contacto */
 .contacto-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
+    margin-bottom: 24px;
+}
+
+/* Correos por área */
+.contacto-correos {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    border-radius: 14px;
+    padding: 24px 28px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
     margin-bottom: 32px;
+}
+
+.contacto-correos-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.contacto-correos-icon {
+    width: 48px;
+    height: 48px;
+    background: rgba(255, 107, 107, 0.2);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.contacto-correos-icon i {
+    font-size: 1.2rem;
+    color: #FF6B6B;
+}
+
+.contacto-correos-header h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 4px;
+}
+
+.contacto-correos-header p {
+    font-size: 0.88rem;
+    color: rgba(255, 255, 255, 0.55);
+    line-height: 1.45;
+}
+
+.correos-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.correo-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 14px 16px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    text-decoration: none;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.correo-item:hover {
+    background: rgba(255, 107, 107, 0.1);
+    border-color: rgba(255, 107, 107, 0.35);
+    transform: translateY(-2px);
+}
+
+.correo-area {
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.correo-direccion {
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.92);
+    word-break: break-all;
 }
 
 /* Cards de contacto */
@@ -412,6 +498,10 @@
     .contacto-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .correos-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (max-width: 900px) {
@@ -475,5 +565,14 @@
 
     .contacto-card {
         padding: 20px 22px;
+    }
+
+    .contacto-correos {
+        padding: 20px 18px;
+    }
+
+    .contacto-correos-header {
+        flex-direction: column;
+        gap: 12px;
     }
 }

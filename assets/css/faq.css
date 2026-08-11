@@ -278,6 +278,17 @@
     line-height: 1.55;
 }
 
+.faq-answer a {
+    color: var(--rojo, #E74C3C);
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.faq-answer a:hover {
+    color: #c0392b;
+}
+
 .faq-item.active .faq-answer {
     max-height: 260px;
     padding: 10px 0 12px;

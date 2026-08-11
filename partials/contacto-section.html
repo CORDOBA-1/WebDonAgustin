@@ -17,7 +17,7 @@
         <!-- Cards de contacto -->
         <div class="contacto-grid">
             <!-- WhatsApp Card -->
-            <a href="https://wa.me/5493435436131" target="_blank" class="contacto-card whatsapp-card">
+            <a href="https://wa.me/5493435436131" target="_blank" rel="noopener" class="contacto-card whatsapp-card">
                 <div class="card-icon-wrapper">
                     <div class="icon-bg"></div>
                     <i class="fab fa-whatsapp"></i>
@@ -38,7 +38,7 @@
             </a>
 
             <!-- Teléfono Card -->
-            <a href="tel:4930 793" class="contacto-card telefono-card">
+            <a href="tel:+5493435436131" class="contacto-card telefono-card">
                 <div class="card-icon-wrapper">
                     <div class="icon-bg"></div>
                     <i class="fas fa-phone-alt"></i>
@@ -54,25 +54,8 @@
                 </div>
             </a>
 
-            <!-- Email Card -->
-            <a href="mailto:info@empresa.com" class="contacto-card email-card">
-                <div class="card-icon-wrapper">
-                    <div class="icon-bg"></div>
-                    <i class="fas fa-envelope"></i>
-                </div>
-                <div class="card-info">
-                    <h3>Email</h3>
-                    <p>Consultas y presupuestos</p>
-                    <span class="card-detail">info@empresa.com</span>
-                </div>
-                <div class="card-action">
-                    <span>Enviar email</span>
-                    <i class="fas fa-arrow-right"></i>
-                </div>
-            </a>
-
             <!-- Ubicación Card -->
-            <a href="https://maps.google.com" target="_blank" class="contacto-card ubicacion-card">
+            <a href="https://maps.google.com" target="_blank" rel="noopener" class="contacto-card ubicacion-card">
                 <div class="card-icon-wrapper">
                     <div class="icon-bg"></div>
                     <i class="fas fa-map-marker-alt"></i>
@@ -87,6 +70,33 @@
                     <i class="fas fa-arrow-right"></i>
                 </div>
             </a>
+        </div>
+
+        <!-- Correos por área -->
+        <div class="contacto-correos">
+            <div class="contacto-correos-header">
+                <div class="contacto-correos-icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <div>
+                    <h3>Correos electrónicos</h3>
+                    <p>Escribinos al área que corresponda y te respondemos a la brevedad.</p>
+                </div>
+            </div>
+            <div class="correos-grid">
+                <a href="mailto:info@donagustin.com.ar" class="correo-item">
+                    <span class="correo-area">Consultas generales</span>
+                    <span class="correo-direccion">info@donagustin.com.ar</span>
+                </a>
+                <a href="mailto:presupuestos@donagustin.com.ar" class="correo-item">
+                    <span class="correo-area">Presupuestos</span>
+                    <span class="correo-direccion">presupuestos@donagustin.com.ar</span>
+                </a>
+                <a href="mailto:rrhh@donagustin.com.ar" class="correo-item">
+                    <span class="correo-area">Recursos Humanos (CV)</span>
+                    <span class="correo-direccion">rrhh@donagustin.com.ar</span>
+                </a>
+            </div>
         </div>
 
         <!-- Horarios y servicios -->
