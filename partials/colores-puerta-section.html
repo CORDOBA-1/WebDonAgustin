@@ -1,0 +1,178 @@
+<!-- Explorador de colores y tipos de aberturas -->
+<section id="colores-puerta">
+    <div class="colores-puerta-container">
+        <header class="colores-puerta-header">
+            <h1 class="colores-puerta-title">Colores y tipos de aberturas</h1>
+            <p class="colores-puerta-subtitle">Elegí el tipo de abertura, abrila con un clic y probá distintos acabados en aluminio anodizado o pintado.</p>
+        </header>
+
+        <div class="tipos-abertura" role="tablist" aria-label="Tipos de aberturas">
+            <button type="button" class="tipo-btn active" data-tipo="batiente" role="tab" aria-selected="true">
+                <i class="fas fa-door-open"></i>
+                <span>Batiente</span>
+            </button>
+            <button type="button" class="tipo-btn" data-tipo="corrediza" role="tab" aria-selected="false">
+                <i class="fas fa-arrows-alt-h"></i>
+                <span>Corrediza</span>
+            </button>
+            <button type="button" class="tipo-btn" data-tipo="proyectante" role="tab" aria-selected="false">
+                <i class="fas fa-external-link-alt"></i>
+                <span>Proyectante</span>
+            </button>
+            <button type="button" class="tipo-btn" data-tipo="porton" role="tab" aria-selected="false">
+                <i class="fas fa-warehouse"></i>
+                <span>Portón elevadizo</span>
+            </button>
+            <button type="button" class="tipo-btn" data-tipo="enrollable" role="tab" aria-selected="false">
+                <i class="fas fa-grip-lines"></i>
+                <span>Cortina enrollar</span>
+            </button>
+        </div>
+
+        <p class="tipo-descripcion" id="tipoDescripcion">Puerta o ventana que abre hacia adentro o afuera sobre bisagras laterales.</p>
+
+        <div class="colores-puerta-layout">
+            <div class="puerta-viewport">
+                <!-- Batiente -->
+                <div class="puerta-vista active" data-tipo="batiente">
+                    <p class="puerta-hint"><i class="fas fa-hand-pointer"></i> Tocá para abrir y cerrar</p>
+                    <button type="button" class="puerta-trigger" aria-expanded="false">
+                        <div class="puerta-stage">
+                            <div class="puerta-marco">
+                                <div class="puerta-interior"></div>
+                                <div class="puerta-hoja hoja-batiente">
+                                    <div class="puerta-panel panel-solido"></div>
+                                    <div class="puerta-barral"></div>
+                                </div>
+                            </div>
+                            <div class="puerta-suelo"></div>
+                        </div>
+                    </button>
+                </div>
+
+                <!-- Corrediza -->
+                <div class="puerta-vista" data-tipo="corrediza" hidden>
+                    <p class="puerta-hint"><i class="fas fa-hand-pointer"></i> Tocá para correr la hoja</p>
+                    <button type="button" class="puerta-trigger" aria-expanded="false">
+                        <div class="puerta-stage">
+                            <div class="puerta-marco marco-corrediza">
+                                <div class="puerta-interior"></div>
+                                <div class="corrediza-track">
+                                    <div class="corrediza-hoja hoja-fija">
+                                        <div class="corrediza-marco-hoja">
+                                            <div class="corrediza-vidrio-full"></div>
+                                        </div>
+                                    </div>
+                                    <div class="corrediza-hoja hoja-mueve">
+                                        <div class="corrediza-marco-hoja">
+                                            <div class="corrediza-vidrio-full"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="puerta-suelo"></div>
+                        </div>
+                    </button>
+                </div>
+
+                <!-- Proyectante -->
+                <div class="puerta-vista" data-tipo="proyectante" hidden>
+                    <p class="puerta-hint"><i class="fas fa-hand-pointer"></i> Tocá para proyectar la hoja</p>
+                    <button type="button" class="puerta-trigger" aria-expanded="false">
+                        <div class="puerta-stage">
+                            <div class="puerta-marco marco-ventana">
+                                <div class="puerta-interior"></div>
+                                <div class="puerta-hoja hoja-proyectante">
+                                    <div class="corrediza-marco-hoja">
+                                        <div class="corrediza-vidrio-full"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="puerta-suelo"></div>
+                        </div>
+                    </button>
+                </div>
+
+                <!-- Portón elevadizo -->
+                <div class="puerta-vista" data-tipo="porton" hidden>
+                    <p class="puerta-hint"><i class="fas fa-hand-pointer"></i> Tocá para levantar el portón</p>
+                    <button type="button" class="puerta-trigger" aria-expanded="false">
+                        <div class="puerta-stage">
+                            <div class="puerta-marco marco-porton">
+                                <div class="puerta-interior interior-porton"></div>
+                                <div class="puerta-hoja hoja-porton">
+                                    <div class="puerta-panel panel-porton"></div>
+                                    <div class="porton-lineas"></div>
+                                </div>
+                            </div>
+                            <div class="puerta-suelo suelo-porton"></div>
+                        </div>
+                    </button>
+                </div>
+
+                <!-- Cortina de enrollar -->
+                <div class="puerta-vista" data-tipo="enrollable" hidden>
+                    <p class="puerta-hint"><i class="fas fa-hand-pointer"></i> Tocá para enrollar / desenrollar</p>
+                    <button type="button" class="puerta-trigger" aria-expanded="false">
+                        <div class="puerta-stage">
+                            <div class="puerta-marco marco-enrollable">
+                                <div class="puerta-interior"></div>
+                                <div class="enrollable-cajon"></div>
+                                <div class="enrollable-cortina">
+                                    <div class="enrollable-tablillas"></div>
+                                </div>
+                            </div>
+                            <div class="puerta-suelo"></div>
+                        </div>
+                    </button>
+                </div>
+            </div>
+
+            <div class="colores-panel" id="coloresPanel">
+                <div class="colores-panel-inner">
+                    <p class="colores-tipo-activo">Tipo: <strong id="tipoActivo">Batiente</strong></p>
+
+                    <div class="colores-tabs" role="tablist">
+                        <button type="button" class="colores-tab active" data-tab="anodizado" role="tab" aria-selected="true">Anodizado</button>
+                        <button type="button" class="colores-tab" data-tab="pintado" role="tab" aria-selected="false">Pintado</button>
+                    </div>
+
+                    <div class="colores-grupo active" data-grupo="anodizado" role="tabpanel">
+                        <button type="button" class="color-muestra active" data-nombre="Anodizado natural" data-color="#B8B8B8" data-dark="#8E8E8E" style="--muestra: #B8B8B8">
+                            <span class="muestra-circle"></span><span class="muestra-nombre">Natural</span>
+                        </button>
+                        <button type="button" class="color-muestra" data-nombre="Anodizado negro" data-color="#3A3A3A" data-dark="#1A1A1A" style="--muestra: #3A3A3A">
+                            <span class="muestra-circle"></span><span class="muestra-nombre">Negro</span>
+                        </button>
+                        <button type="button" class="color-muestra" data-nombre="Anodizado peltre" data-color="#6E7A86" data-dark="#4A5560" style="--muestra: #6E7A86">
+                            <span class="muestra-circle"></span><span class="muestra-nombre">Peltre</span>
+                        </button>
+                    </div>
+
+                    <div class="colores-grupo" data-grupo="pintado" role="tabpanel" hidden>
+                        <button type="button" class="color-muestra" data-nombre="Pintado blanco" data-color="#F4F4F2" data-dark="#D8D8D6" style="--muestra: #F4F4F2">
+                            <span class="muestra-circle"></span><span class="muestra-nombre">Blanco</span>
+                        </button>
+                        <button type="button" class="color-muestra" data-nombre="Pintado negro" data-color="#2C2C2C" data-dark="#141414" style="--muestra: #2C2C2C">
+                            <span class="muestra-circle"></span><span class="muestra-nombre">Negro</span>
+                        </button>
+                        <button type="button" class="color-muestra" data-nombre="Pintado gris" data-color="#8A9098" data-dark="#636970" style="--muestra: #8A9098">
+                            <span class="muestra-circle"></span><span class="muestra-nombre">Gris</span>
+                        </button>
+                        <button type="button" class="color-muestra" data-nombre="Pintado símil madera" data-color="#A67B5B" data-dark="#735540" data-madera="true" style="--muestra: #A67B5B">
+                            <span class="muestra-circle muestra-madera"></span><span class="muestra-nombre">Símil madera</span>
+                        </button>
+                    </div>
+
+                    <p class="colores-seleccionado">Color: <strong id="colorElegido">Anodizado natural</strong></p>
+                    <p class="colores-disclaimer">Los colores pueden variar según pantalla. Consultá muestras físicas en nuestro local.</p>
+
+                    <a href="https://wa.me/5493435436131?text=Hola!%20Me%20interesa%20un%20presupuesto%20de%20abertura%20batiente%20en%20Anodizado%20natural." class="colores-whatsapp" id="coloresWhatsapp" target="_blank" rel="noopener">
+                        <i class="fab fa-whatsapp"></i>
+                        Consultar por WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

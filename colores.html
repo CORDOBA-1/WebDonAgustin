@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colores y tipos de aberturas - Don Agustín</title>
+    <meta name="description" content="Explorá colores en aluminio anodizado y pintado. Batiente, corrediza, proyectante, portón elevadizo y cortina de enrollar.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body class="page-colores">
+    <a href="index.html#aberturas" class="colores-back-btn" title="Volver a aberturas">
+        <i class="fas fa-arrow-left"></i>
+        <span>Volver</span>
+    </a>
+
+    <main>
+        <div data-include="partials/colores-puerta-section.html"></div>
+    </main>
+
+    <script>
+        async function loadPartials() {
+            const targets = document.querySelectorAll('[data-include]');
+            await Promise.all(Array.from(targets).map(async (target) => {
+                const path = target.getAttribute('data-include');
+                const res = await fetch(path);
+                if (!res.ok) throw new Error(path);
+                target.outerHTML = await res.text();
+            }));
+        }
+
+        loadPartials().then(() => {
+            const s = document.createElement('script');
+            s.src = 'assets/js/colores-puerta.js';
+            document.body.appendChild(s);
+        });
+    </script>
+</body>
+</html>
