@@ -11,8 +11,17 @@
         padding: 70px 16px 40px;
     }
 
-    /* Hero más compacto */
-    #inicio { min-height: 92vh; }
+    /* Hero a pantalla completa */
+    #inicio {
+        min-height: 100vh;
+        min-height: 100svh;
+        min-height: 100dvh;
+    }
+
+    #inicio::before {
+        background-position: center 78%;
+    }
+
     .hero-content { padding: 48px 36px; }
     .hero-title { font-size: 4.5rem !important; }
     .hero-vision { font-size: 1.3rem !important; margin-bottom: 24px; }
@@ -204,6 +213,17 @@
     section {
         padding: 70px 15px 40px;
         min-height: auto;
+    }
+
+    #inicio {
+        min-height: 100vh;
+        min-height: 100svh;
+        min-height: 100dvh;
+        padding: 90px 15px 50px;
+    }
+
+    #inicio::before {
+        background-position: center 82%;
     }
 
     .section-text h2 {
@@ -855,7 +875,13 @@
 @media (max-width: 900px) and (orientation: landscape) {
     #inicio {
         min-height: 100vh;
+        min-height: 100svh;
+        min-height: 100dvh;
         padding-top: 80px;
+    }
+
+    #inicio::before {
+        background-position: center 70%;
     }
 
     .hero-content {

@@ -376,3 +376,257 @@ onReady(function() {
         }
     });
 });
+
+// Modales de detalle (aberturas y corralón en home)
+function initDetalleModal(config) {
+    var section = document.getElementById(config.sectionId);
+    var modal = document.getElementById(config.modalId);
+    if (!section || !modal) return;
+
+    var modalImg = document.getElementById(config.ids.img);
+    var modalBadge = document.getElementById(config.ids.badge);
+    var modalTitle = document.getElementById(config.ids.title);
+    var modalDesc = document.getElementById(config.ids.desc);
+    var modalFeatures = document.getElementById(config.ids.features);
+    var modalWhatsapp = document.getElementById(config.ids.whatsapp);
+    var lastFocused = null;
+
+    function openModal(itemId) {
+        var data = config.data[itemId];
+        if (!data) return;
+
+        lastFocused = document.activeElement;
+
+        modalImg.src = data.image;
+        modalImg.alt = data.title;
+        modalTitle.textContent = data.title;
+        modalDesc.textContent = data.description;
+
+        if (data.badge) {
+            modalBadge.textContent = data.badge;
+            modalBadge.className = 'abertura-modal-badge' + (data.badgeClass ? ' ' + data.badgeClass : '');
+            modalBadge.hidden = false;
+        } else {
+            modalBadge.hidden = true;
+        }
+
+        modalFeatures.innerHTML = data.features.map(function(text) {
+            return '<li><i class="fas fa-check-circle"></i><span>' + text + '</span></li>';
+        }).join('');
+
+        if (modalWhatsapp) {
+            var msg = encodeURIComponent(config.whatsappMsg(data.title));
+            modalWhatsapp.href = 'https://wa.me/5493435436131?text=' + msg;
+        }
+
+        modal.hidden = false;
+        modal.setAttribute('aria-hidden', 'false');
+        requestAnimationFrame(function() {
+            modal.classList.add('is-open');
+        });
+        document.body.style.overflow = 'hidden';
+        modal.querySelector('.abertura-modal-close').focus();
+    }
+
+    function closeModal() {
+        modal.classList.remove('is-open');
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+
+        setTimeout(function() {
+            modal.hidden = true;
+            if (lastFocused && lastFocused.focus) lastFocused.focus();
+        }, 300);
+    }
+
+    section.querySelectorAll(config.cardSelector).forEach(function(card) {
+        card.addEventListener('click', function() {
+            openModal(card.dataset[config.dataAttr]);
+        });
+
+        card.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                openModal(card.dataset[config.dataAttr]);
+            }
+        });
+    });
+
+    modal.querySelectorAll('[data-close-modal]').forEach(function(el) {
+        el.addEventListener('click', closeModal);
+    });
+
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && modal.classList.contains('is-open')) {
+            closeModal();
+        }
+    });
+}
+
+onReady(function() {
+    initDetalleModal({
+        sectionId: 'aberturas',
+        modalId: 'aberturaModal',
+        cardSelector: '.abertura-card[data-linea]',
+        dataAttr: 'linea',
+        ids: {
+            img: 'aberturaModalImg',
+            badge: 'aberturaModalBadge',
+            title: 'aberturaModalTitle',
+            desc: 'aberturaModalDesc',
+            features: 'aberturaModalFeatures',
+            whatsapp: 'aberturaModalWhatsapp'
+        },
+        whatsappMsg: function(title) {
+            return 'Hola! Me interesa la ' + title + '. Quisiera más información.';
+        },
+        data: {
+            a40: {
+                title: 'Línea A40 New',
+                badge: 'Ultra',
+                badgeClass: 'badge-ultra',
+                image: 'assets/images/a30_new.jpg',
+                description: 'Nuestra línea de máximo rendimiento. Pensada para proyectos que exigen grandes vanos, excelente aislación térmica y acústica, con terminaciones de primer nivel.',
+                features: [
+                    'Máxima prestación en aluminio',
+                    'Ideal para grandes dimensiones y proyectos exigentes',
+                    'Aislación térmica y acústica superior',
+                    'Compatible con DVH y herrajes de alta gama',
+                    'Fabricación propia con control de calidad en planta'
+                ]
+            },
+            a30: {
+                title: 'Línea A30 New',
+                badge: 'Premium',
+                badgeClass: 'badge-premium',
+                image: 'assets/images/a30_new.jpg',
+                description: 'Equilibrio entre prestación y diseño. Una línea premium muy elegida para viviendas y local comercial que buscan calidad superior sin llegar al rango ultra.',
+                features: [
+                    'Alta prestación estructural',
+                    'Permite aberturas de buen tamaño',
+                    'Buena aislación térmica',
+                    'Variedad de aperturas: batiente, corrediza, proyectante',
+                    'Excelente relación calidad-prestación'
+                ]
+            },
+            modena: {
+                title: 'Línea Modena',
+                badge: 'Recomendado',
+                badgeClass: '',
+                image: 'assets/images/modena.jpg',
+                description: 'La opción más elegida por nuestros clientes. Doble contacto y muy buena hermeticidad, con un precio competitivo para obras residenciales.',
+                features: [
+                    'Sistema de doble contacto',
+                    'Muy buena hermeticidad al viento y al agua',
+                    'Excelente relación precio-calidad',
+                    'Ideal para viviendas y refacciones',
+                    'Disponible en múltiples tipos de apertura'
+                ]
+            },
+            herrero: {
+                title: 'Línea Herrero Pesado',
+                badge: '',
+                badgeClass: '',
+                image: 'assets/images/herrero_pesado.JPG',
+                description: 'Línea económica y robusta, clásica del mercado. Muy utilizada en construcción tradicional cuando se busca durabilidad y un presupuesto accesible.',
+                features: [
+                    'Opción económica y resistente',
+                    'Perfil herrero clásico reforzado',
+                    'Duradera y de fácil mantenimiento',
+                    'Ideal para obras con presupuesto ajustado',
+                    'Fabricación y colocación con nuestro equipo'
+                ]
+            }
+        }
+    });
+
+    initDetalleModal({
+        sectionId: 'corralon',
+        modalId: 'corralonModal',
+        cardSelector: '.corralon-card[data-categoria]',
+        dataAttr: 'categoria',
+        ids: {
+            img: 'corralonModalImg',
+            badge: 'corralonModalBadge',
+            title: 'corralonModalTitle',
+            desc: 'corralonModalDesc',
+            features: 'corralonModalFeatures',
+            whatsapp: 'corralonModalWhatsapp'
+        },
+        whatsappMsg: function(title) {
+            return 'Hola! Me interesa consultar por ' + title + ' del corralón. Quisiera más información.';
+        },
+        data: {
+            'obra-gruesa': {
+                title: 'Obra Gruesa',
+                badge: '',
+                badgeClass: '',
+                image: 'assets/images/materiales_obras_gruesa.jpg',
+                description: 'Materiales para la estructura de tu obra: desde cimientos hasta muros portantes. Stock permanente y asesoramiento para calcular cantidades.',
+                features: [
+                    'Ladrillos, bloques y cerámicos estructurales',
+                    'Cemento, cal, arena y áridos',
+                    'Viguetas, bloques de hormigón y complementos',
+                    'Presupuesto sin cargo',
+                    'Envíos a gran parte de Entre Ríos'
+                ]
+            },
+            'obra-fina': {
+                title: 'Obra Fina',
+                badge: '',
+                badgeClass: '',
+                image: 'assets/images/materiales_obras_fina.jpg',
+                description: 'Todo para terminaciones interiores y exteriores: revestimientos, pinturas, pegamentos y productos de alta calidad para el acabado final.',
+                features: [
+                    'Cerámicos, porcelanatos y revestimientos',
+                    'Pinturas, pastinas, selladores y fragües',
+                    'Pegamentos y morteros de terminación',
+                    'Marcas reconocidas del mercado',
+                    'Asesoramiento para elegir el producto correcto'
+                ]
+            },
+            hierros: {
+                title: 'Hierros',
+                badge: '',
+                badgeClass: '',
+                image: 'assets/images/materiales_hierro.jpg',
+                description: 'Hierros y aceros para construcción: barras, mallas, alambres, chapas y perfiles. Ideal para estructuras, refuerzos y herrería.',
+                features: [
+                    'Hierro de construcción en distintos diámetros',
+                    'Alambre, clavos y accesorios',
+                    'Chapas y perfiles metálicos',
+                    'Corte y asesoramiento en mostrador',
+                    'Precios mayoristas y minoristas'
+                ]
+            },
+            'perfil-c': {
+                title: 'Perfil C',
+                badge: 'Representantes',
+                badgeClass: 'badge-featured',
+                image: 'assets/images/perfil_c.jpg',
+                description: 'Somos representantes directos de Perfil C. Precios de fábrica, stock permanente y entrega para obra y estructura metálica.',
+                features: [
+                    'Representantes oficiales',
+                    'Perfiles C en múltiples medidas',
+                    'Precio directo de fábrica',
+                    'Stock permanente en depósito',
+                    'Ideal para tinglados, galpones y estructuras'
+                ]
+            },
+            malla: {
+                title: 'Malla Electrosoldada',
+                badge: 'Representantes',
+                badgeClass: 'badge-featured',
+                image: 'assets/images/malla_electrosoldada.jpg',
+                description: 'Representantes directos de malla electrosoldada. Los mejores precios para losas, caminos, cerramientos y refuerzo de hormigón.',
+                features: [
+                    'Representantes directos',
+                    'Distintas medidas y separaciones',
+                    'Excelente relación precio-calidad',
+                    'Ideal para losas y contrapisos',
+                    'Envío coordinado según tu obra'
+                ]
+            }
+        }
+    });
+});

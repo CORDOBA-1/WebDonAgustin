@@ -112,6 +112,7 @@
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
     animation: fadeInUp 0.8s ease-out both;
+    cursor: pointer;
 }
 
 .abertura-card:nth-child(1) { animation-delay: 0.1s; }
@@ -881,4 +882,270 @@
     transform: translateY(-2px);
     box-shadow: 0 10px 30px rgba(233, 69, 96, 0.45);
     color: #fff;
+}
+
+/* ─── Modal detalle de línea ─── */
+.abertura-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.abertura-modal.is-open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.abertura-modal[hidden] {
+    display: none !important;
+}
+
+.abertura-modal.is-open[hidden] {
+    display: flex !important;
+}
+
+.abertura-modal-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(10, 15, 30, 0.75);
+    backdrop-filter: blur(6px);
+}
+
+.abertura-modal-dialog {
+    position: relative;
+    width: min(920px, 100%);
+    max-height: min(90vh, 720px);
+    overflow: auto;
+    background: linear-gradient(160deg, #ffffff 0%, #f4f6fa 100%);
+    border-radius: 18px;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
+    transform: translateY(24px) scale(0.96);
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.abertura-modal.is-open .abertura-modal-dialog {
+    transform: translateY(0) scale(1);
+}
+
+.abertura-modal-close {
+    position: fixed;
+    top: max(16px, env(safe-area-inset-top, 16px));
+    right: max(16px, env(safe-area-inset-right, 16px));
+    z-index: 2003;
+    width: 48px;
+    height: 48px;
+    border: none;
+    border-radius: 50%;
+    background: #ffffff;
+    color: #1a1a2e;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.28);
+    transition: background 0.2s, transform 0.2s;
+    font-size: 1.15rem;
+}
+
+.abertura-modal-close:hover {
+    background: #fff;
+    color: #e94560;
+    transform: scale(1.05);
+}
+
+.abertura-modal-close-bottom {
+    display: none;
+}
+
+.abertura-modal-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+}
+
+.abertura-modal-media {
+    min-height: 320px;
+    background: #1a1a2e;
+}
+
+.abertura-modal-media img {
+    width: 100%;
+    height: 100%;
+    min-height: 320px;
+    object-fit: cover;
+    display: block;
+}
+
+.abertura-modal-body {
+    padding: 32px 28px 28px;
+    color: #1a1a2e;
+}
+
+.abertura-modal-badge {
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 50px;
+    background: linear-gradient(135deg, #e94560 0%, #c23a51 100%);
+    color: #fff;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-bottom: 12px;
+}
+
+.abertura-modal-badge.badge-ultra {
+    background: linear-gradient(135deg, #ff00d4 0%, #f700ff 100%);
+    color: #1a1a2e;
+}
+
+.abertura-modal-badge.badge-premium {
+    background: linear-gradient(135deg, #ffd700 0%, #ffb700 100%);
+    color: #1a1a2e;
+}
+
+.abertura-modal-badge.badge-featured {
+    background: linear-gradient(135deg, #ffd700 0%, #ffb700 100%);
+    color: #1a1a2e;
+}
+
+.abertura-modal-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.75rem;
+    margin-bottom: 12px;
+    line-height: 1.2;
+}
+
+.abertura-modal-desc {
+    font-size: 0.92rem;
+    line-height: 1.6;
+    color: #4a5568;
+    margin-bottom: 18px;
+}
+
+.abertura-modal-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.abertura-modal-features li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 0.88rem;
+    color: #2d3748;
+    line-height: 1.45;
+}
+
+.abertura-modal-features li i {
+    color: #e94560;
+    margin-top: 3px;
+    flex-shrink: 0;
+}
+
+.abertura-modal-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.abertura-modal-btn {
+    margin-top: 0;
+    font-size: 0.85rem;
+    padding: 12px 20px;
+}
+
+.abertura-modal-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    background: #25D366;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.abertura-modal-whatsapp:hover {
+    background: #1da851;
+    transform: translateY(-2px);
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .abertura-modal {
+        padding: 12px;
+        align-items: flex-end;
+    }
+
+    .abertura-modal-dialog {
+        max-height: 92vh;
+        border-radius: 18px 18px 0 0;
+    }
+
+    .abertura-modal-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .abertura-modal-media {
+        min-height: 220px;
+    }
+
+    .abertura-modal-media img {
+        min-height: 220px;
+    }
+
+    .abertura-modal-body {
+        padding: 24px 20px 22px;
+    }
+
+    .abertura-modal-title {
+        font-size: 1.45rem;
+    }
+
+    .abertura-modal-actions {
+        flex-direction: column;
+    }
+
+    .abertura-modal-btn,
+    .abertura-modal-whatsapp {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .abertura-modal-close-bottom {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        width: 100%;
+        margin-top: 4px;
+        padding: 12px 20px;
+        border: 1px solid #cdd5e0;
+        border-radius: 50px;
+        background: #fff;
+        color: #4a5568;
+        font-size: 0.88rem;
+        font-weight: 600;
+        cursor: pointer;
+        font-family: inherit;
+    }
+
+    .abertura-modal-close-bottom i {
+        font-size: 0.85rem;
+    }
 }

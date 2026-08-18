@@ -111,6 +111,7 @@
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
     animation: fadeInUp 0.8s ease-out both;
+    cursor: pointer;
 }
 
 .corralon-card:nth-child(1) { animation-delay: 0.1s; }

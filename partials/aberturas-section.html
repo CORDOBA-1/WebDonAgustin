@@ -15,8 +15,8 @@
         </div>
 
         <div class="aberturas-grid">
-            <!-- Línea A40 New - Premium -->
-            <div class="abertura-card ultra">
+            <!-- Línea A40 New - Ultra -->
+            <div class="abertura-card ultra" role="button" tabindex="0" data-linea="a40" aria-label="Ver más información sobre Línea A40 New">
                 <div class="card-ribbon">
                     <i class="fas fa-crown"></i>
                     <span>Ultra</span>
@@ -39,7 +39,7 @@
                 </div>
             </div>
             <!-- Línea A30 New - Premium -->
-            <div class="abertura-card premium">
+            <div class="abertura-card premium" role="button" tabindex="0" data-linea="a30" aria-label="Ver más información sobre Línea A30 New">
                 <div class="card-ribbon">
                     <i class="fas fa-crown"></i>
                     <span>Premium</span>
@@ -63,7 +63,7 @@
             </div>
 
             <!-- Línea Modena - Recomendado -->
-            <div class="abertura-card recommended">
+            <div class="abertura-card recommended" role="button" tabindex="0" data-linea="modena" aria-label="Ver más información sobre Línea Modena">
                 <div class="card-ribbon">
                     <i class="fas fa-star"></i>
                     <span>Recomendado</span>
@@ -87,7 +87,7 @@
             </div>
 
             <!-- Línea Herrero Pesado -->
-            <div class="abertura-card">
+            <div class="abertura-card" role="button" tabindex="0" data-linea="herrero" aria-label="Ver más información sobre Línea Herrero Pesado">
                 <div class="card-image">
                     <img loading="lazy" decoding="async" src="assets/images/herrero_pesado.JPG" alt="Línea Herrero Pesado">
                     <div class="card-overlay">
@@ -203,6 +203,41 @@
                     </div>
                     <div class="marca-item">
                         <span>EKONAL</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal detalle de línea -->
+    <div class="abertura-modal" id="aberturaModal" hidden aria-hidden="true">
+        <div class="abertura-modal-backdrop" data-close-modal></div>
+        <button type="button" class="abertura-modal-close" aria-label="Cerrar detalle" data-close-modal>
+            <i class="fas fa-times"></i>
+        </button>
+        <div class="abertura-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="aberturaModalTitle">
+            <div class="abertura-modal-layout">
+                <div class="abertura-modal-media">
+                    <img src="" alt="" id="aberturaModalImg" loading="lazy" decoding="async">
+                </div>
+                <div class="abertura-modal-body">
+                    <span class="abertura-modal-badge" id="aberturaModalBadge" hidden></span>
+                    <h3 class="abertura-modal-title" id="aberturaModalTitle"></h3>
+                    <p class="abertura-modal-desc" id="aberturaModalDesc"></p>
+                    <ul class="abertura-modal-features" id="aberturaModalFeatures"></ul>
+                    <div class="abertura-modal-actions">
+                        <a href="colores.html" class="btn-explorar-colores abertura-modal-btn">
+                            <i class="fas fa-palette"></i>
+                            Ver colores
+                        </a>
+                        <a href="https://wa.me/5493435436131?text=Hola!%20Me%20interesa%20informaci%C3%B3n%20sobre%20aberturas." class="abertura-modal-whatsapp" id="aberturaModalWhatsapp" target="_blank" rel="noopener">
+                            <i class="fab fa-whatsapp"></i>
+                            Consultar por WhatsApp
+                        </a>
+                        <button type="button" class="abertura-modal-close-bottom" data-close-modal>
+                            <i class="fas fa-times"></i>
+                            Cerrar
+                        </button>
                     </div>
                 </div>
             </div>

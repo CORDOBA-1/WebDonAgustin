@@ -12,7 +12,7 @@
 
         <div class="corralon-grid">
             <!-- Obra Gruesa -->
-            <div class="corralon-card">
+            <div class="corralon-card" role="button" tabindex="0" data-categoria="obra-gruesa" aria-label="Ver más información sobre Obra Gruesa">
                 <div class="card-image">
                     <img loading="lazy" decoding="async" src="assets/images/materiales_obras_gruesa.jpg" alt="Materiales Obra Gruesa">
                     <div class="card-overlay">
@@ -31,7 +31,7 @@
             </div>
 
             <!-- Obra Fina -->
-            <div class="corralon-card">
+            <div class="corralon-card" role="button" tabindex="0" data-categoria="obra-fina" aria-label="Ver más información sobre Obra Fina">
                 <div class="card-image">
                     <img loading="lazy" decoding="async" src="assets/images/materiales_obras_fina.jpg" alt="Materiales Obra Fina">
                     <div class="card-overlay">
@@ -50,7 +50,7 @@
             </div>
 
             <!-- Hierros -->
-            <div class="corralon-card">
+            <div class="corralon-card" role="button" tabindex="0" data-categoria="hierros" aria-label="Ver más información sobre Hierros">
                 <div class="card-image">
                     <img loading="lazy" decoding="async" src="assets/images/materiales_hierro.jpg" alt="Materiales de Hierro">
                     <div class="card-overlay">
@@ -69,7 +69,7 @@
             </div>
 
             <!-- Perfil C - Destacado -->
-            <div class="corralon-card featured">
+            <div class="corralon-card featured" role="button" tabindex="0" data-categoria="perfil-c" aria-label="Ver más información sobre Perfil C">
                 <div class="card-ribbon">
                     <i class="fas fa-award"></i>
                     <span>Representantes</span>
@@ -92,7 +92,7 @@
             </div>
 
             <!-- Malla Electrosoldada - Destacado -->
-            <div class="corralon-card featured">
+            <div class="corralon-card featured" role="button" tabindex="0" data-categoria="malla" aria-label="Ver más información sobre Malla Electrosoldada">
                 <div class="card-ribbon">
                     <i class="fas fa-award"></i>
                     <span>Representantes</span>
@@ -212,6 +212,41 @@
                     </div>
                     <div class="marca-item">
                         <span>STANLEY</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal detalle de categoría -->
+    <div class="abertura-modal" id="corralonModal" hidden aria-hidden="true">
+        <div class="abertura-modal-backdrop" data-close-modal></div>
+        <button type="button" class="abertura-modal-close" aria-label="Cerrar detalle" data-close-modal>
+            <i class="fas fa-times"></i>
+        </button>
+        <div class="abertura-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="corralonModalTitle">
+            <div class="abertura-modal-layout">
+                <div class="abertura-modal-media">
+                    <img src="" alt="" id="corralonModalImg" loading="lazy" decoding="async">
+                </div>
+                <div class="abertura-modal-body">
+                    <span class="abertura-modal-badge" id="corralonModalBadge" hidden></span>
+                    <h3 class="abertura-modal-title" id="corralonModalTitle"></h3>
+                    <p class="abertura-modal-desc" id="corralonModalDesc"></p>
+                    <ul class="abertura-modal-features" id="corralonModalFeatures"></ul>
+                    <div class="abertura-modal-actions">
+                        <a href="corralon.html" class="btn-explorar-colores abertura-modal-btn">
+                            <i class="fas fa-th-large"></i>
+                            Ver productos
+                        </a>
+                        <a href="https://wa.me/5493435436131?text=Hola!%20Me%20interesa%20informaci%C3%B3n%20sobre%20materiales." class="abertura-modal-whatsapp" id="corralonModalWhatsapp" target="_blank" rel="noopener">
+                            <i class="fab fa-whatsapp"></i>
+                            Consultar por WhatsApp
+                        </a>
+                        <button type="button" class="abertura-modal-close-bottom" data-close-modal>
+                            <i class="fas fa-times"></i>
+                            Cerrar
+                        </button>
                     </div>
                 </div>
             </div>
