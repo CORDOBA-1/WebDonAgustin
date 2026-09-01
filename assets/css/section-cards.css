@@ -1,0 +1,598 @@
+/* ============================================
+   CARDS HOME — diseño editorial / overlay
+   Aberturas, Corralón y Muebles
+   ============================================ */
+
+/* ─── Aberturas ─── */
+#aberturas .aberturas-grid {
+    gap: 18px !important;
+    margin-bottom: 36px !important;
+}
+
+#aberturas .abertura-card {
+    position: relative;
+    display: block !important;
+    padding: 0 !important;
+    border-radius: 20px !important;
+    border: none !important;
+    background: rgba(0, 0, 0, 0.2) !important;
+    box-shadow:
+        0 8px 28px rgba(0, 0, 0, 0.28),
+        inset 0 1px 0 rgba(255, 255, 255, 0.12);
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    -webkit-tap-highlight-color: transparent;
+}
+
+#aberturas .abertura-card:hover {
+    transform: translateY(-8px);
+    box-shadow:
+        0 16px 40px rgba(0, 0, 0, 0.35),
+        inset 0 1px 0 rgba(255, 255, 255, 0.18);
+    background: rgba(0, 0, 0, 0.2) !important;
+    border: none !important;
+}
+
+#aberturas .abertura-card .card-image {
+    position: absolute !important;
+    inset: 0 !important;
+    height: 100% !important;
+    width: 100% !important;
+}
+
+#aberturas .abertura-card .card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.9) saturate(1.05);
+    transition: transform 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#aberturas .abertura-card:hover .card-image img {
+    transform: scale(1.08);
+}
+
+#aberturas .abertura-card .card-image::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.12) 0%,
+        rgba(0, 0, 0, 0.05) 30%,
+        rgba(107, 0, 0, 0.5) 68%,
+        rgba(50, 0, 0, 0.94) 100%
+    );
+    pointer-events: none;
+    transition: opacity 0.35s ease;
+}
+
+#aberturas .abertura-card:hover .card-image::after {
+    opacity: 0.92;
+}
+
+#aberturas .abertura-card .card-overlay,
+#aberturas .abertura-card .card-features,
+#aberturas .abertura-card .card-description {
+    display: none !important;
+}
+
+#aberturas .abertura-card .card-ribbon {
+    top: 14px !important;
+    left: 14px !important;
+    right: auto !important;
+    padding: 6px 12px !important;
+    font-size: 0.68rem !important;
+    letter-spacing: 0.6px;
+    border-radius: 20px !important;
+    z-index: 3;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.22) !important;
+}
+
+#aberturas .abertura-card .card-body {
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    z-index: 2;
+    padding: 18px 16px 20px !important;
+    text-align: left !important;
+    background: transparent !important;
+}
+
+#aberturas .abertura-card .card-title {
+    font-family: var(--font-heading) !important;
+    font-size: 1.15rem !important;
+    font-weight: 700 !important;
+    color: #fff !important;
+    margin: 0 0 8px !important;
+    line-height: 1.2 !important;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.45);
+}
+
+#aberturas .abertura-card .card-title::after {
+    content: '';
+    display: block;
+    width: 32px;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.75);
+    margin-top: 10px;
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+#aberturas .abertura-card:hover .card-title::after {
+    width: 48px;
+}
+
+#aberturas .abertura-card .card-mobile-hint {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.88);
+    letter-spacing: 0.2px;
+    opacity: 0.85;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#aberturas .abertura-card:hover .card-mobile-hint {
+    opacity: 1;
+    transform: translateX(3px);
+}
+
+#aberturas .abertura-card.ultra,
+#aberturas .abertura-card.premium,
+#aberturas .abertura-card.recommended {
+    border: none !important;
+    box-shadow:
+        0 8px 28px rgba(0, 0, 0, 0.3),
+        inset 0 0 0 2px rgba(255, 255, 255, 0.28) !important;
+}
+
+#aberturas .abertura-card.ultra:hover,
+#aberturas .abertura-card.premium:hover,
+#aberturas .abertura-card.recommended:hover {
+    box-shadow:
+        0 16px 42px rgba(0, 0, 0, 0.38),
+        inset 0 0 0 2px rgba(255, 255, 255, 0.4) !important;
+}
+
+#aberturas .abertura-card.recommended .card-ribbon {
+    background: var(--brand-blanco) !important;
+    color: var(--brand-rojo) !important;
+}
+
+#aberturas .abertura-card.recommended .card-ribbon i {
+    color: var(--brand-rojo) !important;
+}
+
+/* ─── Corralón ─── */
+#corralon .corralon-grid {
+    gap: 18px !important;
+    margin-bottom: 36px !important;
+}
+
+#corralon .corralon-card {
+    position: relative;
+    display: block !important;
+    padding: 0 !important;
+    border-radius: 20px !important;
+    border: none !important;
+    background: rgba(255, 255, 255, 0.05) !important;
+    box-shadow:
+        0 8px 28px rgba(0, 0, 0, 0.35),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+#corralon .corralon-card:hover {
+    transform: translateY(-8px);
+    box-shadow:
+        0 16px 40px rgba(0, 0, 0, 0.45),
+        inset 0 1px 0 rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: none !important;
+}
+
+#corralon .corralon-card .card-image {
+    display: block !important;
+    position: absolute !important;
+    inset: 0 !important;
+    height: 100% !important;
+    width: 100% !important;
+}
+
+#corralon .corralon-card .card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.78) saturate(0.95);
+    transition: transform 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#corralon .corralon-card:hover .card-image img {
+    transform: scale(1.08);
+}
+
+#corralon .corralon-card .card-image::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.08) 0%,
+        rgba(0, 0, 0, 0.15) 35%,
+        rgba(0, 0, 0, 0.72) 72%,
+        rgba(0, 0, 0, 0.96) 100%
+    );
+    pointer-events: none;
+}
+
+#corralon .corralon-card .card-overlay,
+#corralon .corralon-card .card-icon,
+#corralon .corralon-card .card-description {
+    display: none !important;
+}
+
+#corralon .corralon-card .card-ribbon {
+    display: none !important;
+}
+
+#corralon .corralon-card.featured .card-ribbon {
+    display: flex !important;
+    top: 14px !important;
+    left: 14px !important;
+    right: auto !important;
+    padding: 6px 12px !important;
+    font-size: 0.65rem !important;
+    z-index: 3;
+    backdrop-filter: blur(6px);
+}
+
+#corralon .corralon-card .card-body {
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    z-index: 2;
+    padding: 18px 16px 20px !important;
+    text-align: left !important;
+}
+
+#corralon .corralon-card .card-title {
+    font-family: var(--font-heading) !important;
+    font-size: 1.05rem !important;
+    font-weight: 700 !important;
+    color: #fff !important;
+    margin: 0 0 8px !important;
+    line-height: 1.2 !important;
+}
+
+#corralon .corralon-card .card-title::after {
+    content: '';
+    display: block;
+    width: 32px;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.55);
+    margin-top: 10px;
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+#corralon .corralon-card:hover .card-title::after {
+    width: 48px;
+}
+
+#corralon .corralon-card .card-mobile-hint {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.88);
+    opacity: 0.85;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#corralon .corralon-card:hover .card-mobile-hint {
+    opacity: 1;
+    transform: translateX(3px);
+}
+
+#corralon .corralon-card.featured {
+    border: none !important;
+    box-shadow:
+        0 8px 28px rgba(0, 0, 0, 0.4),
+        inset 0 0 0 2px rgba(255, 215, 0, 0.35) !important;
+}
+
+/* ─── Muebles ─── */
+#muebles .muebles-categorias {
+    gap: 18px !important;
+    max-width: 960px !important;
+}
+
+#muebles .categoria-item {
+    position: relative;
+    display: flex !important;
+    flex-direction: column;
+    align-items: flex-start !important;
+    text-align: left !important;
+    padding: 24px 20px 22px !important;
+    border-radius: 20px !important;
+    border: 1px solid #ebebeb !important;
+    background: linear-gradient(145deg, #fff 0%, #f9f9f9 100%) !important;
+    box-shadow:
+        0 6px 22px rgba(0, 0, 0, 0.06),
+        inset 0 1px 0 rgba(255, 255, 255, 0.95);
+    overflow: hidden;
+    min-height: 160px;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+#muebles .categoria-item:hover {
+    transform: translateY(-6px);
+    box-shadow:
+        0 14px 36px rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 1);
+}
+
+#muebles .categoria-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: var(--brand-negro);
+    border-radius: 20px 0 0 20px;
+}
+
+#muebles .categoria-item::after {
+    content: 'PDF';
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    font-size: 0.62rem;
+    font-weight: 600;
+    letter-spacing: 0.6px;
+    color: var(--brand-negro-medio);
+    background: var(--brand-blanco-suave);
+    padding: 4px 10px;
+    border-radius: 20px;
+    border: 1px solid #e5e5e5;
+}
+
+#muebles .categoria-icono {
+    width: 52px !important;
+    height: 52px !important;
+    border-radius: 14px !important;
+    margin: 0 0 16px !important;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.14) !important;
+}
+
+#muebles .categoria-item h3 {
+    font-size: 1.1rem !important;
+    font-weight: 700 !important;
+    margin-bottom: 6px !important;
+    padding-right: 40px;
+}
+
+#muebles .categoria-item p {
+    display: none;
+}
+
+#muebles .categoria-item .categoria-hint {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.75rem;
+    color: var(--gris-medio);
+    margin-top: auto;
+    padding-top: 10px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+#muebles .categoria-item:hover .categoria-hint {
+    color: var(--brand-negro);
+    transform: translateX(3px);
+}
+
+/* ─── Desktop (mismo diseño editorial que móvil) ─── */
+@media (min-width: 769px) {
+    #aberturas .aberturas-grid {
+        gap: 20px !important;
+    }
+
+    #corralon .corralon-grid {
+        gap: 20px !important;
+    }
+
+    #aberturas .abertura-card,
+    #corralon .corralon-card {
+        min-height: 0;
+        aspect-ratio: 3 / 3.5;
+    }
+
+    #aberturas .abertura-card .card-body,
+    #corralon .corralon-card .card-body {
+        padding: 22px 20px 24px !important;
+    }
+
+    #aberturas .abertura-card .card-title {
+        font-size: 1.2rem !important;
+    }
+
+    #corralon .corralon-card .card-title {
+        font-size: 1.08rem !important;
+    }
+
+    #aberturas .abertura-card .card-mobile-hint,
+    #corralon .corralon-card .card-mobile-hint {
+        font-size: 0.82rem;
+    }
+
+    #aberturas .abertura-card .card-ribbon {
+        top: 16px !important;
+        left: 16px !important;
+        padding: 7px 14px !important;
+        font-size: 0.72rem !important;
+    }
+
+    #corralon .corralon-card.featured .card-ribbon {
+        top: 16px !important;
+        left: 16px !important;
+        padding: 7px 14px !important;
+        font-size: 0.68rem !important;
+    }
+
+    #muebles .categoria-item {
+        min-height: 180px;
+        padding: 28px 24px 24px !important;
+    }
+
+    #muebles .categoria-icono {
+        width: 56px !important;
+        height: 56px !important;
+    }
+
+    #muebles .categoria-item h3 {
+        font-size: 1.15rem !important;
+    }
+}
+
+@media (min-width: 1200px) {
+    #aberturas .abertura-card,
+    #corralon .corralon-card {
+        aspect-ratio: 3 / 3.65;
+    }
+
+    #aberturas .abertura-card .card-title {
+        font-size: 1.25rem !important;
+    }
+}
+
+@media (min-width: 1400px) {
+    #aberturas .abertura-card,
+    #corralon .corralon-card {
+        aspect-ratio: 3 / 3.75;
+    }
+
+    #aberturas .abertura-card .card-title {
+        font-size: 1.3rem !important;
+    }
+
+    #corralon .corralon-card .card-title {
+        font-size: 1.12rem !important;
+    }
+}
+
+@media (max-width: 1280px) and (min-width: 769px) {
+    #aberturas .aberturas-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    #corralon .corralon-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+    }
+
+    #muebles .muebles-categorias {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+/* ─── Móvil ─── */
+@media (max-width: 768px) {
+    #aberturas .aberturas-grid,
+    #corralon .corralon-grid {
+        gap: 12px !important;
+    }
+
+    #aberturas .abertura-card,
+    #corralon .corralon-card {
+        min-height: 168px;
+        border-radius: 18px !important;
+    }
+
+    #aberturas .abertura-card:hover,
+    #corralon .corralon-card:hover {
+        transform: translateY(-4px);
+    }
+
+    #aberturas .abertura-card:active,
+    #corralon .corralon-card:active {
+        transform: scale(0.98);
+    }
+
+    #aberturas .abertura-card .card-body,
+    #corralon .corralon-card .card-body {
+        padding: 12px 12px 14px !important;
+    }
+
+    #aberturas .abertura-card .card-title,
+    #corralon .corralon-card .card-title {
+        font-size: 0.82rem !important;
+        margin-bottom: 6px !important;
+    }
+
+    #aberturas .abertura-card .card-title::after,
+    #corralon .corralon-card .card-title::after {
+        width: 24px;
+        margin-top: 8px;
+    }
+
+    #aberturas .abertura-card .card-mobile-hint,
+    #corralon .corralon-card .card-mobile-hint {
+        font-size: 0.65rem;
+    }
+
+    #aberturas .abertura-card .card-ribbon,
+    #corralon .corralon-card.featured .card-ribbon {
+        top: 10px !important;
+        left: 10px !important;
+        padding: 5px 10px !important;
+        font-size: 0.58rem !important;
+    }
+
+    #muebles .muebles-categorias {
+        gap: 12px !important;
+    }
+
+    #muebles .categoria-item {
+        min-height: 130px;
+        padding: 18px 16px 16px !important;
+        border-radius: 18px !important;
+    }
+
+    #muebles .categoria-icono {
+        width: 44px !important;
+        height: 44px !important;
+        margin-bottom: 14px !important;
+    }
+
+    #muebles .categoria-item h3 {
+        font-size: 0.95rem !important;
+    }
+
+    #muebles .categoria-item .categoria-hint {
+        font-size: 0.68rem;
+    }
+}
+
+@media (max-width: 400px) {
+    #aberturas .abertura-card,
+    #corralon .corralon-card {
+        min-height: 155px;
+    }
+
+    #aberturas .abertura-card .card-title,
+    #corralon .corralon-card .card-title {
+        font-size: 0.78rem !important;
+    }
+}

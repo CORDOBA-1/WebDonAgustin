@@ -47,12 +47,6 @@
         gap: 14px !important;
         margin-bottom: 36px !important;
     }
-    .abertura-card .card-image { height: 135px !important; }
-    .abertura-card .card-body { padding: 14px !important; }
-    .abertura-card .card-title { font-size: 1.12rem !important; margin-bottom: 8px !important; }
-    .abertura-card .card-features { margin-bottom: 8px !important; }
-    .abertura-card .feature { font-size: 0.68rem !important; padding: 3px 8px !important; }
-    .abertura-card .card-description { font-size: 0.8rem !important; }
 
     .aberturas-servicios {
         grid-template-columns: repeat(4, 1fr) !important;
@@ -87,12 +81,6 @@
         gap: 14px !important;
         margin-bottom: 36px !important;
     }
-    .corralon-card .card-image { height: 115px !important; }
-    .corralon-card .card-body { padding: 12px !important; }
-    .corralon-card .card-icon { width: 40px !important; height: 40px !important; margin-bottom: 10px !important; }
-    .corralon-card .card-icon i { font-size: 1.05rem !important; }
-    .corralon-card .card-title { font-size: 1rem !important; margin-bottom: 6px !important; }
-    .corralon-card .card-description { font-size: 0.75rem !important; }
     .corralon-servicios {
         grid-template-columns: repeat(4, 1fr) !important;
         gap: 8px !important;
@@ -132,10 +120,6 @@
         gap: 12px !important;
         margin-bottom: 28px !important;
     }
-    .abertura-card .card-image { height: 120px !important; }
-    .abertura-card .card-body { padding: 12px !important; }
-    .abertura-card .card-title { font-size: 1.05rem !important; }
-    .abertura-card .card-description { font-size: 0.75rem !important; }
     .aberturas-servicios { padding: 10px 12px !important; gap: 8px !important; max-width: 720px !important; }
     .aberturas-servicios .servicio-icon { width: 34px !important; height: 34px !important; }
     .aberturas-servicios .servicio-icon i { font-size: 0.85rem !important; }
@@ -152,10 +136,6 @@
         gap: 12px !important;
         margin-bottom: 28px !important;
     }
-    .corralon-card .card-image { height: 100px !important; }
-    .corralon-card .card-body { padding: 10px !important; }
-    .corralon-card .card-title { font-size: 0.95rem !important; }
-    .corralon-card .card-description { font-size: 0.7rem !important; }
     .corralon-servicios {
         grid-template-columns: repeat(4, 1fr) !important;
         padding: 10px 12px !important;
@@ -310,28 +290,11 @@
 
     .aberturas-grid {
         grid-template-columns: 1fr 1fr !important;
-        gap: 15px !important;
+        gap: 12px !important;
     }
 
     .abertura-card {
-        padding: 20px 15px;
-    }
-
-    .abertura-card .card-image-wrapper {
-        height: 120px;
-    }
-
-    .abertura-card .card-title {
-        font-size: 1rem;
-    }
-
-    .abertura-card .card-description {
-        font-size: 0.85rem;
-        display: none;
-    }
-
-    .abertura-card .card-features {
-        display: none;
+        padding: 0 !important;
     }
 
     .aberturas-servicios {
@@ -417,27 +380,11 @@
 
     .corralon-grid {
         grid-template-columns: 1fr 1fr !important;
-        gap: 15px !important;
+        gap: 12px !important;
     }
 
     .corralon-card {
-        padding: 20px 15px;
-    }
-
-    .corralon-card .card-image-wrapper {
-        height: 100px;
-    }
-
-    .corralon-card .card-title {
-        font-size: 1rem;
-    }
-
-    .corralon-card .card-description {
-        display: none;
-    }
-
-    .corralon-card .card-features {
-        display: none;
+        padding: 0 !important;
     }
 
     .corralon-servicios {
@@ -795,16 +742,18 @@
     }
 
     .aberturas-grid,
-    .corralon-grid,
+    .corralon-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px !important;
+    }
+
     .muebles-categorias {
         grid-template-columns: 1fr !important;
     }
 
-    /* Cards más compactas */
     .abertura-card,
-    .corralon-card,
-    .categoria-item {
-        padding: 15px;
+    .corralon-card {
+        padding: 0 !important;
     }
 
     /* Contacto */
