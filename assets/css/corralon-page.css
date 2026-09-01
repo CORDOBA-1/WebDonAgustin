@@ -52,7 +52,7 @@
 }
 
 .productos-title {
-    font-family: 'Playfair Display', serif;
+    font-family: var(--font-heading);
     font-size: 3.2rem;
     font-weight: 700;
     color: #ffffff;
@@ -62,7 +62,7 @@
 }
 
 .productos-subtitle {
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--font-body);
     font-size: 1.15rem;
     color: rgba(255, 255, 255, 0.7);
     max-width: 600px;
@@ -88,7 +88,7 @@
     background: rgba(255, 255, 255, 0.08);
     border: 2px solid rgba(255, 255, 255, 0.15);
     border-radius: 50px;
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--font-body);
     font-size: 0.95rem;
     font-weight: 500;
     color: rgba(255, 255, 255, 0.8);
@@ -213,7 +213,7 @@
 }
 
 .producto-card .card-linea {
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--font-body);
     font-size: 0.85rem;
     font-weight: 600;
     color: #ffffff;
@@ -228,7 +228,7 @@
     top: 15px;
     left: 15px;
     padding: 6px 14px;
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--font-body);
     font-size: 0.7rem;
     font-weight: 600;
     border-radius: 20px;
@@ -272,7 +272,7 @@
 }
 
 .producto-card .card-title {
-    font-family: 'Playfair Display', serif;
+    font-family: var(--font-heading);
     font-size: 1.2rem;
     font-weight: 700;
     color: #ffffff;
@@ -281,7 +281,7 @@
 }
 
 .producto-card .card-description {
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--font-body);
     font-size: 0.85rem;
     color: rgba(255, 255, 255, 0.7);
     line-height: 1.5;
@@ -299,7 +299,7 @@
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--font-body);
     font-size: 0.75rem;
     color: rgba(255, 255, 255, 0.6);
     background: rgba(255, 255, 255, 0.08);
@@ -323,7 +323,7 @@
 }
 
 .productos-contacto .contacto-content h3 {
-    font-family: 'Playfair Display', serif;
+    font-family: var(--font-heading);
     font-size: 1.8rem;
     font-weight: 700;
     color: #ffffff;
@@ -339,7 +339,7 @@
 }
 
 .productos-contacto .contacto-content p {
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--font-body);
     font-size: 1rem;
     color: rgba(255, 255, 255, 0.7);
     margin-bottom: 30px;
@@ -357,7 +357,7 @@
     color: #ffffff;
     text-decoration: none;
     border-radius: 50px;
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--font-body);
     font-weight: 600;
     font-size: 1rem;
     transition: all 0.3s ease;

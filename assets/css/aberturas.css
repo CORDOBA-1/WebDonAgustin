@@ -67,7 +67,7 @@
 }
 
 .header-badge span {
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--font-body);
     font-size: 0.9rem;
     font-weight: 600;
     color: #ffffff;
@@ -76,7 +76,7 @@
 }
 
 .aberturas-title {
-    font-family: 'Playfair Display', serif;
+    font-family: var(--font-heading);
     font-size: 3.5rem;
     font-weight: 700;
     color: #ffffff;
@@ -86,7 +86,7 @@
 }
 
 .aberturas-subtitle {
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--font-body);
     font-size: 1.15rem;
     color: rgba(255, 255, 255, 0.8);
     max-width: 600px;
@@ -184,7 +184,7 @@
     gap: 6px;
     padding: 8px 14px;
     border-radius: 25px;
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--font-body);
     font-size: 0.75rem;
     font-weight: 600;
     text-transform: uppercase;
@@ -262,7 +262,7 @@
 }
 
 .abertura-card .card-title {
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--font-body);
     font-size: 1.25rem;
     font-weight: 600;
     letter-spacing: 0.2px;
@@ -284,7 +284,7 @@
     background: rgba(255, 255, 255, 0.1);
     padding: 5px 12px;
     border-radius: 20px;
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--font-body);
     font-size: 0.75rem;
     color: rgba(255, 255, 255, 0.9);
 }
@@ -295,7 +295,7 @@
 }
 
 .abertura-card .card-description {
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--font-body);
     font-size: 0.9rem;
     color: rgba(255, 255, 255, 0.7);
     line-height: 1.6;
@@ -357,7 +357,7 @@
 
 .aberturas-servicios .servicio-item h4 {
     grid-column: 2;
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--font-body);
     font-size: 0.78rem;
     font-weight: 600;
     color: #ffffff;
@@ -367,7 +367,7 @@
 
 .aberturas-servicios .servicio-item p {
     grid-column: 2;
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--font-body);
     font-size: 0.65rem;
     color: rgba(255, 255, 255, 0.55);
     line-height: 1.25;
@@ -408,7 +408,7 @@
 }
 
 .servicio-item h4 {
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--font-body);
     font-size: 1.1rem;
     font-weight: 600;
     color: #ffffff;
@@ -416,7 +416,7 @@
 }
 
 .servicio-item p {
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--font-body);
     font-size: 0.85rem;
     color: rgba(255, 255, 255, 0.6);
     line-height: 1.5;
@@ -438,7 +438,7 @@
     color: #ffffff;
     text-decoration: none;
     border-radius: 50px;
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--font-body);
     font-weight: 600;
     font-size: 1.1rem;
     transition: all 0.3s ease;
@@ -472,7 +472,7 @@
 }
 
 .marcas-titulo {
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--font-body);
     font-size: 0.9rem;
     font-weight: 500;
     color: rgba(255, 255, 255, 0.5);
@@ -535,7 +535,7 @@
 }
 
 .marca-item span {
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--font-body);
     font-size: 0.9rem;
     font-weight: 700;
     color: rgba(255, 255, 255, 0.6);
@@ -1017,7 +1017,7 @@
 }
 
 .abertura-modal-title {
-    font-family: 'Playfair Display', serif;
+    font-family: var(--font-heading);
     font-size: 1.75rem;
     margin-bottom: 12px;
     line-height: 1.2;

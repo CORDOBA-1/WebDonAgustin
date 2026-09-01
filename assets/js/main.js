@@ -25,6 +25,23 @@ onReady(function() {
         document.body.style.opacity = '1';
     }, 10);
 
+    window.addEventListener('pageshow', function(event) {
+        if (event.persisted) {
+            document.body.style.opacity = '1';
+        }
+        scrollToHashTarget();
+    });
+
+    function scrollToHashTarget() {
+        if (!window.location.hash) return;
+        const target = document.querySelector(window.location.hash);
+        if (target) {
+            target.scrollIntoView({ block: 'start' });
+        }
+    }
+
+    scrollToHashTarget();
+
     // Función para verificar si un enlace va a otra página
     function isExternalPage(href) {
         if (!href) return false;
@@ -45,6 +62,13 @@ onReady(function() {
             if (isExternalPage(href)) {
                 // Si el enlace tiene ancla, separar la URL y el ancla
                 const [url, anchor] = href.split('#');
+
+                if (href.includes('colores.html')) {
+                    sessionStorage.setItem(
+                        'donagustin-colores-return',
+                        'index.html#aberturas'
+                    );
+                }
                 
                 e.preventDefault();
                 

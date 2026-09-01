@@ -1,5 +1,8 @@
 /* Variables CSS - Paleta de colores y configuraciones globales */
 :root {
+    --font-heading: 'Quatro Slab', Georgia, 'Times New Roman', serif;
+    --font-body: 'Poppins', Arial, sans-serif;
+
     --rojo: #E74C3C;
     --rojo-suave: #FADBD8;
     --madera-oscura: #8B4513;

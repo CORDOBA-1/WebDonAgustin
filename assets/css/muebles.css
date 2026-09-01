@@ -41,7 +41,7 @@
 }
 
 .muebles-title {
-    font-family: 'Playfair Display', serif;
+    font-family: var(--font-heading);
     font-size: 3.2rem;
     font-weight: 700;
     color: #4e342e;
@@ -51,7 +51,7 @@
 }
 
 .muebles-subtitle {
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--font-body);
     font-size: 1.15rem;
     color: #6d4c41;
     font-weight: 400;
@@ -61,7 +61,7 @@
 }
 
 .muebles-download-hint {
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--font-body);
     font-size: 0.95rem;
     color: #8d6e63;
     margin-top: 14px;
@@ -120,7 +120,7 @@
 }
 
 .categoria-item h3 {
-    font-family: 'Playfair Display', serif;
+    font-family: var(--font-heading);
     font-size: 1.05rem;
     font-weight: 700;
     color: #4e342e;
@@ -128,7 +128,7 @@
 }
 
 .categoria-item p {
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--font-body);
     font-size: 0.75rem;
     color: #7d6559;
     line-height: 1.45;
@@ -152,7 +152,7 @@
     border: none;
     cursor: pointer;
     border-radius: 50px;
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--font-body);
     font-weight: 600;
     font-size: 1.1rem;
     transition: all 0.3s ease;
@@ -196,7 +196,7 @@
     background: #ffffff;
     border: 2px solid #e0d5c7;
     border-radius: 50px;
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--font-body);
     font-size: 0.95rem;
     font-weight: 500;
     color: #6d4c41;
@@ -314,7 +314,7 @@
     padding: 6px 14px;
     background: linear-gradient(135deg, #8d6e63 0%, #6d4c41 100%);
     color: #ffffff;
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--font-body);
     font-size: 0.75rem;
     font-weight: 600;
     border-radius: 20px;
@@ -333,7 +333,7 @@
 }
 
 .card-title {
-    font-family: 'Playfair Display', serif;
+    font-family: var(--font-heading);
     font-size: 1.4rem;
     font-weight: 700;
     color: #4e342e;
@@ -342,7 +342,7 @@
 }
 
 .card-description {
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--font-body);
     font-size: 0.9rem;
     color: #7d6559;
     line-height: 1.6;
@@ -382,7 +382,7 @@
     color: #ffffff;
     text-decoration: none;
     border-radius: 12px;
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--font-body);
     font-weight: 600;
     font-size: 1rem;
     transition: all 0.3s ease;
@@ -415,7 +415,7 @@
 }
 
 .catalogos-title {
-    font-family: 'Playfair Display', serif;
+    font-family: var(--font-heading);
     font-size: 1.8rem;
     font-weight: 700;
     color: #ffffff;
@@ -447,7 +447,7 @@
     color: #ffffff;
     text-decoration: none;
     border-radius: 12px;
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--font-body);
     font-weight: 600;
     font-size: 0.95rem;
     transition: all 0.3s ease;

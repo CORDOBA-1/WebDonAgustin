@@ -12,11 +12,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Preguntas Frecuentes</title>
+  <link rel="stylesheet" href="../assets/css/variables.css">
+  <link rel="stylesheet" href="../assets/css/fonts.css">
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap');
-
     body {
-      font-family: 'Arial', sans-serif;
+      font-family: var(--font-body);
+      font-weight: 400;
       background-color: #f7f7f7;
       margin: 0;
       padding: 20px;
@@ -47,7 +48,8 @@
     .faq-header h1 {
       margin: 0;
       font-size: 36px;
-      font-family: 'Roboto Slab', serif; /* Nueva tipografía */
+      font-family: var(--font-heading);
+      font-weight: 700;
       white-space: nowrap;
       overflow: hidden;
       border-right: 2px solid white;

@@ -23,8 +23,14 @@ html {
 }
 
 body {
-    font-family: 'Poppins', 'Montserrat', Arial, sans-serif;
+    font-family: var(--font-body);
+    font-weight: 400;
     color: var(--gris-oscuro);
     background-color: var(--blanco);
     overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 700;
 }

@@ -1,0 +1,32 @@
+/* Tipografías de marca: Quatro Slab (titulares) + Poppins (textos) */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+
+@font-face {
+    font-family: 'Quatro Slab';
+    src:
+        local('Quatro Slab Bold'),
+        local('QuatroSlab-Bold'),
+        url('../fonts/QuatroSlab-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Titulares de sección */
+.hero-title,
+.aberturas-title,
+.corralon-title,
+.muebles-title,
+.catalogos-title,
+.contacto-title,
+.faq-title,
+.colores-puerta-title,
+.proyectos-title,
+.productos-title,
+.obras-content h2,
+.testimonios-title,
+.abertura-modal-title {
+    font-family: var(--font-heading);
+    font-weight: 700;
+}

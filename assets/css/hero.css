@@ -84,7 +84,7 @@
 
 /* Título principal */
 .hero-title {
-    font-family: 'Playfair Display', serif;
+    font-family: var(--font-heading);
     font-size: 6rem;
     font-weight: 700;
     margin-bottom: 20px;
