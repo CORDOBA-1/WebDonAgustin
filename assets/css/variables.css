@@ -1,10 +1,28 @@
-/* Variables CSS - Paleta de colores y configuraciones globales */
+/* Variables CSS — Paleta de marca Don Agustín */
 :root {
     --font-heading: 'Quatro Slab', Georgia, 'Times New Roman', serif;
     --font-body: 'Poppins', Arial, sans-serif;
 
-    --rojo: #E74C3C;
-    --rojo-suave: #FADBD8;
+    /* Paleta institucional */
+    --brand-negro: #0D0D0D;
+    --brand-negro-suave: #1A1A1A;
+    --brand-negro-medio: #2C2C2C;
+    --brand-blanco: #FFFFFF;
+    --brand-blanco-suave: #F5F5F5;
+    --brand-rojo: #8B0000;
+    --brand-rojo-oscuro: #6B0000;
+    --brand-rojo-medio: #A01818;
+    --brand-rojo-claro: #B22222;
+
+    /* Alias legacy (compatibilidad) */
+    --rojo: var(--brand-rojo);
+    --rojo-suave: #F5E6E6;
+    --negro: var(--brand-negro);
+    --blanco: var(--brand-blanco);
+    --gris-oscuro: var(--brand-negro-medio);
+    --gris-medio: #6B6B6B;
+    --gris-claro: var(--brand-blanco-suave);
+
     --madera-oscura: #8B4513;
     --madera-betas: rgba(193, 154, 107, 0.8);
     --aluminio-oscuro: #A9A9A9;
@@ -13,9 +31,4 @@
     --cemento: #B0B0B0;
     --whatsapp-verde: #25D366;
     --whatsapp-blanco: #FFFFFF;
-    --gris-oscuro: #333333;
-    --gris-medio: #777777;
-    --gris-claro: #F5F5F5;
-    --blanco: #FFFFFF;
-    --negro: #000000;
 }

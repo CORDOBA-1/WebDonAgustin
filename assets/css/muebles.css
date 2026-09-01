@@ -4,12 +4,16 @@
    ESTILOS BASE (compartidos)
    ============================================ */
 #muebles {
-    background: linear-gradient(135deg, #f8f6f3 0%, #ede8e0 100%);
+    background: var(--brand-blanco);
     min-height: 100vh;
-    padding: 120px 20px 80px;
+    min-height: 100svh;
+    padding: 55px 16px 40px;
     position: relative;
     overflow: hidden;
-    scroll-margin-top: 80px; /* Ajuste de scroll para enlaces del hero */
+    scroll-margin-top: 80px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
 }
 
 #muebles::before {
@@ -19,10 +23,9 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: 
-        radial-gradient(circle at 10% 20%, rgba(78, 52, 46, 0.03) 0%, transparent 40%),
-        radial-gradient(circle at 90% 80%, rgba(141, 110, 99, 0.04) 0%, transparent 40%),
-        radial-gradient(circle at 50% 50%, rgba(193, 154, 107, 0.02) 0%, transparent 60%);
+    background:
+        radial-gradient(circle at 10% 20%, rgba(0, 0, 0, 0.02) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(0, 0, 0, 0.03) 0%, transparent 45%);
     pointer-events: none;
 }
 
@@ -44,7 +47,7 @@
     font-family: var(--font-heading);
     font-size: 3.2rem;
     font-weight: 700;
-    color: #4e342e;
+    color: var(--brand-negro);
     margin-bottom: 15px;
     letter-spacing: -0.5px;
     text-shadow: 0 2px 4px rgba(0,0,0,0.05);
@@ -53,7 +56,7 @@
 .muebles-subtitle {
     font-family: var(--font-body);
     font-size: 1.15rem;
-    color: #6d4c41;
+    color: var(--brand-negro-medio);
     font-weight: 400;
     max-width: 600px;
     margin: 0 auto;
@@ -63,7 +66,7 @@
 .muebles-download-hint {
     font-family: var(--font-body);
     font-size: 0.95rem;
-    color: #8d6e63;
+    color: var(--gris-medio);
     margin-top: 14px;
 }
 
@@ -83,10 +86,11 @@
 
 .categoria-item {
     background: #ffffff;
+    border: 1px solid var(--brand-blanco-suave);
     border-radius: 14px;
     padding: 20px 16px;
     text-align: center;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     text-decoration: none;
     color: inherit;
@@ -100,13 +104,13 @@
 .categoria-icono {
     width: 50px;
     height: 50px;
-    background: linear-gradient(135deg, #8d6e63 0%, #6d4c41 100%);
+    background: var(--brand-negro);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 auto 10px;
-    box-shadow: 0 6px 18px rgba(141, 110, 99, 0.28);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
     transition: transform 0.3s ease;
 }
 
@@ -123,7 +127,7 @@
     font-family: var(--font-heading);
     font-size: 1.05rem;
     font-weight: 700;
-    color: #4e342e;
+    color: var(--brand-negro);
     margin-bottom: 6px;
 }
 
@@ -146,7 +150,7 @@
     justify-content: center;
     gap: 12px;
     padding: 18px 40px;
-    background: linear-gradient(135deg, #4e342e 0%, #3e2723 100%);
+    background: var(--brand-negro);
     color: #ffffff;
     text-decoration: none;
     border: none;
@@ -160,7 +164,7 @@
 }
 
 .btn-ver-catalogo:hover {
-    background: linear-gradient(135deg, #6d4c41 0%, #4e342e 100%);
+    background: var(--brand-negro-suave);
     transform: translateY(-3px);
     box-shadow: 0 12px 40px rgba(78, 52, 46, 0.45);
 }
@@ -199,7 +203,7 @@
     font-family: var(--font-body);
     font-size: 0.95rem;
     font-weight: 500;
-    color: #6d4c41;
+    color: var(--brand-negro-medio);
     cursor: pointer;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: 0 2px 8px rgba(0,0,0,0.04);
@@ -222,7 +226,7 @@
 }
 
 .filtro-btn.active {
-    background: linear-gradient(135deg, #8d6e63 0%, #6d4c41 100%);
+    background: var(--brand-negro);
     border-color: transparent;
     color: #ffffff;
     box-shadow: 0 6px 25px rgba(109, 76, 65, 0.35);
@@ -312,7 +316,7 @@
     top: 15px;
     left: 15px;
     padding: 6px 14px;
-    background: linear-gradient(135deg, #8d6e63 0%, #6d4c41 100%);
+    background: var(--brand-negro);
     color: #ffffff;
     font-family: var(--font-body);
     font-size: 0.75rem;
@@ -336,7 +340,7 @@
     font-family: var(--font-heading);
     font-size: 1.4rem;
     font-weight: 700;
-    color: #4e342e;
+    color: var(--brand-negro);
     margin-bottom: 10px;
     line-height: 1.3;
 }
@@ -353,7 +357,7 @@
 .card-icon {
     width: 60px;
     height: 60px;
-    background: linear-gradient(135deg, #8d6e63 0%, #6d4c41 100%);
+    background: var(--brand-negro);
     border-radius: 15px;
     display: flex;
     align-items: center;
@@ -378,7 +382,7 @@
     justify-content: center;
     gap: 10px;
     padding: 14px 28px;
-    background: linear-gradient(135deg, #8d6e63 0%, #6d4c41 100%);
+    background: var(--brand-negro);
     color: #ffffff;
     text-decoration: none;
     border-radius: 12px;
@@ -391,7 +395,7 @@
 }
 
 .card-button:hover {
-    background: linear-gradient(135deg, #6d4c41 0%, #5d4037 100%);
+    background: var(--brand-negro-suave);
     transform: translateX(5px);
     box-shadow: 0 6px 20px rgba(141, 110, 99, 0.4);
 }
@@ -406,7 +410,7 @@
 
 /* Sección de catálogos */
 .catalogos-section {
-    background: linear-gradient(135deg, #4e342e 0%, #3e2723 100%);
+    background: var(--brand-negro);
     border-radius: 24px;
     padding: 50px 40px;
     text-align: center;
