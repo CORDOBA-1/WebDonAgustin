@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y4FHY57BH1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-Y4FHY57BH1');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Aberturas - Don Agustín</title>
+    <meta name="description" content="Catálogo de aberturas Don Agustín: cerramientos, puertas, mamparas, portones y tapas churrasqueras. Filtrá por tipo, línea y color.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://donagustin.com.ar/catalogo-aberturas.html">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/variables.css">
+    <link rel="stylesheet" href="assets/css/fonts.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/catalogo-aberturas.css">
+</head>
+<body class="page-catalogo">
+    <a href="index.html#aberturas" class="catalogo-back-btn" title="Volver a aberturas">
+        <i class="fas fa-arrow-left"></i>
+        <span>Volver</span>
+    </a>
+
+    <main id="catalogo-aberturas">
+        <div class="catalogo-container">
+            <header class="catalogo-header">
+                <h1 class="catalogo-title">Catálogo de aberturas</h1>
+                <p class="catalogo-subtitle">Explorá lo que fabricamos. Filtrá por categoría, tipo, línea y color.</p>
+                <p class="catalogo-count" id="catalogoCount" aria-live="polite"></p>
+            </header>
+
+            <div class="catalogo-filtros-cat" id="catalogoFiltrosCat" role="toolbar" aria-label="Categorías"></div>
+
+            <div class="catalogo-filtros-sec">
+                <div class="filtro-grupo" id="catalogoFiltrosSub" hidden></div>
+                <div class="filtro-grupo" id="catalogoFiltrosLinea" hidden></div>
+                <div class="filtro-grupo" id="catalogoFiltrosColor" hidden></div>
+            </div>
+
+            <div class="catalogo-grid" id="catalogoGrid"></div>
+            <div class="catalogo-empty" id="catalogoEmpty" hidden></div>
+        </div>
+    </main>
+
+    <div class="catalogo-lightbox" id="catalogoLightbox" hidden aria-hidden="true" role="dialog" aria-modal="true" aria-label="Vista ampliada">
+        <button type="button" class="lightbox-backdrop" data-close-lightbox aria-label="Cerrar"></button>
+        <div class="lightbox-dialog">
+            <button type="button" class="lightbox-close" data-close-lightbox aria-label="Cerrar">
+                <i class="fas fa-times"></i>
+            </button>
+            <img class="lightbox-img" src="" alt="">
+            <p class="lightbox-caption"></p>
+        </div>
+    </div>
+
+    <script src="assets/js/catalogo-aberturas.js"></script>
+</body>
+</html>
