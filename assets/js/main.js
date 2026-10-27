@@ -1,4 +1,4 @@
-// JavaScript principal para la página web
+﻿// JavaScript principal para la página web
 
 function onReady(callback) {
     if (document.readyState === 'loading') {
@@ -509,7 +509,7 @@ onReady(function() {
                 title: 'Línea A40 New',
                 badge: 'Ultra',
                 badgeClass: 'badge-ultra',
-                image: 'assets/images/a30_new.jpg',
+                image: 'assets/images/a30_new.webp',
                 description: 'Nuestra línea de máximo rendimiento. Pensada para proyectos que exigen grandes vanos, excelente aislación térmica y acústica, con terminaciones de primer nivel.',
                 features: [
                     'Máxima prestación en aluminio',
@@ -523,7 +523,7 @@ onReady(function() {
                 title: 'Línea A30 New',
                 badge: 'Premium',
                 badgeClass: 'badge-premium',
-                image: 'assets/images/a30_new.jpg',
+                image: 'assets/images/a30_new.webp',
                 description: 'Equilibrio entre prestación y diseño. Una línea premium muy elegida para viviendas y local comercial que buscan calidad superior sin llegar al rango ultra.',
                 features: [
                     'Alta prestación estructural',
@@ -537,7 +537,7 @@ onReady(function() {
                 title: 'Línea Modena',
                 badge: 'Recomendado',
                 badgeClass: '',
-                image: 'assets/images/modena.jpg',
+                image: 'assets/images/modena.webp',
                 description: 'La opción más elegida por nuestros clientes. Doble contacto y muy buena hermeticidad, con un precio competitivo para obras residenciales.',
                 features: [
                     'Sistema de doble contacto',
@@ -551,7 +551,7 @@ onReady(function() {
                 title: 'Línea Herrero Pesado',
                 badge: '',
                 badgeClass: '',
-                image: 'assets/images/herrero_pesado.JPG',
+                image: 'assets/images/herrero_pesado.webp',
                 description: 'Línea económica y robusta, clásica del mercado. Muy utilizada en construcción tradicional cuando se busca durabilidad y un presupuesto accesible.',
                 features: [
                     'Opción económica y resistente',
@@ -585,7 +585,7 @@ onReady(function() {
                 title: 'Obra Gruesa',
                 badge: '',
                 badgeClass: '',
-                image: 'assets/images/materiales_obras_gruesa.jpg',
+                image: 'assets/images/materiales_obras_gruesa.webp',
                 description: 'Materiales para la estructura de tu obra: desde cimientos hasta muros portantes. Stock permanente y asesoramiento para calcular cantidades.',
                 features: [
                     'Ladrillos, bloques y cerámicos estructurales',
@@ -599,7 +599,7 @@ onReady(function() {
                 title: 'Obra Fina',
                 badge: '',
                 badgeClass: '',
-                image: 'assets/images/materiales_obras_fina.jpg',
+                image: 'assets/images/materiales_obras_fina.webp',
                 description: 'Todo para terminaciones interiores y exteriores: revestimientos, pinturas, pegamentos y productos de alta calidad para el acabado final.',
                 features: [
                     'Cerámicos, porcelanatos y revestimientos',
@@ -613,7 +613,7 @@ onReady(function() {
                 title: 'Hierros',
                 badge: '',
                 badgeClass: '',
-                image: 'assets/images/materiales_hierro.jpg',
+                image: 'assets/images/materiales_hierro.webp',
                 description: 'Hierros y aceros para construcción: barras, mallas, alambres, chapas y perfiles. Ideal para estructuras, refuerzos y herrería.',
                 features: [
                     'Hierro de construcción en distintos diámetros',
@@ -627,7 +627,7 @@ onReady(function() {
                 title: 'Perfil C',
                 badge: 'Representantes',
                 badgeClass: 'badge-featured',
-                image: 'assets/images/perfil_c.jpg',
+                image: 'assets/images/perfil_c.webp',
                 description: 'Somos representantes directos de Perfil C. Precios de fábrica, stock permanente y entrega para obra y estructura metálica.',
                 features: [
                     'Representantes oficiales',
@@ -641,7 +641,7 @@ onReady(function() {
                 title: 'Malla Electrosoldada',
                 badge: 'Representantes',
                 badgeClass: 'badge-featured',
-                image: 'assets/images/malla_electrosoldada.jpg',
+                image: 'assets/images/malla_electrosoldada.webp',
                 description: 'Representantes directos de malla electrosoldada. Los mejores precios para losas, caminos, cerramientos y refuerzo de hormigón.',
                 features: [
                     'Representantes directos',
