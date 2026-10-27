@@ -18,17 +18,7 @@ onReady(function() {
         document.body.appendChild(transitionOverlay);
     }
 
-    // Aplicar fade in al cargar la página
-    document.body.style.opacity = '0';
-    setTimeout(() => {
-        document.body.style.transition = 'opacity 0.5s ease-in-out';
-        document.body.style.opacity = '1';
-    }, 10);
-
-    window.addEventListener('pageshow', function(event) {
-        if (event.persisted) {
-            document.body.style.opacity = '1';
-        }
+    window.addEventListener('pageshow', function() {
         scrollToHashTarget();
     });
 
@@ -40,6 +30,7 @@ onReady(function() {
         }
     }
 
+    // Hash al cargar (ya no depende de fetch de partials)
     scrollToHashTarget();
 
     // Función para verificar si un enlace va a otra página
@@ -358,10 +349,49 @@ onReady(function() {
     }
 });
 
-// Carrusel de Obras (imágenes WhatsApp)
-onReady(function() {
-    if (typeof Swiper === 'undefined') return;
-    if (!document.querySelector('.obras-carousel')) return;
+// Swiper: se carga solo cuando Obras o Testimonios se acercan al viewport
+function loadStylesheet(href) {
+    return new Promise(function(resolve, reject) {
+        if (document.querySelector('link[href="' + href + '"]')) {
+            resolve();
+            return;
+        }
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = href;
+        link.onload = function() { resolve(); };
+        link.onerror = reject;
+        document.head.appendChild(link);
+    });
+}
+
+function loadScript(src) {
+    return new Promise(function(resolve, reject) {
+        if (document.querySelector('script[src="' + src + '"]')) {
+            resolve();
+            return;
+        }
+        var script = document.createElement('script');
+        script.src = src;
+        script.async = true;
+        script.onload = function() { resolve(); };
+        script.onerror = reject;
+        document.body.appendChild(script);
+    });
+}
+
+var swiperReady = null;
+function ensureSwiper() {
+    if (typeof Swiper !== 'undefined') return Promise.resolve();
+    if (swiperReady) return swiperReady;
+    var css = 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css';
+    var js = 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js';
+    swiperReady = Promise.all([loadStylesheet(css), loadScript(js)]);
+    return swiperReady;
+}
+
+function initObrasCarousel() {
+    if (!document.querySelector('.obras-carousel') || document.querySelector('.obras-carousel').swiper) return;
     new Swiper('.obras-carousel', {
         loop: true,
         autoplay: { delay: 3500, disableOnInteraction: false },
@@ -372,14 +402,15 @@ onReady(function() {
         },
         effect: 'slide',
         speed: 600,
-        grabCursor: true
+        grabCursor: true,
+        preloadImages: false,
+        lazy: false,
+        watchSlidesProgress: true
     });
-});
+}
 
-// Carrusel de Testimonios
-onReady(function() {
-    if (typeof Swiper === 'undefined') return;
-    if (!document.querySelector('.testimonios-carousel')) return;
+function initTestimoniosCarousel() {
+    if (!document.querySelector('.testimonios-carousel') || document.querySelector('.testimonios-carousel').swiper) return;
     new Swiper('.testimonios-carousel', {
         loop: true,
         autoplay: { delay: 5000, disableOnInteraction: false, pauseOnMouseEnter: true },
@@ -399,6 +430,43 @@ onReady(function() {
             1200: { slidesPerView: 3, spaceBetween: 24 }
         }
     });
+}
+
+onReady(function() {
+    var targets = [
+        document.getElementById('obras'),
+        document.getElementById('testimonios')
+    ].filter(Boolean);
+
+    if (!targets.length) return;
+
+    var started = false;
+    function startSwiper() {
+        if (started) return;
+        started = true;
+        ensureSwiper().then(function() {
+            initObrasCarousel();
+            initTestimoniosCarousel();
+        }).catch(function(err) {
+            console.error('No se pudo cargar Swiper', err);
+        });
+    }
+
+    if (!('IntersectionObserver' in window)) {
+        startSwiper();
+        return;
+    }
+
+    var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+                startSwiper();
+                observer.disconnect();
+            }
+        });
+    }, { rootMargin: '400px 0px' });
+
+    targets.forEach(function(el) { observer.observe(el); });
 });
 
 // Modales de detalle (aberturas y corralón en home)
